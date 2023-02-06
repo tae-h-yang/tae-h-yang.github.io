@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Tae Yang"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a Computer Engineering student minoring in Robotics at Northeastern University.<br /><br />
+  bio              : "I am a Computer Engineering student minoring in Robotics at Northeastern University.
   I am intrested in Autonomous Driving, Computer Vision, AI/ML, Robotics, and Embedded Systems"
   location         : "Boston, MA"
   email            :

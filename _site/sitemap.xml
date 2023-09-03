@@ -11,4 +11,10 @@
 <url>
 <loc>http://localhost:4000/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/cv/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/unused/</loc>
+</url>
 </urlset>

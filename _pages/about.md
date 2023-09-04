@@ -19,9 +19,22 @@ Hi! I'm Tae, a Computer Engineering student minoring in Robotics at Northeastern
 
 ---
 
-Autonomous driving technology requires a wide range of understandings about Electronics, Mathematics, Computer/Software Engineering, and Mechanical Engieering.  
+Autonomous driving technology requires a wide range of understandings of Electronics, Mathematics, Computer/Software Engineering, and Mechanical Engieering. Sensors such as camera, LiDAR, radar, and sonar are employed to detect surroundings and create a map. Additional sensors such as IMU and wheel encoder can improve accuracy in creating the map and localization within it. In order to process the sensor data and estimate poses, linear algebra operations, multiple view geomtery, and probablistic and statistical inference are entailed. Based on this mathematical model, efficient path planning is implemented to navigate. Then, the path following is peformed by control systems that ensures accuracy and robustness. Lastly, programming skills and computer applications are what actually deploy the entire autonomous driving system to the real world.
 
-Sensors ->  (prob. and stats., linear algebra, and geometry)
-Programming,  
+---
 
-The roadmaps below show what I am referring to. Check my website to find more about my efforts to become a good slam engineer!
+I am especially fascinated by solving the SLAM problem in an unknown environment which can be functional to achieve various accomplishments such as self-driving cars and tranportation, search and rescue, autonomous delivery, and space exploration. The [roadmaps](https://github.com/changh95/visual-slam-roadmap) below present my milestones te become a compotent **Visual SLAM** engineer. Feel free to check out further details of my work in this website!  
+
+![Image](/assets/images/beginner_2023.png)
+
+---
+![Image](/assets/images/getting-familiar_2023.png)
+
+---
+![Image](/assets/images/monocular_2023.png)
+
+---
+![Image](/assets/images/rgbd_2023.png)
+
+---
+![Image](/assets/images/applying-deep-learning_2023.png)

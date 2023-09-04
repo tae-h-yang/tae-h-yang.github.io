@@ -15,8 +15,6 @@ redirect_from:
 #     title: "High-Speed Off-Road Navigation"
 ---
 
-# About
-
 I am currently a Computer Engineering student minoring in Robotics at Northeastern University.
 
 I am currently an Assistant Professor at Northeastern University, with a joint appointment in the Department of Electrical & Computer Engineering and the Khoury College of Computer Sciences.

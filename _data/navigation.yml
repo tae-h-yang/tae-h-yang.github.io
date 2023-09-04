@@ -10,7 +10,15 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+  - title: "Courses"
+    url: /courses/
   - title: "Projects"
     url: /projects/
+  - title: "Studies"
+    url: /studies/
+  - title: "Work Experiences"
+    url: /work_experiences"
+  - title: "Activities"
+    url: /activities/
   - title: "CV"
     url: /cv/

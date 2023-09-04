@@ -23,7 +23,7 @@ Autonomous driving technology requires a wide range of understandings of Electro
 
 ---
 
-I am especially fascinated by solving the SLAM problem in an unknown environment which can be functional to achieve various accomplishments such as self-driving cars and tranportation, search and rescue, autonomous delivery, and space exploration. The [roadmaps](https://github.com/changh95/visual-slam-roadmap) below present my milestones te become a compotent **Visual SLAM** engineer. Feel free to check out further details of my work in this website!  
+I am especially fascinated by solving the SLAM problem in an unknown environment which can be functional to achieve various accomplishments such as self-driving cars and tranportation, search and rescue, autonomous delivery, and space exploration. The [roadmaps](https://github.com/changh95/visual-slam-roadmap) below present my milestones to become a compotent **Visual SLAM** engineer. Feel free to check out further details of my work in this website!  
 
 ![Image](/assets/images/beginner_2023.png)
 

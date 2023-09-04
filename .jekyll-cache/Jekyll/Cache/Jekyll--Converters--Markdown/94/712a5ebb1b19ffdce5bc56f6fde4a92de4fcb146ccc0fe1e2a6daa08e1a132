@@ -1,0 +1,11 @@
+I"ã<p>Hi! Iâ€™m Tae, a Computer Engineering student minoring in Robotics at Northeastern University. My interest lies in the design and development of <strong>autonomous driving systems</strong> for vehicles and mobile robots using the techniques such as <strong>SLAM (Simultaneous Localization and Mapping)</strong>, <strong>Computer Vision</strong>, and <strong>AI/ML</strong>. Innovation that self-driving cars and intelligent robots will bring in the future is what intrigues and drives me to pursue a career in this research and industry area.</p>
+
+<hr />
+
+<p>Autonomous driving technology requires a wide range of understandings of Electronics, Mathematics, Computer/Software Engineering, and Mechanical Engieering. Sensors such as camera, LiDAR, radar, and sonar are employed to detect surroundings and create a map. Additional sensors such as IMU and wheel encoder can improve accuracy in creating the map and localization within it. In order to process the sensor data and estimate poses, linear algebra operations, multiple view geomtery, and probablistic and statistical inference are entailed. Based on this mathematical model, efficient path planning is implemented to navigate. Then, the path following is peformed by control systems that ensures accuracy and robustness.</p>
+
+<p>Sensors -&gt;  (prob. and stats., linear algebra, and geometry)
+Programming,</p>
+
+<p>The roadmaps below show what I am referring to. Check my website to find more about my efforts to become a good slam engineer!</p>
+:ET

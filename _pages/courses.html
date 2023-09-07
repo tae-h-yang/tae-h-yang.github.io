@@ -1,0 +1,18 @@
+---
+layout: archive
+title: 
+permalink: /courses/
+author_profile: true
+---
+
+<header>
+  <h2>Northeastern University Courses</h2>
+</header>
+
+<hr>
+
+{% include base_path %}
+    
+{% for post in site.courses reversed %}
+  {% include archive-single.html %}
+{% endfor %}

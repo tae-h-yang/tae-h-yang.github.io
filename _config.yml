@@ -300,3 +300,16 @@ defaults:
     values:
       layout: single
       author_profile: true 
+  # _courses
+  - scope:
+      path: ""
+      type: courses
+    values:
+      layout: course
+      author_profile: true
+
+# Collections
+collections:
+  courses:
+    output: true
+    permalink: /:collection/:path/

@@ -1,8 +1,8 @@
 var store = [{
-        "title": "Garbage In, Garbage Out Revisited: Labeling and Dataification Practices Across Disciplines.",
+        "title": "EECE5554 Robotics Sensing and Navigation",
         "excerpt":"Abstract: “I discuss a range of issues and best practices around data labeling, verification, and quality across disciplines. This work is based on our existing research in the ‘Garbage In, Garbage Out’ project, as well as my experiences collaborating with researchers across disciplines.”  ","categories": [],
         "tags": [],
-        "url": "/courses/tst/",
+        "url": "/courses/eece5554/",
         "teaser": null
       },{
         "title": "About",

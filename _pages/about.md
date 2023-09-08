@@ -6,6 +6,7 @@ author_profile: true
 redirect_from: 
   - /about/
   - /about.html
+classes: wide
 # homepage_feature_row:
 #   - image_path: publications/nfls.png
 #     title: "Neural Feedback Loop Verification"

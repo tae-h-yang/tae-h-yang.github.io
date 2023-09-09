@@ -307,9 +307,49 @@ defaults:
     values:
       layout: course
       author_profile: true
+  # _projects
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: course
+      author_profile: true
+  # _studies
+  - scope:
+      path: ""
+      type: studies
+    values:
+      layout: course
+      author_profile: true
+  # _work-experiences
+  - scope:
+      path: ""
+      type: work-experiences
+    values:
+      layout: course
+      author_profile: true
+  # _activities
+  - scope:
+      path: ""
+      type: activities
+    values:
+      layout: course
+      author_profile: true
 
 # Collections
 collections:
   courses:
+    output: true
+    permalink: /:collection/:path/
+  projects:
+    output: true
+    permalink: /:collection/:path/
+  studies:
+    output: true
+    permalink: /:collection/:path/
+  work-experiences:
+    output: true
+    permalink: /:collection/:path/
+  activities:
     output: true
     permalink: /:collection/:path/

@@ -1,0 +1,12 @@
+---
+title: "EECE5644 Introduction to Machine Learning and Patter Recognition"
+collection: projects
+type: #"northeastern"
+permalink: /projects/tst/ 
+date: 2023-5-8
+location: 
+classes: wide
+excerpt: "Studied machine learning (the study and design of algorithms that enable computers/machines to learn from experience/data)."
+---
+
+**Description**: Studied machine learning (the study and design of algorithms that enable computers/machines to learn from experience/data). Covered a range of algorithms, focusing on the underlying models between each approach. Emphasized the foundations to prepare for research in machine learning. Topics included Bayes decision theory, maximum likelihood parameter estimation, model selection, mixture density estimation, support vector machines, neural networks, probabilistic graphics models, and ensemble methods (boosting and bagging). Offered an opportunity to learn where and how to apply machine learning algorithms and why they work.

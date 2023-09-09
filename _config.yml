@@ -312,28 +312,28 @@ defaults:
       path: ""
       type: projects
     values:
-      layout: course
+      layout: project
       author_profile: true
   # _studies
   - scope:
       path: ""
       type: studies
     values:
-      layout: course
+      layout: project
       author_profile: true
   # _work-experiences
   - scope:
       path: ""
       type: work-experiences
     values:
-      layout: course
+      layout: project
       author_profile: true
   # _activities
   - scope:
       path: ""
       type: activities
     values:
-      layout: course
+      layout: project
       author_profile: true
 
 # Collections

@@ -32,8 +32,8 @@ layout: default
           {% endif %}
         {% if page.modified %}
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% elsif page.semester %}
-          <p class="page__meta">{{ page.semester }}</p>
+        {% elsif page.date %}
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time></p>
         {% endif %}
           {% if page.type %}<p>{{page.type}} at {{ page.venue }},  {{page.location}}</p> {% endif %}
 

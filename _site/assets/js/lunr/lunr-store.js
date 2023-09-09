@@ -94,10 +94,4 @@ var store = [{
         "tags": ["Blog"],
         "url": "/first-post/",
         "teaser": null
-      },{
-        "title": "EECE5644 Introduction to Machine Learning and Patter Recognition",
-        "excerpt":"Description: Studied machine learning (the study and design of algorithms that enable computers/machines to learn from experience/data). Covered a range of algorithms, focusing on the underlying models between each approach. Emphasized the foundations to prepare for research in machine learning. Topics included Bayes decision theory, maximum likelihood parameter estimation, model...","categories": [],
-        "tags": [],
-        "url": "/projects/tst/",
-        "teaser": null
       },]

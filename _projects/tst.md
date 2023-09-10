@@ -3,7 +3,8 @@ title: "EECE5644 Introduction to Machine Learning and Patter Recognition"
 collection: courses
 type: #"northeastern"
 permalink: /projects/tst/ 
-date: 2023-5-8
+# date: 2023-5-8
+period: Jul 2023 - Sep 2023
 location: 
 classes: wide
 excerpt: "Studied machine learning (the study and design of algorithms that enable computers/machines to learn from experience/data)."

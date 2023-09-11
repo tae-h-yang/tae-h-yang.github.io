@@ -1,0 +1,98 @@
+I"�%<h1 id="introduction">Introduction</h1>
+
+<p>Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. Data of the school tunnel were collected by a LiDAR, Cameras, and IMU. The sensor data were stored as a rosbag format to test the algorithms individually by replaying the rosbag file on ROS. Each algorithm created either occupancy grid map or point cloud map and their performance was analyzed.</p>
+
+<h1 id="data-collection">Data Collection</h1>
+
+<p style="text-align: center;"><img src="/assets/projects/School-Tunnel.png" width="250" height="250" /><strong><br />Route and map of school tunnel.</strong></p>
+<p>The school tunnel at Northeastern University looked like the map above. The red line in the map indicated where the sensor data were collected and the algorithms had to contruct a map.</p>
+
+<p style="text-align: center;"><img src="/assets/projects/RPLiDAR-A3.png" width="150" height="150" /><img src="/assets/projects/Realsense-D435i.png" width="150" height="150" /><img src="/assets/projects/Realsense-T265.png" width="150" height="150" /><img src="/assets/projects/VectorNav-VN100.png" width="150" height="150" /><strong><br />RPLiDAR A3, Realsense D435i and T265, and VectorNav VN100 sensors from the left.</strong></p>
+
+<p>The sensors consisted of one LiDAR, two cameras, and one IMU. RPLiDAR A3 was a 2D planar LiDAR. Realsense D435i and T265 were a RGB-D and Stereo camera respectively. VectorNav VN100 was an IMU that contained a three-axis accelerometer, gyroscope, and magnetometer.</p>
+
+<p style="text-align: center;"><img src="/assets/projects/Sensor-Mount-Top.png" width="400" height="400" /><img src="/assets/projects/Sensor-Mount-Front.png" width="155" height="155" /><strong><br />Top side of the cart with the LiDAR and IMU and front side with the cameras.</strong></p>
+
+<p>The sensors were rigidly mounted on a rolling cart as the figures above to reduce noises as much as possible. The cart was pushed and traveled the tunnel following the trajectory planned in the beginning. During the sensor data collection, A laptop was reading all the data running ROS drivers for each sensor and recording them with a rosbag node.</p>
+
+<p style="text-align: center;"><img src="/assets/projects/Tunnel-Rosbag.png" width="400" height="400" /><strong><br />Rosbag file recorded.</strong></p>
+
+<h1 id="hector-slam">Hector SLAM</h1>
+<p>There was a ROS package implementing Hector SLAM which was a LiDAR based SLAM algorithm. Only the LiDAR sensor data was used and the localization and mapping was performed by scan match. Scan matching was finding the sensor pose that minimized the error between the map and the new scan data using the Gauss-Newton leaster squares approach. This meant that feature detection or mathcning wasn’t required which reduced the computational load.</p>
+
+<p style="text-align: center;"><img src="/assets/projects/Hector-SLAM-1.png" width="400" height="400" /><img src="/assets/projects/Hector-SLAM-2.png" width="400" height="400" /><strong><br />Left: First 30 seconds of dataset showing good SLAM performance. Right: Entire map with some incorrect pose estimation.</strong></p>
+
+<p>Hector SLAM generated and expanded the map as the cart moved along and provided fair pose information. However, during the travel in long and straight sections of the tunnel, it wasn’t able to function properly since there were no distinct differences in the consecutive LiDAR scans and the cart was assumed to be stationary.</p>
+
+<h1 id="gmapping-slam">Gmapping SLAM</h1>
+<p>Another LiDAR based SLAM, Gmapping SLAM, was tested. It applied a Rao-Blackwellized particle filter for learning grid maps and created a 2D occupancy grid map from the laser scan and pose data. In ROS, the Gmapping SLAM node which was called <code class="language-plaintext highlighter-rouge">slam_gmapping</code> attempted to transform each incoming scan into the <code class="language-plaintext highlighter-rouge">odom</code> tf frame.</p>
+
+<p>Additional ROS node was required to provide accurate pose data to the Gmapping SLAM node. It was called <code class="language-plaintext highlighter-rouge">laser_scan_matcher_node</code> from the <code class="language-plaintext highlighter-rouge">laser_scan_matcher</code> package. This package was an incremental laser scan registration tool. It allowed to scan match between consecutive <code class="language-plaintext highlighter-rouge">sensor_msgs/LaserScan</code> messages and published the estimated pose of the sensor with a tf transform. Detailed instruction for running the Gmapping SLAM node can be found in <a href="#appendix-a-gmapping-slam-in-ros">Appendix A</a>.</p>
+
+<p style="text-align: center;"><img src="/assets/projects/Gmapping-SLAM.png" width="250" height="250" /><strong><br />Map generated from Gmapping SLAM.</strong></p>
+<p>The resulting map presented the same issue as Hector SLAM. When there were no distinctive differences between consecutive laser scan messages, the cart was assumed to stationary. Therefore, some tunnel areas were generated on top of the wrong locations and the entire map ended up having several overlapping areas.</p>
+
+<h1 id="cartographer-slam">Cartographer SLAM</h1>
+<p>Cartographer SLAM used a combitionation of LiDAR and IMU data to construct 2D or 3D map of the environment while simultaneously estimating poses of the sensors. Detailed instruction for running the Cartographer SLAM node in ROS can be found in <a href="#appendix-b-cartographer-slam-in-ros">Appendix B</a>.</p>
+
+<p style="text-align: center;"><img src="/assets/projects/Cartographer-SLAM.png" width="300" height="300" /><strong><br />Map generated from Cartographer SLAM.</strong></p>
+
+<h1 id="appendix-a-gmapping-slam-in-ros">Appendix A: Gmapping SLAM in ROS</h1>
+<p>This instruction assumes pre-installation and setup of ROS Noetic on Ubuntu 20.04.5.</p>
+
+<h3 id="installing-gmapping-slam-package">Installing Gmapping SLAM package</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-noetic-gmapping
+<span class="nb">cd </span>catkin_ws
+rosmake gmapping
+</code></pre></div></div>
+
+<h3 id="installing-laser_scan_matcher-package">Installing <code class="language-plaintext highlighter-rouge">laser_scan_matcher</code> package</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-noetic-scan-tools
+</code></pre></div></div>
+
+<h3 id="run-gmapping-slam">Run Gmapping SLAM</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roscore
+</code></pre></div></div>
+<p>Open another terminal.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosparam <span class="nb">set </span>use_sim_time <span class="nb">true
+</span>rosrun rviz rviz
+</code></pre></div></div>
+<p>Open another terminal.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosparam <span class="nb">set </span>use_sim_time <span class="nb">true
+</span>rosrun gmapping slam_gmapping scan:<span class="o">=</span>scan
+</code></pre></div></div>
+<p>Open another terminal.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosparam <span class="nb">set </span>use_sim_time <span class="nb">true
+</span>rosrun laser_scan_matcher laser_scan_matcher_node _fixed_frame:<span class="o">=</span>odom _max_iterations:<span class="o">=</span>10
+</code></pre></div></div>
+<p>Open another terminal.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosparam <span class="nb">set </span>use_sim_time <span class="nb">true
+</span>rosbag play <span class="nt">--clock</span> <span class="nt">-d</span> 5 tunnel.bag
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h1 id="appendix-b-cartographer-slam-in-ros">Appendix B: Cartographer SLAM in ROS</h1>
+
+<h3 id="building-cartographer-ros">Building Cartographer ROS</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> python3-wstool python3-rosdep ninja-build stow
+<span class="nb">cd </span>catkin_ws
+wstool init src
+wstool merge <span class="nt">-t</span> src https://raw.githubusercontent.com/cartographer-project/cartographer_ros/master/cartographer_ros.rosinstall
+wstool update <span class="nt">-t</span> src
+<span class="nb">sudo </span>rosdep init
+</code></pre></div></div>
+<p>Ignore the error meesages after <code class="language-plaintext highlighter-rouge">sudo rosdep init</code>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
+rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">--rosdistro</span><span class="o">=</span><span class="k">${</span><span class="nv">ROS_DISTRO</span><span class="k">}</span> <span class="nt">-y</span>
+</code></pre></div></div>
+<p style="text-align: center;"><img src="/assets/projects/Cartographer-Error.png" width="1000" height="50" /></p>
+<p>Resolve the error message above</p>
+
+<p><br />
+more accurate odometry data using IMU
+more advanced sensor fusion algorithm using all sensor data
+better comparison analysis with a ground truth</p>
+:ET

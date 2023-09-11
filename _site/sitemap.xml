@@ -65,8 +65,12 @@
 <lastmod>2023-07-24T00:00:00-04:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/projects/tst/</loc>
-<lastmod>2023-09-10T00:42:23-04:00</lastmod>
+<loc>http://localhost:4000/projects/tunnel-mapping/</loc>
+<lastmod>2023-03-01T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/projects/vehicle-detection/</loc>
+<lastmod>2023-05-01T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>

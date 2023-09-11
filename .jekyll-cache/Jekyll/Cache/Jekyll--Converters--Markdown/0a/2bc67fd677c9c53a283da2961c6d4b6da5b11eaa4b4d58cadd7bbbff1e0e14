@@ -1,0 +1,21 @@
+I"<h1 id="introduction">Introduction</h1>
+
+<p>Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. Data of the school tunnel were collected by a LiDAR, Cameras, and IMU. The sensor data were stored as a rosbag format to test the algorithms individually by replaying the rosbag file on ROS. Each algorithm created either occupancy grid map or point cloud map and their performance was analyzed.</p>
+
+<h1 id="data-collection">Data Collection</h1>
+
+<p style="text-align: center;"><img src="/assets/projects/School-Tunnel.png" width="250" height="250" /><strong><br />Route and map of school tunnel</strong></p>
+<p>The school tunnel at Northeastern University looked like the map above. The red line in the map indicated where the sensor data were collected and the algorithms had to contruct a map.</p>
+
+<p style="text-align: center;"><img src="/assets/projects/RPLiDAR-A3.png" width="150" height="150" /><img src="/assets/projects/Realsense-D435i.png" width="150" height="150" /><img src="/assets/projects/Realsense-T265.png" width="150" height="150" /><img src="/assets/projects/VectorNav-VN100.png" width="150" height="150" /><strong><br />RPLiDAR A3, Realsense D435i and T265, and VectorNav VN100 sensors from the left</strong></p>
+
+<p>The sensors consisted of one LiDAR, two cameras, and one IMU. RPLiDAR A3 was a 2D planar LiDAR. Realsense D435i and T265 were a RGB-D and Stereo camera respectively. VectorNav VN100 was an IMU that contained a three-axis accelerometer, gyroscope, and magnetometer.
+<br /></p>
+
+<p>The sensors were rigidly mounted on a rolling cart</p>
+
+<p><br />
+more accurate odometry data using IMU
+more advanced sensor fusion algorithm using all sensor data
+better comparison analysis with a ground truth</p>
+:ET

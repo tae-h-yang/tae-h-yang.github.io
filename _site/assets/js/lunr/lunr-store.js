@@ -95,9 +95,15 @@ var store = [{
         "url": "/first-post/",
         "teaser": null
       },{
-        "title": "EECE5644 Introduction to Machine Learning and Patter Recognition",
-        "excerpt":"Description: Studied machine learning (the study and design of algorithms that enable computers/machines to learn from experience/data). Covered a range of algorithms, focusing on the underlying models between each approach. Emphasized the foundations to prepare for research in machine learning. Topics included Bayes decision theory, maximum likelihood parameter estimation, model...","categories": [],
+        "title": "School Tunnel Mapping",
+        "excerpt":"Introduction Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. Data of the school tunnel were collected by a LiDAR, Cameras, and IMU. The sensor data were stored as a rosbag format to test the algorithms individually...","categories": [],
         "tags": [],
-        "url": "/projects/tst/",
+        "url": "/projects/tunnel-mapping/",
+        "teaser": null
+      },{
+        "title": "Exploration of Various Object Detection Algorithms",
+        "excerpt":"Abstract:  ","categories": [],
+        "tags": [],
+        "url": "/projects/vehicle-detection/",
         "teaser": null
       },]

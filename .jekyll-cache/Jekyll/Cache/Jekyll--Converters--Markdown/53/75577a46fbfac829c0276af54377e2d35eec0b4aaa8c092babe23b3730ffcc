@@ -1,5 +1,0 @@
-I"Y<p><strong>Abstract</strong>: Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. School tunnel data were collected by a LiDAR, Cameras, and IMU.</p>
-
-<p>more accurate odometry data using IMU
-more advanced sensor fusion algorithm using all sensor data</p>
-:ET

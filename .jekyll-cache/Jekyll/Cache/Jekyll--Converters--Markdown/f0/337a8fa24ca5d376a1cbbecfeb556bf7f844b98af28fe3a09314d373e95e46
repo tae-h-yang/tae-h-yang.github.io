@@ -1,305 +1,4 @@
-<!doctype html>
-<!--
-  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
-  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
-  Free for personal and commercial use under the MIT license
-  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="utf-8">
-
-<!-- begin _includes/seo.html --><title>School Tunnel Mapping - Tae Yang</title>
-<meta name="description" content="Created a map of school tunnel using various SLAM algorithms on sensor data collected by a LiDAR, Cameras, and IMU">
-
-
-  <meta name="author" content="Tae Yang">
-  
-  <meta property="article:author" content="Tae Yang">
-  
-
-
-<meta property="og:type" content="article">
-<meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="Tae Yang">
-<meta property="og:title" content="School Tunnel Mapping">
-<meta property="og:url" content="http://localhost:4000/projects/tunnel-mapping/">
-
-
-  <meta property="og:description" content="Created a map of school tunnel using various SLAM algorithms on sensor data collected by a LiDAR, Cameras, and IMU">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2023-03-01T00:00:00-05:00">
-
-
-
-
-
-  
-
-  
-
-
-<link rel="canonical" href="http://localhost:4000/projects/tunnel-mapping/">
-
-
-
-
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": "Tae Yang",
-      "url": "http://localhost:4000/"
-    
-  }
-</script>
-
-
-
-
-
-
-
-<!-- end _includes/seo.html -->
-
-
-
-  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Tae Yang Feed">
-
-
-<!-- https://t.co/dKP3o1e -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-</script>
-
-<!-- For all browsers -->
-<link rel="stylesheet" href="/assets/css/main.css">
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
-
-
-
-    <!-- start custom head snippets -->
-
-<!-- insert favicons. use https://realfavicongenerator.net/ -->
-
-<!-- end custom head snippets -->
-
-  </head>
-
-  <body class="layout--project wide">
-    <nav class="skip-links">
-  <ul>
-    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
-    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
-    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
-  </ul>
-</nav>
-
-    
-
-<div class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        
-        <a class="site-title" href="/">
-          Tae Yang
-          
-        </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/courses/">Courses</a>
-            </li><li class="masthead__menu-item">
-              <a href="/projects/">Projects</a>
-            </li><li class="masthead__menu-item">
-              <a href="/studies/">Studies</a>
-            </li><li class="masthead__menu-item">
-              <a href="/work-experiences/">Work Experiences</a>
-            </li><li class="masthead__menu-item">
-              <a href="/activities/">Activities</a>
-            </li><li class="masthead__menu-item">
-              <a href="/cv/">CV</a>
-            </li></ul>
-        
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
-          <div class="navicon"></div>
-        </button>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
-    </div>
-  </div>
-</div>
-
-
-    <div class="initial-content">
-      
-
-
-
-
-
-<div id="main" role="main">
-  
-  <div class="sidebar sticky">
-  
-
-
-<div itemscope itemtype="https://schema.org/Person" class="h-card">
-
-  
-    <div class="author__avatar">
-      <a href="http://localhost:4000/">
-        <img src="/assets/images/profile2.png" alt="Tae Yang" itemprop="image" class="u-photo">
-      </a>
-    </div>
-  
-
-  <div class="author__content">
-    <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Tae Yang</a>
-    </h3>
-    
-      <div class="author__bio p-note" itemprop="description">
-        <p>Computer Engineering student minoring in Robotics at Northeastern University.<br /><br />Talks about Autonomous Driving, Robotics, SLAM, Computer Vision, and AI/ML</p>
-
-      </div>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Boston, MA</span>
-        </li>
-      
-
-      
-        
-          
-            <li><a href="mailto:yang.tae@northeastern.edu" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-            <li><a href="https://github.com/tae-h-yang/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
-          
-        
-          
-            <li><a href="https://www.linkedin.com/in/tae-yang/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
-          
-        
-          
-            <li><a href="https://www.instagram.com/hoonyy_11/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
-          
-        
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
-</div>
-
-  
-  </div>
-
-
-
-  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="School Tunnel Mapping">
-    <meta itemprop="description" content="Created a map of school tunnel using various SLAM algorithms on sensor data collected by a LiDAR, Cameras, and IMU">
-    <meta itemprop="datePublished" content="March 01, 2023">
-    
-
-    <div class="page__inner-wrap">
-      
-        <header>
-          <h1 class="page__title" itemprop="headline">School Tunnel Mapping
-</h1>
-          
-        
-          <p class="page__meta">Mar 2023 - May 2023</p>
-        
-          
-
-        </header>
-      
-
-      <section class="page__content" itemprop="text">
-        <p>Some of the content in this page is based on the following report: 
-<a style="text-decoration: none;" href="/assets/projects/Final Report EEECE5554.pdf" target="_blank">Report <i class="fa fa-file"></i></a></p>
-
-<h1 id="introduction">Introduction</h1>
+I"^J<h1 id="introduction">Introduction</h1>
 
 <p>Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. Data of the school tunnel were collected by a LiDAR, Cameras, and IMU. The sensor data were stored as a rosbag format to test the algorithms individually by replaying the rosbag file on ROS. Each algorithm created either occupancy grid map or point cloud map and their performance was analyzed.</p>
 
@@ -334,7 +33,7 @@
 <p>The resulting map presented the same issue as Hector SLAM. When there were no distinctive differences between consecutive laser scan messages, the cart was assumed to stationary. Therefore, some tunnel areas were generated on top of the wrong locations and the entire map ended up having several overlapping areas.</p>
 
 <h1 id="cartographer-slam">Cartographer SLAM</h1>
-<p>Cartographer SLAM used a combitionation of LiDAR and IMU data to construct 2D or 3D map of the environment while simultaneously estimating poses of the sensors. Detailed instruction for running the Cartographer SLAM node on ROS can be found in <a href="#appendix-b-cartographer-slam-in-ros">Appendix B</a>.</p>
+<p>Cartographer SLAM used a combitionation of LiDAR and IMU data to construct 2D or 3D map of the environment while simultaneously estimating poses of the sensors. Detailed instruction for running the Cartographer SLAM node in ROS can be found in <a href="#appendix-b-cartographer-slam-in-ros">Appendix B</a>.</p>
 
 <p style="text-align: center;"><img src="/assets/projects/Cartographer-SLAM.png" width="300" height="300" /><strong><br />Map generated from Cartographer SLAM.</strong></p>
 
@@ -343,7 +42,7 @@
 <h1 id="rtab-map">RTAB-Map</h1>
 <p>RTAB-Map (Real-Time Appearance-Based Mapping) provided an open-source Graph-Based SLAM library. It was designed to build 3D maps of environments using different sensors such as a RGB-D camera, stereo camera, and LiDAR sensor. For this experiment, the Realsense D435i camera data were used since RTAB-Map had been fully verified with the same type of cameras.</p>
 
-<p>In this mapping algorithm, a keyframe-based approach was applied for mapping which meant a set of keyframes instead of a dense point cloud was used to represent the environment. This approach reduced the memory usage and computational requirements of the SLAM algorithm. This mapping algorithm also featured visual and loop closures to improve the accuracy of the map. Visual closures were detected by comparing the appearance of images captured by a camera, while loop closures were detected by comparing poses of the keyframes. Detailed instruction for running RTAB-Map on ROS can be found in <a href="#appendix-c-rtab-map-in-ros">Appendix C</a>.</p>
+<p>In this mapping algorithm, a keyframe-based approach was applied for mapping which meant a set of keyframes instead of a dense point cloud was used to represent the environment. This approach reduced the memory usage and computational requirements of the SLAM algorithm. This mapping algorithm also featured visual and loop closures to improve the accuracy of the map. Visual closures were detected by comparing the appearance of images captured by a camera, while loop closures were detected by comparing poses of the keyframes. Detailed instruction for running RTAB-Map in ROS can be found in <a href="#appendix-c-rtab-map-in-ros">Appendix C</a>.</p>
 
 <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/l8Z8xgZt3Mc?si=2fxemMPZhNJ0YUig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe><strong>Running RTAB-Map on Rviz.</strong></p>
 
@@ -356,7 +55,7 @@
 
 <p style="text-align: center;"><img src="/assets/projects/ORB-SLAM3-trajectory.png" width="400" height="400" /><strong><br />Trajectory generated from ORB-SLAM 3.</strong></p>
 
-<p>In order to run the ORB-SLAM 3 pacakge on ROS, some dependent packaged such as <code class="language-plaintext highlighter-rouge">Open CV</code>, <code class="language-plaintext highlighter-rouge">Pangolin</code>, and <code class="language-plaintext highlighter-rouge">Egien</code> had to be installed as well. Using the stereo camera data, the trajectory of the cart was acquired as above. During the SLAM operation, the number of the ORB features parameter was set to 1000 in its <code class="language-plaintext highlighter-rouge">yaml</code> file to achieve a better accuracy.</p>
+<p>In order to run the ORB-SLAM 3 pacakge in ROS, some dependent packaged such as <code class="language-plaintext highlighter-rouge">Open CV</code>, <code class="language-plaintext highlighter-rouge">Pangolin</code>, and <code class="language-plaintext highlighter-rouge">Egien</code> had to be installed as well. Using the stereo camera data, the trajectory of the cart was acquired as above. During the SLAM operation, the number of the ORB features parameter was set to 1000 in its <code class="language-plaintext highlighter-rouge">yaml</code> file to achieve a better accuracy.</p>
 
 <h1 id="conclusion">Conclusion</h1>
 
@@ -423,17 +122,11 @@
   </tbody>
 </table>
 
-<h1 id="future-work">Future Work</h1>
-<p>For Hector SLAM and Gmapping SLAM, a custom ROS node that provides better odometry data from the IMU could be made to localize the sensor pose more accruately since the odometry data from scan matching wasn’t working under the featureless environemnts.</p>
-
-<p>For Cartographer SLAM, its internal pose estimation function needs to be tuned to correctly match the rotation of the sensor.</p>
-
-<p>For ORB-SLAM 3, its tracking accuracy was remarkable, but loading the generated map on Rviz needs some tf transformation to accurately match the map frame with the tracking frame.</p>
-
-<p>Finally, the comparision between the algorithms could become more rigorous by adapting ground truth map of the tunnel and calculating errors.</p>
+<h1 id="future-works">Future works</h1>
 
 <h1 id="appendix-a-gmapping-slam-in-ros">Appendix A: Gmapping SLAM in ROS</h1>
-<p>The following instruction assumes pre-installation and setup of ROS Noetic on Ubuntu 20.04.5.</p>
+<p>This instruction assumes pre-installation and setup of ROS Noetic on Ubuntu 20.04.5.</p>
+
 <h3 id="installing-gmapping-slam-package">Installing Gmapping SLAM package</h3>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get update
 <span class="nb">sudo </span>apt-get <span class="nb">install </span>ros-noetic-gmapping
@@ -478,7 +171,7 @@ wstool merge <span class="nt">-t</span> src https://raw.githubusercontent.com/ca
 wstool update <span class="nt">-t</span> src
 <span class="nb">sudo </span>rosdep init
 </code></pre></div></div>
-<p>Ignore the error messages after entering <code class="language-plaintext highlighter-rouge">sudo rosdep init</code>.</p>
+<p>Ignore the error meesages after <code class="language-plaintext highlighter-rouge">sudo rosdep init</code>.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rosdep update
 rosdep <span class="nb">install</span> <span class="nt">--from-paths</span> src <span class="nt">--ignore-src</span> <span class="nt">--rosdistro</span><span class="o">=</span><span class="k">${</span><span class="nv">ROS_DISTRO</span><span class="k">}</span> <span class="nt">-y</span>
 </code></pre></div></div>
@@ -510,7 +203,7 @@ catkin_make_isolated <span class="nt">--install</span> <span class="nt">--use-ni
 <h1 id="appendix-c-rtab-map-in-ros">Appendix C: RTAB-Map in ROS</h1>
 
 <h3 id="rviz-setup">Rviz Setup</h3>
-<p>In order to visualize the point cloud map on Rviz, the following settings are required.</p>
+<p>In order to visualize the point cloud map in Rviz, the following settings are required.</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>roscore
 </code></pre></div></div>
 <p>Open another terminal and follow the setup for <code class="language-plaintext highlighter-rouge">LaserScan</code>.</p>
@@ -533,90 +226,8 @@ catkin_make_isolated <span class="nt">--install</span> <span class="nt">--use-ni
 </span>rosbag play <span class="nt">--clock</span> tunnel.bag
 </code></pre></div></div>
 
-        
-      </section>
-
-      <footer class="page__meta">
-        
-        
-
-
-      </footer>
-
-      
-
-      
-  <nav class="pagination">
-    
-      <a href="#" class="pagination--pager disabled">Previous</a>
-    
-    
-      <a href="/projects/vehicle-detection/" class="pagination--pager" title="Exploration of Various Object Detection Algorithms
-">Next</a>
-    
-  </nav>
-
-    </div>
-
-    
-  </article>
-
-  
-  
-</div>
-    </div>
-
-    
-
-    <div id="footer" class="page__footer">
-      <footer>
-        <!-- start custom footer snippets -->
-
-<!-- end custom footer snippets -->
-        <!-- <div class="page__footer-follow">
-  <ul class="social-icons">
-    
-      <li><strong>Follow:</strong></li>
-    
-
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
-    
-  </ul>
-</div> -->
-
-<div class="page__footer-copyright">&copy; 2023 Tae Yang. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
-
-      </footer>
-    </div>
-
-    
-  <script src="/assets/js/main.min.js"></script>
-
-
-
-
-
-
-
-
-
-
-  </body>
-</html>
+<p><br />
+more accurate odometry data using IMU
+more advanced sensor fusion algorithm using all sensor data
+better comparison analysis with a ground truth</p>
+:ET

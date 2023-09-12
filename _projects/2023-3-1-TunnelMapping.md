@@ -9,6 +9,8 @@ location:
 classes: wide
 excerpt: "Created a map of school tunnel using various SLAM algorithms on sensor data collected by a LiDAR, Cameras, and IMU"
 ---
+Some of the content in this page is based on the following report: 
+<a style="text-decoration: none;" href="/assets/projects/Final Report EEECE5554.pdf" target="_blank">Report <i class="fa fa-file"></i></a>
 
 # Introduction
 
@@ -45,7 +47,7 @@ Additional ROS node was required to provide accurate pose data to the Gmapping S
 The resulting map presented the same issue as Hector SLAM. When there were no distinctive differences between consecutive laser scan messages, the cart was assumed to stationary. Therefore, some tunnel areas were generated on top of the wrong locations and the entire map ended up having several overlapping areas.
 
 # Cartographer SLAM
-Cartographer SLAM used a combitionation of LiDAR and IMU data to construct 2D or 3D map of the environment while simultaneously estimating poses of the sensors. Detailed instruction for running the Cartographer SLAM node in ROS can be found in [Appendix B](#appendix-b-cartographer-slam-in-ros).
+Cartographer SLAM used a combitionation of LiDAR and IMU data to construct 2D or 3D map of the environment while simultaneously estimating poses of the sensors. Detailed instruction for running the Cartographer SLAM node on ROS can be found in [Appendix B](#appendix-b-cartographer-slam-in-ros).
 
 <p style="text-align: center;"><img src="/assets/projects/Cartographer-SLAM.png" width="300" height="300" /><strong><br />Map generated from Cartographer SLAM.</strong></p>
 
@@ -54,7 +56,7 @@ Since the IMU data were used, the long and straight sections of the tunnel were 
 # RTAB-Map
 RTAB-Map (Real-Time Appearance-Based Mapping) provided an open-source Graph-Based SLAM library. It was designed to build 3D maps of environments using different sensors such as a RGB-D camera, stereo camera, and LiDAR sensor. For this experiment, the Realsense D435i camera data were used since RTAB-Map had been fully verified with the same type of cameras.
 
-In this mapping algorithm, a keyframe-based approach was applied for mapping which meant a set of keyframes instead of a dense point cloud was used to represent the environment. This approach reduced the memory usage and computational requirements of the SLAM algorithm. This mapping algorithm also featured visual and loop closures to improve the accuracy of the map. Visual closures were detected by comparing the appearance of images captured by a camera, while loop closures were detected by comparing poses of the keyframes. Detailed instruction for running RTAB-Map in ROS can be found in [Appendix C](#appendix-c-rtab-map-in-ros).
+In this mapping algorithm, a keyframe-based approach was applied for mapping which meant a set of keyframes instead of a dense point cloud was used to represent the environment. This approach reduced the memory usage and computational requirements of the SLAM algorithm. This mapping algorithm also featured visual and loop closures to improve the accuracy of the map. Visual closures were detected by comparing the appearance of images captured by a camera, while loop closures were detected by comparing poses of the keyframes. Detailed instruction for running RTAB-Map on ROS can be found in [Appendix C](#appendix-c-rtab-map-in-ros).
 
 <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/l8Z8xgZt3Mc?si=2fxemMPZhNJ0YUig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><strong>Running RTAB-Map on Rviz.</strong></p>
 
@@ -63,10 +65,35 @@ In this mapping algorithm, a keyframe-based approach was applied for mapping whi
 The point cloud map showed a very accurate map of the tunnel providing visual information such as a vending machine and elevator as well. There was a slight deviation in the top right corner of the map where the cart made a 180 degree turn. However, RTAB-Map instantly corrected the drift with visual closure. 
 
 # ORB-SLAM 3
+The ORB-SLAM 3 system was based on the feature-based ORB descriptor and the probablistic mapping approach. Additionally, it provided loop closure detection and semantic segmentation component that identified and categorized objects within the environment.
+
+<p style="text-align: center;"><img src="/assets/projects/ORB-SLAM3-trajectory.png" width="400" height="400" /><strong><br />Trajectory generated from ORB-SLAM 3.</strong></p>
+
+In order to run the ORB-SLAM 3 pacakge on ROS, some dependent packaged such as `Open CV`, `Pangolin`, and `Egien` had to be installed as well. Using the stereo camera data, the trajectory of the cart was acquired as above. During the SLAM operation, the number of the ORB features parameter was set to 1000 in its `yaml` file to achieve a better accuracy. 
+
+# Conclusion
+
+<p style="text-align: center;"><strong>Comparison between the SLAM algorithms used for tunnel mapping.<br /></strong></p>
+
+| SLAM | Sensors | Map type | Performance | Classification | Based on | Odometry required |
+| --- | --- | --- | --- | --- | --- | --- |
+| Hector SLAM | 2D Lidar | Grid | Bad | Kalman filter | EKF | No |
+| Gmapping SLAM | 2D Lidar | Grid | Bad | Particle filter | Fast SLAM | Yes |
+| Cartographer SLAM | 2D Lidar/IMU | Grid | Bad | Optimization based | Graph SLAM | Yes |
+| RTAB-Map | RGB-D camera | Grid/Point cloud | Good | Optimization based | Graph SLAM | No |
+| ORB-SLAM 3 | Stereo camera | Trajectory | Good | Optimization based | Graph SLAM | No |
+
+# Future Work
+For Hector SLAM and Gmapping SLAM, a custom ROS node that provides better odometry data from the IMU could be made to localize the sensor pose more accruately since the odometry data from scan matching wasn't working under the featureless environemnts.
+
+For Cartographer SLAM, its internal pose estimation function needs to be tuned to correctly match the rotation of the sensor.
+
+For ORB-SLAM 3, its tracking accuracy was remarkable, but loading the generated map on Rviz needs some tf transformation to accurately match the map frame with the tracking frame.
+
+Finally, the comparision between the algorithms could become more rigorous by adapting ground truth map of the tunnel and calculating errors.
 
 # Appendix A: Gmapping SLAM in ROS
-This instruction assumes pre-installation and setup of ROS Noetic on Ubuntu 20.04.5.
-
+The following instruction assumes pre-installation and setup of ROS Noetic on Ubuntu 20.04.5.
 ### Installing Gmapping SLAM package
 ```bash
 sudo apt-get update
@@ -119,7 +146,7 @@ wstool merge -t src https://raw.githubusercontent.com/cartographer-project/carto
 wstool update -t src
 sudo rosdep init
 ```
-Ignore the error meesages after `sudo rosdep init`.
+Ignore the error messages after entering `sudo rosdep init`.
 ```bash
 rosdep update
 rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y
@@ -157,7 +184,7 @@ roslaunch cartographer_ros demo_my_robot.launch bag_filename:=/home/tyang/tunnel
 # Appendix C: RTAB-Map in ROS
 
 ### Rviz Setup
-In order to visualize the point cloud map in Rviz, the following settings are required.
+In order to visualize the point cloud map on Rviz, the following settings are required.
 ```bash
 roscore
 ```
@@ -184,11 +211,3 @@ Open another terminal.
 rosparam set use_sim_time true
 rosbag play --clock tunnel.bag
 ```
-
-
-
-
-<br />
-more accurate odometry data using IMU
-more advanced sensor fusion algorithm using all sensor data
-better comparison analysis with a ground truth

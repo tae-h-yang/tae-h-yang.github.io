@@ -96,7 +96,7 @@ var store = [{
         "teaser": null
       },{
         "title": "School Tunnel Mapping",
-        "excerpt":"Introduction Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. Data of the school tunnel were collected by a LiDAR, Cameras, and IMU. The sensor data were stored as a rosbag format to test the algorithms individually...","categories": [],
+        "excerpt":"Some of the content in this page is based on the following report: Report Introduction Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. Data of the school tunnel were collected by a LiDAR, Cameras, and IMU....","categories": [],
         "tags": [],
         "url": "/projects/tunnel-mapping/",
         "teaser": null

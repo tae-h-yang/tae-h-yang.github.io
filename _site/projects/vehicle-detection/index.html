@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Exploration of Various Object Detection Algorithms - Tae Yang</title>
-<meta name="description" content="Performed">
+<!-- begin _includes/seo.html --><title>Multiple Vehicle Detection Utilizing Deep Learning Algorithms - Tae Yang</title>
+<meta name="description" content="Trained and tested deep learning based object detection models, RetinaNet and YOLOv5, on an on-road vehicle dataset and their performance was investigated.">
 
 
   <meta name="author" content="Tae Yang">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Tae Yang">
-<meta property="og:title" content="Exploration of Various Object Detection Algorithms">
+<meta property="og:title" content="Multiple Vehicle Detection Utilizing Deep Learning Algorithms">
 <meta property="og:url" content="http://localhost:4000/projects/vehicle-detection/">
 
 
-  <meta property="og:description" content="Performed">
+  <meta property="og:description" content="Trained and tested deep learning based object detection models, RetinaNet and YOLOv5, on an on-road vehicle dataset and their performance was investigated.">
 
 
 
@@ -276,15 +276,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Exploration of Various Object Detection Algorithms">
-    <meta itemprop="description" content="Performed">
+    <meta itemprop="headline" content="Multiple Vehicle Detection Utilizing Deep Learning Algorithms">
+    <meta itemprop="description" content="Trained and tested deep learning based object detection models, RetinaNet and YOLOv5, on an on-road vehicle dataset and their performance was investigated.">
     <meta itemprop="datePublished" content="May 01, 2023">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">Exploration of Various Object Detection Algorithms
+          <h1 class="page__title" itemprop="headline">Multiple Vehicle Detection Utilizing Deep Learning Algorithms
 </h1>
           
         
@@ -296,7 +296,29 @@
       
 
       <section class="page__content" itemprop="text">
-        <p><strong>Abstract</strong>:</p>
+        <p>Some of the content in this page is based on the following report: 
+<a style="text-decoration: none;" href="/assets/projects/vehicle-detection/ML for Computer Vision EECE 5644 Final Report.pdf" target="_blank">Report <i class="fa fa-file"></i></a></p>
+
+<h1 id="introduction">Introduction</h1>
+<p>The principle and trend of deep learning based object detection models were reserached. Between the several models, two (RetinaNet and YOLOv5) were selected to be tested. In order to investigate the application of object detection in practice, a preprocessed on-road vehicle dataset was prepared. The dataset provided location and vehicle information of vehicle objects in each image. Accordingly, the object detection models were trained, validated, and tested. The resulting performace of each model was analyzed and presented at the end.</p>
+
+<h1 id="overview-of-object-detection">Overview of Object Detection</h1>
+<p>The task of object detection was to identify and localize objects within digital images or video frames which were basically a sequence of digital images. In order to detect multiple objects in one image or video frame, a training dataset had to provide both classification and localization information. Then, a object detection model trained with the dataset could properly detect where and what they were.</p>
+
+<p>Object localization could be divided into two steps <a href="#1">[1]</a>. The first step was to generate a set of potential object proposals or candidate bounding boxes through a region proposal network (RPN). The proposals acted as potential regions of interest (ROIs) that might contain objects. In the next step, bounding box coordinates of the proposals were refined to precisely fit the objects. It was achieved by bounding box regression. The model learned to predict adjustments or offsets to the candidate bounding box coordinates, adjusting their position, size, and aspect ratio.</p>
+
+<p>Subsequently, the refined object proposals were fed into a classification network to assign a label or category to each object. The classfication network extracted meaningful features in the objects and calculated the highest probability of being mapped to one of the predefined classes.</p>
+
+<h1 id="trend-of-object-detection">Trend of Object Detection</h1>
+
+<p style="text-align: center;"><img src="/assets/projects/vehicle-detection/Object-Detection-Trend.png" width="800" height="500" /><strong><br />Fig. 1: Trend of deep learning based object detection algorithms <a href="#2">[2]</a>.</strong></p>
+
+<p>Since 2012, various object detection algorithms had been developed as in Fig. 1. Main purposes of them was to improve accuracy, speed, real-time performance, and the ability to detect object at various scales <a href="#2">[2]</a>.</p>
+
+<h1 id="references">References</h1>
+<p><a name="1"></a>[1] R. Shanmugamani, “Deep Learning for Computer Vision,” <em>Packt Publishing</em>, 2018.<br />
+<a name="2"></a>[2] R. Sagar, “How the deep learning approach for object detection evolved over the years,” <em>Analyticsindiamag.com</em>, https://analyticsindiamag.com/how-the-deep-learning-approach-for-object-detection-evolved-over-the-years/ (accessed Jun. 20, 2023).</p>
+
 
         
       </section>

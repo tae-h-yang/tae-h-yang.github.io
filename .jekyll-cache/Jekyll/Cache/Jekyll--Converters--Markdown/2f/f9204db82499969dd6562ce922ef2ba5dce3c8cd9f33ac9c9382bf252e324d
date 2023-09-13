@@ -1,0 +1,22 @@
+I"�<p>Some of the content in this page is based on the following report: 
+<a style="text-decoration: none;" href="/assets/projects/vehicle-detection/ML for Computer Vision EECE 5644 Final Report.pdf" target="_blank">Report <i class="fa fa-file"></i></a></p>
+
+<h1 id="introduction">Introduction</h1>
+<p>The principle and trend of deep learning based object detection models were reserached. Between the several models, two (RetinaNet and YOLOv5) were selected to be tested. In order to investigate the application of object detection in practice, a preprocessed on-road vehicle dataset was prepared. The dataset provided location and vehicle information of vehicle objects in each image. Accordingly, the object detection models were trained, validated, and tested. The resulting performace of each model was analyzed and presented at the end.</p>
+
+<h1 id="overview-of-object-detection">Overview of Object Detection</h1>
+<p>The task of object detection was to identify and localize objects within digital images or video frames which were basically a sequence of digital images. In order to detect multiple objects in one image or video frame, a training dataset had to provide both classification and localization information. Then, a object detection model trained with the dataset could properly detect where and what they were.</p>
+
+<p>Object localization could be divided into two steps <a href="#1">[1]</a>. The first step was to generate a set of potential object proposals or candidate bounding boxes through a region proposal network (RPN). The proposals acted as potential regions of interest (ROIs) that might contain objects. In the next step, bounding box coordinates of the proposals were refined to precisely fit the objects. It was achieved by bounding box regression. The model learned to predict adjustments or offsets to the candidate bounding box coordinates, adjusting their position, size, and aspect ratio.</p>
+
+<p>Subsequently, the refined object proposals were fed into a classification network to assign a label or category to each object. The classfication network extracted meaningful features in the objects and calculated the highest probability of being mapped to one of the predefined classes.</p>
+
+<h1 id="trend-of-object-detection">Trend of Object Detection</h1>
+
+<p style="text-align: center;"><img src="/assets/projects/vehicle-detection/Object-Detection-Trend.png" width="1000" height="500" /><strong><br />Fig. 1: Trend of deep learning based object detection algorithms <a href="#2">[2]</a>.</strong></p>
+
+<h1 id="references">References</h1>
+<p><a name="1"></a>[1] R. Shanmugamani, “Deep Learning for Computer Vision,” <em>Packt Publishing</em>, 2018.<br />
+<a name="2"></a>[2] R. Sagar, “How the deep learning approach for object detection evolved over the years,” <em>Analyticsindiamag.com</em>, https://analyticsindiamag.com/how-the-deep-learning-approach-for-object-detection-evolved-over-the-years/ (accessed Jun. 20, 2023).</p>
+
+:ET

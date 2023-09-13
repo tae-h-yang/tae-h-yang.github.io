@@ -101,8 +101,8 @@ var store = [{
         "url": "/projects/tunnel-mapping/",
         "teaser": null
       },{
-        "title": "Exploration of Various Object Detection Algorithms",
-        "excerpt":"Abstract:  ","categories": [],
+        "title": "Multiple Vehicle Detection Utilizing Deep Learning Algorithms",
+        "excerpt":"Some of the content in this page is based on the following report: Report Introduction The principle and trend of deep learning based object detection models were reserached. Between the several models, two (RetinaNet and YOLOv5) were selected to be tested. In order to investigate the application of object detection...","categories": [],
         "tags": [],
         "url": "/projects/vehicle-detection/",
         "teaser": null

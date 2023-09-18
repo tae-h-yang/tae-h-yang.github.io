@@ -96,13 +96,13 @@ var store = [{
         "teaser": null
       },{
         "title": "School Tunnel Mapping",
-        "excerpt":"Some of the content in this page is based on the following report: Report Introduction Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. Data of the school tunnel were collected by a LiDAR, Cameras, and IMU....","categories": [],
+        "excerpt":"Some of the contents in this page is based on the following resource: Report Introduction Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. Data of the school tunnel were collected by a LiDAR, Cameras, and IMU....","categories": [],
         "tags": [],
         "url": "/projects/tunnel-mapping/",
         "teaser": null
       },{
         "title": "Multiple Vehicle Detection Utilizing Deep Learning Algorithms",
-        "excerpt":"Some of the content in this page is based on the following report: Report Introduction The principle and trend of deep learning based object detection models were reserached. Between the several models, two (RetinaNet and YOLOv5) were selected to be tested. In order to investigate the application of object detection...","categories": [],
+        "excerpt":"Some of the contents in this page is based on the following resources: Report Dataset Code Introduction The principle and trend of deep learning based object detection models were reserached. Between the several models, two (RetinaNet and YOLOv5) were selected to be tested. In order to investigate the application of...","categories": [],
         "tags": [],
         "url": "/projects/vehicle-detection/",
         "teaser": null

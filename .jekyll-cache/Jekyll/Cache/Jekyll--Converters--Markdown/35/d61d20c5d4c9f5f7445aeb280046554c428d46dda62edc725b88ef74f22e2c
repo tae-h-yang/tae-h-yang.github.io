@@ -1,15 +1,0 @@
-I"<p>Some of the content in this page is based on the following report: 
-<a style="text-decoration: none;" href="/assets/projects/vehicle-detection/ML for Computer Vision EECE 5644 Final Report.pdf" target="_blank">Report <i class="fa fa-file"></i></a></p>
-
-<h1 id="introduction">Introduction</h1>
-<p>The principle and trend of object detection models were reserached. Between the several models, two (RetinaNet and YOLOv5) were selected to be tested. In order to investigate the application of object detection in practice, a preprocessed on-road vehicle dataset was prepared. The dataset provided location and vehicle information of vehicle objects in each image. Accordingly, the object detection models were trained, validated, and tested. The resulting performace of each model was analyzed and presented at the end.</p>
-
-<h1 id="overview-of-object-detection">Overview of Object Detection</h1>
-<p>The task of object detection was to identify and localize objects within digital images or video frames which were basically a sequence of digital images. In order to detect multiple objects in one image or video frame, a training dataset had to provide both classification and localization information. Then, a object detection model trained with the dataset could properly detect where and what they were.</p>
-
-<p>Object localization could be divided into two steps <a href="#1">[1]</a></p>
-
-<h1 id="references">References</h1>
-<p><a name="1"></a>[1] R. Shanmugamani, “Deep Learning for Computer Vision,” <em>Packt Publishing</em>, 2018</p>
-
-:ET

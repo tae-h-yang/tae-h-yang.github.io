@@ -101,8 +101,9 @@ The main performance indicators were mAP (mean Average Precision) and inference 
 # Future Work
 In order to resolve the overfitting issue with RetinaNet, different training parameters can be tried and the dataset should be reviewed to see if there is any class imbalance. Additionally, several other stratagies such as early stopping, pruning, regularization, and ensebmling could be tried.
 
-Faster-RCNN
-Benchmark result
+<p style="text-align: center;"><img src="/assets/projects/vehicle-detection/Object-Detector-Comparison.png" width="500" height="500" /><strong><br />Fig. 11: Comparision between various object detectors that are commonly used in Autonomous Driving <a href="#3">[3]</a>.</strong></p>
+
+The performance comparision in Fig. 11 was used as a reference and trying each of the object detectors was desired to provide a thorough comparision especially depending on their architectures. For single-stage detectors, RetinaNet and YOLOv5 were selected and for two-stage detectors, Fast R-CNN and Faster R-CNN were selected. However, given the limited computing resource, it was taking too long time to train the two-stage models on Google Colab. The estimated training time was about 8 hours with 50 epochs and Google Colab was disconnected from time to time before finishing its task. Therefore, the two models can be tested with better GPU resources and reducing the testing image size and checking the right version of the required librarie such as `tensorflow` can be attempted.
 
 # References
 <a name="1"></a>[1] R. Shanmugamani, “Deep Learning for Computer Vision,” *Packt Publishing*, 2018.<br />

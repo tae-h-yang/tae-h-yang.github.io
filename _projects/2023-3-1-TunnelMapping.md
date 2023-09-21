@@ -7,7 +7,7 @@ permalink: /projects/tunnel-mapping/
 period: Mar 2023 - May 2023
 location: 
 classes: wide
-excerpt: "Created a map of school tunnel using various SLAM algorithms on sensor data collected by a LiDAR, Cameras, and IMU"
+excerpt: "Created a map of school tunnel using various SLAM algorithms on sensor data collected by a LiDAR, Cameras, and IMU."
 ---
 Some of the contents in this page is based on the following resource:<br /> 
 <a style="text-decoration: none;" href="/assets/projects/Final Report EEECE5554.pdf" target="_blank">Report <i class="fa fa-file"></i></a>

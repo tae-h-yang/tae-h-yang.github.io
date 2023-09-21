@@ -95,8 +95,26 @@ var store = [{
         "url": "/first-post/",
         "teaser": null
       },{
+        "title": "Wii-mote Controlled Robot Arm",
+        "excerpt":"Introduction  ","categories": [],
+        "tags": [],
+        "url": "/projects/remote-robot-arm/",
+        "teaser": null
+      },{
+        "title": "Flower-care Monitor System",
+        "excerpt":"Introduction  ","categories": [],
+        "tags": [],
+        "url": "/projects/flower-care-sensor/",
+        "teaser": null
+      },{
+        "title": "Wearable Fitness Motion Tracker",
+        "excerpt":"Introduction  ","categories": [],
+        "tags": [],
+        "url": "/projects/wearable-motion-tracker/",
+        "teaser": null
+      },{
         "title": "Autonomous Reconnaissance Robot",
-        "excerpt":"Some of the contents in this page is based on the following resource: Report Introduction Data Collection Fig. 1: Route and map of school tunnel. The school tunnel at Northeastern University looked like the map in Fig. 1. The red line in the map indicated where the sensor data were...","categories": [],
+        "excerpt":"Some of the contents in this page is based on the following resource:   Report    Introduction  ","categories": [],
         "tags": [],
         "url": "/projects/recon-robot/",
         "teaser": null
@@ -111,6 +129,12 @@ var store = [{
         "excerpt":"Some of the contents in this page is based on the following resources: Report Dataset Code Introduction The principle and trend of deep learning based object detection models were reserached. Between the several models, two (RetinaNet and YOLOv5) were selected to be tested. In order to investigate the application of...","categories": [],
         "tags": [],
         "url": "/projects/vehicle-detection/",
+        "teaser": null
+      },{
+        "title": "Image to Trajectory Converter",
+        "excerpt":"Introduction  ","categories": [],
+        "tags": [],
+        "url": "/projects/trajectory-converter/",
         "teaser": null
       },{
         "title": "Introduction to Visual SLAM From Theory to Practice",

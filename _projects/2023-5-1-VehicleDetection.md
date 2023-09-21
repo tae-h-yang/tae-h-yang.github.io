@@ -56,7 +56,7 @@ RetinaNet is famous for its ability to address a class imbalance which refers to
 
 The architecture of RetinaNet has a rich multi-scale feature pyramid from an input image and performs prediction at each scale as in Fig. 4. With such architecture, it can be semantically strong at all scales.
 
-For the RetinaNet model training, Pytorch implementation of RetinaNet and Pascal VOC dataset format were used. In order to utilize sufficient computing resources, training and testing codes were run on Google Colab and can be found in this <a style="text-decoration: none;" href="https://github.com/tae-h-yang/ml-vehicle-detection/tree/main/retinanet/pytorch_retinanet" target="_blank">repo.</a><br />
+For the RetinaNet model training, Pytorch implementation of RetinaNet and Pascal VOC dataset format were used. In order to utilize sufficient computing resources, training and testing codes were run on Google Colab and can be found in this <a style="text-decoration: none;" href="https://github.com/tae-h-yang/ml-vehicle-detection/tree/main/retinanet/pytorch-retinanet" target="_blank">repo.</a><br />
 
 <p style="text-align: center;"><img src="/assets/projects/vehicle-detection/Pascal-VOC-1.png" width="300" height="300" /><img src="/assets/projects/vehicle-detection/Pascal-VOC-2.png" width="430" height="430" /><strong><br />Fig. 5: Example of Pascal VOC format and its bounding box <a href="#3">[3]</a>.</strong></p>
 
@@ -110,4 +110,4 @@ The performance comparision in Fig. 11 was used as a reference and trying each o
 <a name="2"></a>[2] R. Sagar, “How the deep learning approach for object detection evolved over the years,” *Analyticsindiamag.com*, https://analyticsindiamag.com/how-the-deep-learning-approach-for-object-detection-evolved-over-the-years/ (accessed Jun. 20, 2023).<br />
 <a name="3"></a>[3] A. Balasubramaniam and S. Pasricha, “Object Detection in Autonomous Vehicles: Status and Open Challenges,” *arXiv preprint arXiv:2201.07706*.<br />
 <a name="4"></a>[4] A. Karaka, “Object Detection with RetinaNet,” *wanda.ai*, https://wandb.ai/site/articles/object-detection-with-retinanet (accessed Jun. 22, 2023).<br />
-<a name="5"></a>[5] A. Bochkovskiy, "YOLOv4: Optimal Speed and Accuracy of Object Detection,” *arXiv preprint arXiv:2004.10934v1*..<br />
+<a name="5"></a>[5] A. Bochkovskiy, "YOLOv4: Optimal Speed and Accuracy of Object Detection,” *arXiv preprint arXiv:2004.10934v1*.<br />

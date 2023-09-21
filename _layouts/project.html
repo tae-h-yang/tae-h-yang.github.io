@@ -34,6 +34,8 @@ layout: default
           <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>Date:</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
         {% elsif page.period %}
           <p class="page__meta">{{ page.period }}</p>
+        {% elsif page.authors %}
+          <p class="page__meta">by {{ page.authors }}</p>
         {% endif %}
           {% if page.type %}<p>{{page.type}} at {{ page.venue }},  {{page.location}}</p> {% endif %}
 

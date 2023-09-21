@@ -95,6 +95,12 @@ var store = [{
         "url": "/first-post/",
         "teaser": null
       },{
+        "title": "Autonomous Reconnaissance Robot",
+        "excerpt":"Some of the contents in this page is based on the following resource: Report Introduction Data Collection Fig. 1: Route and map of school tunnel. The school tunnel at Northeastern University looked like the map in Fig. 1. The red line in the map indicated where the sensor data were...","categories": [],
+        "tags": [],
+        "url": "/projects/recon-robot/",
+        "teaser": null
+      },{
         "title": "School Tunnel Mapping",
         "excerpt":"Some of the contents in this page is based on the following resource: Report Introduction Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. Data of the school tunnel were collected by a LiDAR, Cameras, and IMU....","categories": [],
         "tags": [],
@@ -105,5 +111,11 @@ var store = [{
         "excerpt":"Some of the contents in this page is based on the following resources: Report Dataset Code Introduction The principle and trend of deep learning based object detection models were reserached. Between the several models, two (RetinaNet and YOLOv5) were selected to be tested. In order to investigate the application of...","categories": [],
         "tags": [],
         "url": "/projects/vehicle-detection/",
+        "teaser": null
+      },{
+        "title": "Introduction to Visual SLAM From Theory to Practice",
+        "excerpt":"Textbook   Code     Practice codes were run on Ubuntu 20.04.5.    ","categories": [],
+        "tags": [],
+        "url": "/studies/intro-to-vslam/",
         "teaser": null
       },]

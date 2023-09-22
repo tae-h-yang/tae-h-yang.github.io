@@ -326,7 +326,7 @@ defaults:
       path: ""
       type: work-experiences
     values:
-      layout: project
+      layout: work-experience
       author_profile: true
   # _activities
   - scope:

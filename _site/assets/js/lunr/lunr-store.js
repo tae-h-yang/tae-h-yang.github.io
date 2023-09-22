@@ -142,4 +142,40 @@ var store = [{
         "tags": [],
         "url": "/studies/intro-to-vslam/",
         "teaser": null
-      },]
+      },{
+        "title": "Electrical Engineering Co-op - Werfen",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/work-experiences/2020-7-1-Werfen/",
+        "teaser": null
+      },{
+        "title": "Communication Equipment Maintenance - ROK Army",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/work-experiences/2021-1-1-Army/",
+        "teaser": null
+      },{
+        "title": "Embedded Design TA - Northeastern University",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/work-experiences/2022-9-1-Embedded-Design-TA/",
+        "teaser": null
+      },{
+        "title": "Silicon Synapse Lab RA - Northeastern University",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/work-experiences/2022-12-1-SS-RA/",
+        "teaser": null
+      },{
+        "title": "Computing Fundamentals TA - Northeastern University",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/work-experiences/2023-1-1-Computing-Fundamentals-TA/",
+        "teaser": null
+      },{
+        "title": "Hardware Automation Engineering Intern - iRobot",
+        "excerpt":"  ","categories": [],
+        "tags": [],
+        "url": "/work-experiences/hardware-automation-engineering-intern-iRobot/",
+        "teaser": null
+      }]

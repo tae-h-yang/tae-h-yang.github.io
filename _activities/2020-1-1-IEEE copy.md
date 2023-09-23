@@ -1,0 +1,13 @@
+---
+title: "IEEE"
+collection: activities
+type: club
+# permalink: /work-experiences/computing-fundamentals-ta-neu/ 
+role: Member
+period: Jan 2020 - Present
+authors: 
+bookcover: 
+location: 
+classes: wide
+description: <p><ul><li>Attened weekly chapter meetings with guest speakers from various engineering fields.</li><li>Attended workshops covering antenna, schematic, PCB, and embedded design, soldering, 3D printing, and programming languages.</ul></p>
+---

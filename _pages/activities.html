@@ -6,7 +6,51 @@ author_profile: true
 ---
 
 {% include base_path %}
-    
+
+<header>
+  <h2>Northeastern University Clubs</h2>
+</header>
+
+<hr>
+
 {% for post in site.activities reversed %}
-  {% include archive-single-project.html %}
+  {% if post.type == "club" %}
+    {% include archive-single-work-experiences.html %}
+  {% endif %}
+{% endfor %}
+    
+<header>
+  <h2>Honor Societies</h2>
+</header>
+
+<hr>
+
+{% for post in site.activities reversed %}
+  {% if post.type == "honor" %}
+    {% include archive-single-work-experiences.html %}
+  {% endif %}
+{% endfor %}
+
+<header>
+  <h2>Volunteer Experience</h2>
+</header>
+
+<hr>
+
+{% for post in site.activities reversed %}
+  {% if post.type == "volunteer" %}
+    {% include archive-single-work-experiences.html %}
+  {% endif %}
+{% endfor %}
+
+<header>
+  <h2>Interests</h2>
+</header>
+
+<hr>
+
+{% for post in site.activities reversed %}
+  {% if post.type == "interest" %}
+    {% include archive-single-work-experiences.html %}
+  {% endif %}
 {% endfor %}

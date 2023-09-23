@@ -333,7 +333,7 @@ defaults:
       path: ""
       type: activities
     values:
-      layout: project
+      layout: work-experience
       author_profile: true
 
 # Collections

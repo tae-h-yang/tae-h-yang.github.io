@@ -1,4 +1,46 @@
 var store = [{
+        "title": "Susan Bailis Assisted Living Community Service",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/activities/2017-9-1-Susan-Bailis-Volunteer/",
+        "teaser": null
+      },{
+        "title": "Baseball",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/activities/2019-1-1-Baseball/",
+        "teaser": null
+      },{
+        "title": "Guitar Playing",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/activities/2020-1-1-Guitar/",
+        "teaser": null
+      },{
+        "title": "IEEE",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/activities/2020-1-1-IEEE%20copy/",
+        "teaser": null
+      },{
+        "title": "TBP: Tau Beta Pi (Engineering Honor Society)",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/activities/2020-11-1-TBP/",
+        "teaser": null
+      },{
+        "title": "HKN: Eta Kappa Nu (Electrical and Computer Engineering Honor Society)",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/activities/2023-2-1-HKN/",
+        "teaser": null
+      },{
+        "title": "KCSC (Korean Computer Science Community)",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/activities/2023-9-1-KCSC/",
+        "teaser": null
+      },{
         "title": "MATH2341 Differential Equations and Linear Algebra for Engineering",
         "excerpt":"Description: Studied ordinary differential equations, their applications, and techniques for solving them including numerical methods (using MATLAB), Laplace transforms, and linear algebra. Topics included linear and nonlinear first- and second-order equations and applications included electrical and mechanical systems, forced oscillation, and resonance. Topics from linear algebra, such as matrices, row-reduction,...","categories": [],
         "tags": [],

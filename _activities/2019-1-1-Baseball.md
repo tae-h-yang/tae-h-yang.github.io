@@ -1,0 +1,12 @@
+---
+title: "Baseball"
+collection: activities
+type: interest
+# permalink: /work-experiences/computing-fundamentals-ta-neu/ 
+# role: Founder
+# period: Sep 2023 - Present
+authors: 
+bookcover: 
+classes: wide
+# description: <p><ul><li>.</li><li>Assisted in cleaning and straightening community spaces.</ul></p>
+---

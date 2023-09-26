@@ -1,7 +1,7 @@
 ---
 title: "School Tunnel Mapping"
 collection: projects
-type: #"northeastern"
+type: 
 permalink: /projects/tunnel-mapping/ 
 # date: 2023-5-8
 period: Mar 2023 - May 2023

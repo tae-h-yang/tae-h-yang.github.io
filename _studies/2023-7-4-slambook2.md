@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Visual SLAM From Theory to Practice"
 collection: studies
-type: #"northeastern"
+type: textbook
 permalink: /studies/intro-to-vslam/ 
 # date: 2023-5-8
 period: 

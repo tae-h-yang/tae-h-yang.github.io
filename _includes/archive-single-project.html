@@ -36,6 +36,7 @@
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
     {% if post.semester %}<p class="page__meta">{{ post.semester}}</p>{% endif %}
+    {% if post.type %}<p class="page__meta">{{ post.type}}</p>{% endif %}
     {% if post.period %}<p class="page__meta">{{ post.period}}</p>{% endif %}
     {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>{% endif %}

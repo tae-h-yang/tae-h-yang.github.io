@@ -1,7 +1,7 @@
 ---
 title: "Autonomous Reconnaissance Robot"
 collection: projects
-type: #"northeastern"
+type: 
 permalink: /projects/recon-robot/ 
 # date: 2023-5-8
 period: Nov 2022 - Dec 2022

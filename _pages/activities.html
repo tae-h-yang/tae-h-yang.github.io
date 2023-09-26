@@ -8,6 +8,18 @@ author_profile: true
 {% include base_path %}
 
 <header>
+  <h2>Startup</h2>
+</header>
+
+<hr>
+
+{% for post in site.activities reversed %}
+  {% if post.type == "startup" %}
+    {% include archive-single-work-experiences.html %}
+  {% endif %}
+{% endfor %}
+
+<header>
   <h2>Northeastern University Clubs</h2>
 </header>
 

@@ -35,6 +35,12 @@ var store = [{
         "url": "/activities/2023-2-1-HKN/",
         "teaser": null
       },{
+        "title": "Faster Med Solutions",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/activities/2023-8-1-FMS/",
+        "teaser": null
+      },{
         "title": "KCSC (Korean Computer Science Community)",
         "excerpt":" ","categories": [],
         "tags": [],
@@ -167,16 +173,40 @@ var store = [{
         "url": "/projects/tunnel-mapping/",
         "teaser": null
       },{
+        "title": "UUV (Underwater Unmanned Vehicle) Localization",
+        "excerpt":"Introduction  ","categories": [],
+        "tags": [],
+        "url": "/projects/underwater-localization/",
+        "teaser": null
+      },{
         "title": "Multiple Vehicle Detection Utilizing Deep Learning Algorithms",
         "excerpt":"Some of the contents in this page is based on the following resources: Report Dataset Code Introduction The principle and trend of deep learning based object detection models were reserached. Between the several models, two (RetinaNet and YOLOv5) were selected to be tested. In order to investigate the application of...","categories": [],
         "tags": [],
         "url": "/projects/vehicle-detection/",
         "teaser": null
       },{
-        "title": "Image to Trajectory Converter",
+        "title": "Image to Robot Trajectory Converter",
         "excerpt":"Introduction  ","categories": [],
         "tags": [],
         "url": "/projects/trajectory-converter/",
+        "teaser": null
+      },{
+        "title": "Advances in Inference and Representation for Simultaneous Localization and Mapping",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/studies/2022-8-11-Advances-for-SLAM/",
+        "teaser": null
+      },{
+        "title": "Factor Graphs for Robot Perception",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/studies/2022-8-11-Factor-Graph/",
+        "teaser": null
+      },{
+        "title": "Probabilistic Robotics",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/studies/2022-12-10-Probabilistic-Robotics/",
         "teaser": null
       },{
         "title": "Introduction to Visual SLAM From Theory to Practice",

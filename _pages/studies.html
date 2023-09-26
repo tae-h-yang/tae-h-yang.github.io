@@ -7,6 +7,26 @@ author_profile: true
 
 {% include base_path %}
     
+<header>
+  <h2>Textbooks</h2>
+</header>
+
+<hr>
+
 {% for post in site.studies reversed %}
-  {% include archive-single-study.html %}
+  {% if post.type == "textbook" %}
+    {% include archive-single-study.html %}
+  {% endif %}
+{% endfor %}
+
+<header>
+  <h2>Papers</h2>
+</header>
+
+<hr>
+
+{% for post in site.studies reversed %}
+  {% if post.type == "paper" %}
+    {% include archive-single-study.html %}
+  {% endif %}
 {% endfor %}

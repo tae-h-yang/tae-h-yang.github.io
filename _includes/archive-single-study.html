@@ -38,6 +38,9 @@
     {% if post.semester %}<p class="page__meta">{{ post.semester}}</p>{% endif %}
     {% if post.period %}<p class="page__meta">{{ post.period}}</p>{% endif %}
     {% if post.authors %}<p class="page__meta">by {{ post.authors}}</p>{% endif %}
+    {% if post.arxiv %}
+      <a style="text-decoration: none;" href="{{ post.arxiv }}" target="_blank">Paper <i class="fa fa-file"></i></a>&nbsp;&nbsp;&nbsp;
+    {% endif %}
     {% if post.bookcover %}<p class="page__meta"><img src= "{{ post.bookcover }}" width="200" height="200" /></p>{% endif %}
     {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} {% endif %}
   </article>

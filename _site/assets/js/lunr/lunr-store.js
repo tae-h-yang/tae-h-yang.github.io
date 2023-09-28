@@ -20,7 +20,7 @@ var store = [{
         "title": "IEEE",
         "excerpt":" ","categories": [],
         "tags": [],
-        "url": "/activities/2020-1-1-IEEE%20copy/",
+        "url": "/activities/2020-1-1-IEEE/",
         "teaser": null
       },{
         "title": "TBP: Tau Beta Pi (Engineering Honor Society)",
@@ -39,6 +39,12 @@ var store = [{
         "excerpt":" ","categories": [],
         "tags": [],
         "url": "/activities/2023-8-1-FMS/",
+        "teaser": null
+      },{
+        "title": "Entrepreneurs Club",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/activities/2023-9-1-Entrepreneurs-Club/",
         "teaser": null
       },{
         "title": "KCSC (Korean Computer Science Community)",
@@ -189,6 +195,12 @@ var store = [{
         "excerpt":"Introduction  ","categories": [],
         "tags": [],
         "url": "/projects/trajectory-converter/",
+        "teaser": null
+      },{
+        "title": "Hungry Hungry Roomba Competition",
+        "excerpt":"Introduction  ","categories": [],
+        "tags": [],
+        "url": "/projects/hungry-roomba/",
         "teaser": null
       },{
         "title": "Advances in Inference and Representation for Simultaneous Localization and Mapping",

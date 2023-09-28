@@ -13,7 +13,7 @@
 <lastmod>2020-01-01T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/activities/2020-1-1-IEEE%20copy/</loc>
+<loc>http://localhost:4000/activities/2020-1-1-IEEE/</loc>
 <lastmod>2020-01-01T00:00:00-05:00</lastmod>
 </url>
 <url>
@@ -27,6 +27,10 @@
 <url>
 <loc>http://localhost:4000/activities/2023-8-1-FMS/</loc>
 <lastmod>2023-08-01T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/activities/2023-9-1-Entrepreneurs-Club/</loc>
+<lastmod>2023-09-01T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/activities/2023-9-1-KCSC/</loc>
@@ -127,6 +131,10 @@
 <url>
 <loc>http://localhost:4000/projects/trajectory-converter/</loc>
 <lastmod>2023-07-10T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/projects/hungry-roomba/</loc>
+<lastmod>2023-09-24T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/studies/2022-8-11-Advances-for-SLAM/</loc>

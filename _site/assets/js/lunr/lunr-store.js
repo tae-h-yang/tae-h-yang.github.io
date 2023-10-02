@@ -260,6 +260,6 @@ var store = [{
         "title": "Hardware Automation Engineering Intern - iRobot",
         "excerpt":"  ","categories": [],
         "tags": [],
-        "url": "/work-experiences/hardware-automation-engineering-intern-iRobot/",
+        "url": "/work-experiences/2023-7-10-iRobot/",
         "teaser": null
       }]

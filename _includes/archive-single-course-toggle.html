@@ -1,0 +1,55 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+    <h2 class="archive__item-title" itemprop="headline">
+      {% if post.permalink %}
+        <a href="{{ post.permalink }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><span class="sr-only">Permalink</span></a>
+        {% else %}
+        <a href="#" onclick="toggleExcerpt(this); return false;">{{ title }}</a>
+      {% endif %}
+    </h2>
+    {% if post.semester %}<p class="page__meta">{{ post.semester}}</p>{% endif %}
+    {% if post.excerpt %}
+    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">{{ post.excerpt }}</p>
+
+      <!-- <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p> -->
+    {% endif %}
+  </article>
+</div>
+
+<style>
+    .archive__item-excerpt.hidden {
+      display: none;
+    }
+  </style>
+  
+  <script>
+    function toggleExcerpt(link) {
+      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
+      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
+    }
+  </script>

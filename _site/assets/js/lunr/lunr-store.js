@@ -221,6 +221,24 @@ var store = [{
         "url": "/studies/2022-12-10-Probabilistic-Robotics/",
         "teaser": null
       },{
+        "title": "Translating Images into Maps",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/studies/2023-1-1-ImagesToMaps/",
+        "teaser": null
+      },{
+        "title": "Unsupervised Learning of Depth and Ego-Motion from Video",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/studies/2023-1-1-UnsupervisedLearningOfDepthAndEgoMotion/",
+        "teaser": null
+      },{
+        "title": "ROS Robot Programming",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/studies/2023-5-1-RosProgramming/",
+        "teaser": null
+      },{
         "title": "Introduction to Visual SLAM From Theory to Practice",
         "excerpt":"Textbook   Code     Practice codes were run on Ubuntu 20.04.5.    ","categories": [],
         "tags": [],

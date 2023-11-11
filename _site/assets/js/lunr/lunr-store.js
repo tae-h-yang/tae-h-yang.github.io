@@ -192,15 +192,15 @@ var store = [{
         "teaser": null
       },{
         "title": "Image to Robot Drawing Trajectory Converter",
-        "excerpt":"This page is based on the following resources: Paper Code Introduction This project was a part of the robot drawing project using a differential wheeld robot for iRobot Inter Hackathon. The robot was equipped with drawing materials and its purpose was to draw objects in reference images. The images were...","categories": [],
+        "excerpt":"This page is based on the following resources: Paper Code Introduction This project was a part of the robot drawing project using a differential wheeled robot for iRobot Inter Hackathon. The robot was equipped with drawing materials and its purpose was to draw objects in reference images. The images were...","categories": [],
         "tags": [],
         "url": "/projects/trajectory-converter/",
         "teaser": null
       },{
-        "title": "Hungry Hungry Roomba Competition",
-        "excerpt":"Introduction  ","categories": [],
+        "title": "Wii-mote Controlled Differential Wheeled Robot",
+        "excerpt":"This page is based on the following resources: Documentation Code Introduction The goal of iRobot Intern Challenge was to develop a mobile robot that could collect balls and place them in a goal area. Create 3 which was an educational robot produced by iRobot was provided for the development. Create...","categories": [],
         "tags": [],
-        "url": "/projects/hungry-roomba/",
+        "url": "/projects/wiimote-create3/",
         "teaser": null
       },{
         "title": "Advances in Inference and Representation for Simultaneous Localization and Mapping",

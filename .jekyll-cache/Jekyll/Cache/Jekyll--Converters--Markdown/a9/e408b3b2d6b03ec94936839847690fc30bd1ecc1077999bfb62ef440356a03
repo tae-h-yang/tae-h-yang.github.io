@@ -1,0 +1,11 @@
+I"@<p>This page is based on the following resource:<br />
+<a style="text-decoration: none;" href="https://github.com/tae-h-yang/image-to-robot-drawing-trajectory-converter" target="_blank">Code <i class="fa fa-code"></i></a><br /></p>
+
+<h1 id="introduction">Introduction</h1>
+<p>This project was a part of the robot drawing project using a differential wheeld robot for iRobot Inter Hackathon. The robot was equipped with drawing materials and its purpose was to draw objects in reference images. The images were provided either directly from users or from the robot’s fisheye camera which required undistortion. Performing Canny Edge Detection, outlines of the objects in the images were detected and trajectories that the robot should follow while drawing or not drawing were computed connecting the outlines based on closest pixel search. If two outline pixels were far from a certain threshold distance, it was considered as non-drawing area.</p>
+
+<h1 id="test-images">Test Images</h1>
+<p style="text-align: center;"><img src="/assets/projects/trajectory-converter/fisheye_camera_image.jpg" width="300" height="300" /><img src="/assets/projects/trajectory-converter/profile2.jpg" width="430" height="430" /><strong><br />Fig. 1: Fishey camera image and profile image for testing input images.</strong></p>
+
+<h1 id="reference">Reference</h1>
+:ET

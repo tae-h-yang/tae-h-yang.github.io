@@ -9,7 +9,7 @@ location:
 classes: wide
 excerpt: "Trained and tested deep learning based object detection models, RetinaNet and YOLOv5, on an on-road vehicle dataset and their performance was investigated."
 ---
-Some of the contents in this page is based on the following resources:<br />
+This page is based on the following resources:<br />
 <a style="text-decoration: none;" href="/assets/projects/vehicle-detection/ML for Computer Vision EECE 5644 Final Report.pdf" target="_blank">Report <i class="fa fa-file"></i></a><br />
 <a style="text-decoration: none;" href="https://universe.roboflow.com/roboflow-100/vehicles-q0x2v" target="_blank">Dataset <i class="fa fa-external-link-alt"></i></a><br />
 <a style="text-decoration: none;" href="https://github.com/tae-h-yang/ml-vehicle-detection/tree/main" target="_blank">Code <i class="fa fa-code"></i></a><br />

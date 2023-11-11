@@ -174,7 +174,7 @@ var store = [{
         "teaser": null
       },{
         "title": "School Tunnel Mapping",
-        "excerpt":"Some of the contents in this page is based on the following resource: Report Introduction Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. Data of the school tunnel were collected by a LiDAR, Cameras, and IMU....","categories": [],
+        "excerpt":"This page is based on the following resource: Report Introduction Various SLAM algorithms such as Hector SLAM, Gmapping, Cartographer, RTAB-Map and ORB-SLAM 3 were explored to create a map of school tunnel. Data of the school tunnel were collected by a LiDAR, Cameras, and IMU. The sensor data were stored...","categories": [],
         "tags": [],
         "url": "/projects/tunnel-mapping/",
         "teaser": null
@@ -186,13 +186,13 @@ var store = [{
         "teaser": null
       },{
         "title": "Multiple Vehicle Detection Utilizing Deep Learning Algorithms",
-        "excerpt":"Some of the contents in this page is based on the following resources: Report Dataset Code Introduction The principle and trend of deep learning based object detection models were reserached. Between the several models, two (RetinaNet and YOLOv5) were selected to be tested. In order to investigate the application of...","categories": [],
+        "excerpt":"This page is based on the following resources: Report Dataset Code Introduction The principle and trend of deep learning based object detection models were reserached. Between the several models, two (RetinaNet and YOLOv5) were selected to be tested. In order to investigate the application of object detection in autonomous driving,...","categories": [],
         "tags": [],
         "url": "/projects/vehicle-detection/",
         "teaser": null
       },{
-        "title": "Image to Robot Trajectory Converter",
-        "excerpt":"Introduction  ","categories": [],
+        "title": "Image to Robot Drawing Trajectory Converter",
+        "excerpt":"This page is based on the following resources: Paper Code Introduction This project was a part of the robot drawing project using a differential wheeld robot for iRobot Inter Hackathon. The robot was equipped with drawing materials and its purpose was to draw objects in reference images. The images were...","categories": [],
         "tags": [],
         "url": "/projects/trajectory-converter/",
         "teaser": null

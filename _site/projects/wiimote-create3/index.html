@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Wii-mote Controlled Differential Wheeled Robot - Tae Yang</title>
-<meta name="description" content="Computer Engineering student minoring in Robotics at Northeastern University.">
+<meta name="description" content="Controlled a differential wheeled robot with a joystick by establishing bluetooth connections with the robot and joystick and mapping the joystick state to robot wheel speeds.">
 
 
   <meta name="author" content="Tae Yang">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://localhost:4000/projects/wiimote-create3/">
 
 
-  <meta property="og:description" content="Computer Engineering student minoring in Robotics at Northeastern University.">
+  <meta property="og:description" content="Controlled a differential wheeled robot with a joystick by establishing bluetooth connections with the robot and joystick and mapping the joystick state to robot wheel speeds.">
 
 
 
@@ -277,7 +277,7 @@
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Wii-mote Controlled Differential Wheeled Robot">
-    <meta itemprop="description" content="">
+    <meta itemprop="description" content="Controlled a differential wheeled robot with a joystick by establishing bluetooth connections with the robot and joystick and mapping the joystick state to robot wheel speeds.">
     <meta itemprop="datePublished" content="September 24, 2023">
     
 
@@ -307,7 +307,7 @@
 <p>Since <a style="text-decoration: none;" href="https://pypi.org/project/cwiid/" target="_blank">CWiiD</a> was an effective Python package to interface with the Wii-mote, Ubuntu 20.04 was used according to the package’s requirement. Additionally, <a style="text-decoration: none;" href="https://github.com/iRobotEducation/irobot-edu-python-sdk" target="_blank">Create 3 Python SDK</a> was intalled.</p>
 
 <h1 id="development">Development</h1>
-<p>The Wii-mote was easily connected to the computer using CWiiD’s connection function. Once the controller was connected via Bluetooth, its button and joystick states could be received in real-time. Create 3 was connected to the computer easily as well using its SDK. Once the robot was connected via Bluetooth, the robot commands could be transmitted. The joystick state had to be processed and mapped to accurate robot wheel speeds. Then, the calculated speeds were passed to the robot command and sent to the robot. Detailed procedures for establishing the bluetooth connections, reading the joystick state, calculating and sending the robot wheel speeds can be found in this
+<p>The Wii-mote was easily connected to the computer using CWiiD’s connection function. Once the controller was connected via Bluetooth, its button and joystick states could be received in real-time. Create 3 was connected to the computer easily as well using its SDK. Once the robot was connected via Bluetooth, the robot commands could be transmitted. The joystick state had to be processed and mapped to proper robot wheel speeds. Then, the calculated speeds were passed to the robot command and sent to the robot. Detailed procedures for establishing the bluetooth connections, reading the joystick state, calculating and sending the robot wheel speeds can be found in this
 <a style="text-decoration: none;" href="https://github.com/tae-h-yang/create3-with-wii-mote/blob/main/Create3WithWiiMote.py" target="_blank">repo.</a></p>
 
 <h1 id="result">Result</h1>

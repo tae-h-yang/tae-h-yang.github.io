@@ -1,8 +1,0 @@
-I"ç<p>This page is based on the following resource:<br />
-<a style="text-decoration: none;" href="https://github.com/tae-h-yang/image-to-robot-drawing-trajectory-converter" target="_blank">Code <i class="fa fa-code"></i></a><br /></p>
-
-<h1 id="introduction">Introduction</h1>
-<p>This project was a part of the robot drawing project using a differential wheeld robot for iRobot Inter Hackathon. The robot was equipped with drawing materials and its purpose was to draw objects in reference images. The images were provided either directly from users or from the robot‚Äôs fisheye camera which required undistortion.</p>
-
-<h1 id="references">References</h1>
-:ET

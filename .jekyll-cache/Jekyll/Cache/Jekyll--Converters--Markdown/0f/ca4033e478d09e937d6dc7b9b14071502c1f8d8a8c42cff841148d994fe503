@@ -1,0 +1,2 @@
+I"&<p><ul><li>Performed polynomial regression to predict medicine inventory data accurately by iterating different polynomial orders and selecting the best RMSE.</li><li>Created random medicine inventory data with different probability distributions that reflected actual inventory data to perform polynomial regression.</li><li>Developed medicine search function on the Med Finder website that displayed a list of pharmacies based on medicine availabilities and distances by querying inventory database and Mapbox API for geocoding data.</li></ul></p>
+:ET

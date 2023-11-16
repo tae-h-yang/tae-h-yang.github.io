@@ -35,16 +35,16 @@ var store = [{
         "url": "/activities/2023-2-1-HKN/",
         "teaser": null
       },{
-        "title": "Faster Med Solutions",
-        "excerpt":" ","categories": [],
+        "title": "Med Finder (Third Place Winner of Husky Startup Challenge)",
+        "excerpt":"Pitch Deck Code Introduction Med Finder provides an online medicine search platform to patients who are experiencing drug shortage. It checks medicine availability based on pharmacies’ inventory data so that the patients can find pharmacies that have their medicine. Furthermore, the inventory data are analyzed using Machine Learning and 100%...","categories": [],
         "tags": [],
-        "url": "/activities/2023-8-1-FMS/",
+        "url": "/activities/med-finder/",
         "teaser": null
       },{
         "title": "Entrepreneurs Club",
         "excerpt":" ","categories": [],
         "tags": [],
-        "url": "/activities/2023-9-1-Entrepreneurs-Club/",
+        "url": "/activities/entrepreneurs-club/",
         "teaser": null
       },{
         "title": "KCSC (Korean Computer Science Community)",

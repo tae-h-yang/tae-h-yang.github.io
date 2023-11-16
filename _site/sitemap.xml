@@ -25,11 +25,11 @@
 <lastmod>2023-02-01T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/activities/2023-8-1-FMS/</loc>
+<loc>http://localhost:4000/activities/med-finder/</loc>
 <lastmod>2023-08-01T00:00:00-04:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/activities/2023-9-1-Entrepreneurs-Club/</loc>
+<loc>http://localhost:4000/activities/entrepreneurs-club/</loc>
 <lastmod>2023-09-01T00:00:00-04:00</lastmod>
 </url>
 <url>
@@ -215,6 +215,10 @@
 <url>
 <loc>http://localhost:4000/Resume-Tae-Yang-2023.pdf</loc>
 <lastmod>2023-10-16T01:46:41-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/activities/med-finder/med-finder-pitch-deck.pdf</loc>
+<lastmod>2023-11-16T01:00:10-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/projects/Final%20Report%20EEECE5554.pdf</loc>

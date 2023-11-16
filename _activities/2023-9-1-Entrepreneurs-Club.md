@@ -2,12 +2,12 @@
 title: "Entrepreneurs Club"
 collection: activities
 type: club
-# permalink: /work-experiences/computing-fundamentals-ta-neu/ 
+permalink: /activities/entrepreneurs-club/ 
 role: Member
 period: Sep 2023 - Present
 authors: 
 bookcover: 
 location: 
 classes: wide
-description: <p><ul><li>Attended weekly workshops.</li><li>Participated in Husky Startup Challenge.</ul></p>
+description: <p><ul><li>Attended weekly workshops covering business modeling, Minimal Viable Product, etc.</li><li>Participated in Husky Startup Challenge as Med Finder team and won third place with an award of $1,500 out of about 20 teams.</ul></p>
 ---

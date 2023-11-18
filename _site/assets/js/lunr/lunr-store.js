@@ -42,7 +42,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Entrepreneurs Club",
-        "excerpt":" ","categories": [],
+        "excerpt":"Husky Startup Challenge     Presentation Deck for Husky Startup Challenge       Med Finder Presentation       Awards Ceremony               Your browser does not support the video tag.     ","categories": [],
         "tags": [],
         "url": "/activities/entrepreneurs-club/",
         "teaser": null

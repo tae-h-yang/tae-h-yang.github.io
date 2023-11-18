@@ -36,7 +36,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Med Finder (Third Place Winner of Husky Startup Challenge)",
-        "excerpt":"Pitch Deck Code Introduction Med Finder provides an online medicine search platform to patients who are experiencing drug shortage. It checks medicine availability based on pharmacies’ inventory data so that the patients can find pharmacies that have their medicine. Furthermore, the inventory data are analyzed using Machine Learning and 100%...","categories": [],
+        "excerpt":"Med Finder IR Deck Code Introduction Med Finder provides an online medicine search platform to patients who are experiencing drug shortage. It checks medicine availability based on pharmacies’ inventory data so that the patients can find pharmacies that have their medicine. Furthermore, the inventory data are analyzed using Machine Learning...","categories": [],
         "tags": [],
         "url": "/activities/med-finder/",
         "teaser": null

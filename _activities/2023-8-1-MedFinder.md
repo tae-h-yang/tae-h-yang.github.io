@@ -12,7 +12,7 @@ description: <p><ul><li>Performed polynomial regression to predict medicine inve
 ---
 <a style="text-decoration: none;" href="https://www.fastermedsolutions.com/" target="_blank">Med Finder <i class="fa fa-external-link-alt"></i></a><br />
 <a style="text-decoration: none;" href="/assets/activities/med-finder/med-finder-pitch-deck.pdf" target="_blank">IR Deck <i class="fa fa-file"></i></a><br />
-<a style="text-decoration: none;" href="https://github.com/tae-h-yang/med-finder" target="_blank">Code <i class="fa fa-code"></i></a><br />
+<!-- <a style="text-decoration: none;" href="https://github.com/tae-h-yang/med-finder" target="_blank">Code <i class="fa fa-code"></i></a><br /> -->
 
 # Introduction
 Med Finder provides an online medicine search platform to patients who are experiencing drug shortage. It checks medicine availability based on pharmacies' inventory data so that the patients can find pharmacies that have their medicine. Furthermore, the inventory data are analyzed using Machine Learning and 100% accurate medicine availablity information can be offered to the patients. Our performance at Husky Startup Challenge can be found <a style="text-decoration: none;" href="/activities/entrepreneurs-club/">here.</a>

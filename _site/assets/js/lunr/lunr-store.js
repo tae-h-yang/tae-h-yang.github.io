@@ -36,7 +36,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Med Finder (Third Place Winner of Husky Startup Challenge)",
-        "excerpt":"Med Finder IR Deck Code Introduction Med Finder provides an online medicine search platform to patients who are experiencing drug shortage. It checks medicine availability based on pharmacies’ inventory data so that the patients can find pharmacies that have their medicine. Furthermore, the inventory data are analyzed using Machine Learning...","categories": [],
+        "excerpt":"Med Finder IR Deck Introduction Med Finder provides an online medicine search platform to patients who are experiencing drug shortage. It checks medicine availability based on pharmacies’ inventory data so that the patients can find pharmacies that have their medicine. Furthermore, the inventory data are analyzed using Machine Learning and...","categories": [],
         "tags": [],
         "url": "/activities/med-finder/",
         "teaser": null
@@ -48,9 +48,9 @@ var store = [{
         "teaser": null
       },{
         "title": "KCSC (Korean Computer Science Community)",
-        "excerpt":" ","categories": [],
+        "excerpt":"KCSC Intro Presentation       Workshop Activity    ","categories": [],
         "tags": [],
-        "url": "/activities/2023-9-1-KCSC/",
+        "url": "/activities/kcsc/",
         "teaser": null
       },{
         "title": "MATH2341 Differential Equations and Linear Algebra for Engineering",

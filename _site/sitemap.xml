@@ -121,7 +121,7 @@
 <lastmod>2023-03-01T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/projects/underwater-localization/</loc>
+<loc>http://localhost:4000/projects/2023-5-1-UnderwaterLocalization/</loc>
 <lastmod>2023-05-01T00:00:00-04:00</lastmod>
 </url>
 <url>
@@ -227,6 +227,10 @@
 <url>
 <loc>http://localhost:4000/assets/projects/Final%20Report%20EEECE5554.pdf</loc>
 <lastmod>2023-09-11T23:41:56-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/projects/recon-robot/final-report.pdf</loc>
+<lastmod>2023-11-18T23:33:14-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/projects/vehicle-detection/ML%20for%20Computer%20Vision%20EECE%205644%20Final%20Report.pdf</loc>

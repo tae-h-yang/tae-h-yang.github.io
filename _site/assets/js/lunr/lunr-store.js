@@ -168,7 +168,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Autonomous Reconnaissance Robot",
-        "excerpt":"Some of the contents in this page is based on the following resource:   Report    Introduction  ","categories": [],
+        "excerpt":"Some of the contents in this page is based on the following resource: Report Introduction Amid disaster response scenarios, the inherent danger and operational challenges often render it impractical for first responders to execute missions effectively. This situation highlights the indispensable role of autonomous robots as viable assets in such...","categories": [],
         "tags": [],
         "url": "/projects/recon-robot/",
         "teaser": null
@@ -182,7 +182,7 @@ var store = [{
         "title": "UUV (Underwater Unmanned Vehicle) Localization",
         "excerpt":"Introduction  ","categories": [],
         "tags": [],
-        "url": "/projects/underwater-localization/",
+        "url": "/projects/2023-5-1-UnderwaterLocalization/",
         "teaser": null
       },{
         "title": "Multiple Vehicle Detection Utilizing Deep Learning Algorithms",

@@ -2,7 +2,7 @@
 title: "UUV (Underwater Unmanned Vehicle) Localization"
 collection: projects
 type: #"northeastern"
-permalink: /projects/underwater-localization/ 
+# permalink: /projects/underwater-localization/ 
 # date: 2023-5-8
 period: May 2023 - Present
 location: 

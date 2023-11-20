@@ -1,2 +1,0 @@
-I"9<p><ul><li>Created C# libraries to program power supplies conveniently with SCPI commands converted to C# methods establishing serial communication over USB or RS-232.</li><li>Implemented image processing such as Bilateral Filtering, Canny Edge Detection, Binary Threshold, and Structural Similarity Index Measure (SSIM) to grade dirtiness of tile images in both Python and C#.</li><li>Created Python script to convert undistorted input images from calibrated fisheye camera into drawing trajectories for robots to follow during intern hackathon project.</li></ul></p>
-:ET

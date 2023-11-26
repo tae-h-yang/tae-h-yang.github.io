@@ -1,5 +1,5 @@
 ---
-title: "Med Finder (Third Place Winner of Husky Startup Challenge)"
+title: "Med Finder (3rd Place Winner of Husky Startup Challenge)"
 collection: activities
 type: startup
 permalink: /activities/med-finder/ 

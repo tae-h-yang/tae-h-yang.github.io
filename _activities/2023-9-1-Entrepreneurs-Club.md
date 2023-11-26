@@ -9,7 +9,7 @@ authors:
 bookcover: 
 location: 
 classes: wide
-description: <p><ul><li>Attended weekly workshops covering business modeling, Minimal Viable Product, etc.</li><li>Participated in Husky Startup Challenge as Med Finder team and won third place with an award of $1,500 out of 20 teams.</ul></p>
+description: <p><ul><li>Attended weekly workshops covering business modeling, Minimal Viable Product, etc.</li><li>Participated in Husky Startup Challenge as Med Finder team and won 3rd place with an award of $1,500 out of 20 teams.</ul></p>
 ---
 <a style="text-decoration: none;" href="https://www.nuentrepreneursclub.com/hsc" target="_blank">Husky Startup Challenge <i class="fa fa-external-link-alt"></i></a><br />
 

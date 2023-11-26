@@ -35,7 +35,7 @@ var store = [{
         "url": "/activities/2023-2-1-HKN/",
         "teaser": null
       },{
-        "title": "Med Finder (Third Place Winner of Husky Startup Challenge)",
+        "title": "Med Finder (3rd Place Winner of Husky Startup Challenge)",
         "excerpt":"Med Finder IR Deck Introduction Med Finder provides an online medicine search platform to patients who are experiencing drug shortage. It checks medicine availability based on pharmacies’ inventory data so that the patients can find pharmacies that have their medicine. Furthermore, the inventory data are analyzed using Machine Learning and...","categories": [],
         "tags": [],
         "url": "/activities/med-finder/",

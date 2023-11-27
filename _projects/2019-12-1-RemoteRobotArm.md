@@ -2,7 +2,7 @@
 title: "Wii-mote Controlled Robot Arm"
 collection: projects
 type: 
-permalink: /projects/remote-robot-arm/ 
+# permalink: /projects/remote-robot-arm/ 
 # date: 2023-5-8
 period: Nov 2019 - Dec 2019
 location: 

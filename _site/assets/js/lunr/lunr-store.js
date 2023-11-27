@@ -152,19 +152,19 @@ var store = [{
         "title": "Wii-mote Controlled Robot Arm",
         "excerpt":"Introduction  ","categories": [],
         "tags": [],
-        "url": "/projects/remote-robot-arm/",
+        "url": "/projects/2019-12-1-RemoteRobotArm/",
         "teaser": null
       },{
         "title": "Flower-care Monitor System",
         "excerpt":"Introduction  ","categories": [],
         "tags": [],
-        "url": "/projects/flower-care-sensor/",
+        "url": "/projects/2021-7-1-FlowerCareSensor/",
         "teaser": null
       },{
         "title": "Wearable Fitness Motion Tracker",
         "excerpt":"Introduction  ","categories": [],
         "tags": [],
-        "url": "/projects/wearable-motion-tracker/",
+        "url": "/projects/2021-8-1-WerableMotionTracker/",
         "teaser": null
       },{
         "title": "Autonomous Reconnaissance Robot",

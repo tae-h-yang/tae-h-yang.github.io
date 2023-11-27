@@ -2,7 +2,7 @@
 title: "Flower-care Monitor System"
 collection: projects
 type: ROK Army Startup Competition
-permalink: /projects/flower-care-sensor/ 
+# permalink: /projects/flower-care-sensor/ 
 # date: 2023-5-8
 period: Jul 2021 - Sep 2021
 location: 

@@ -2,7 +2,7 @@
 title: "Wearable Fitness Motion Tracker"
 collection: projects
 type: ROK Armed Forces Hackathon
-permalink: /projects/wearable-motion-tracker/ 
+# permalink: /projects/wearable-motion-tracker/ 
 # date: 2023-5-8
 period: Aug 2021 - Oct 2021
 location: 

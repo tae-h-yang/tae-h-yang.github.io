@@ -280,4 +280,16 @@ var store = [{
         "tags": [],
         "url": "/work-experiences/2023-7-10-iRobot/",
         "teaser": null
+      },{
+        "title": "Autonomy & Intelligence Lab RA - Northeastern University",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/work-experiences/2023-12-1-AIL-RA/",
+        "teaser": null
+      },{
+        "title": "Embedded Design TA - Northeastern University",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/work-experiences/2024-1-1-Embedded-Design-TA/",
+        "teaser": null
       }]

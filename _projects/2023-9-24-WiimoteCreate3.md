@@ -4,7 +4,7 @@ collection: projects
 type: iRobot Intern Challenge
 permalink: /projects/wiimote-create3/ 
 # date: 2023-5-8
-period: Sep 2023 - Present
+period: Sep 2023 - Dec 2023
 location: 
 classes: wide
 excerpt: "Controlled a differential wheeled robot with a joystick by establishing bluetooth connections with the robot and joystick and mapping the joystick state to robot wheel speeds."

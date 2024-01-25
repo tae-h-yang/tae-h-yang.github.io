@@ -180,9 +180,9 @@ var store = [{
         "teaser": null
       },{
         "title": "UUV (Underwater Unmanned Vehicle) Localization",
-        "excerpt":"Introduction  ","categories": [],
+        "excerpt":"This page is based on the following resource:  Code     IMU 3D Rotation Tracking  Video 1: Controlling Create 3 with Wii-mote controller.  ","categories": [],
         "tags": [],
-        "url": "/projects/2023-5-1-UnderwaterLocalization/",
+        "url": "/projects/underwater-localization/",
         "teaser": null
       },{
         "title": "Multiple Vehicle Detection Utilizing Deep Learning Algorithms",

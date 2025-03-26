@@ -16,7 +16,7 @@ classes: wide
 #     title: "High-Speed Off-Road Navigation"
 ---
 
-Hi! I'm Tae, a Computer Engineering student minoring in Robotics at Northeastern University. My interest lies in the design and development of **autonomous driving systems** for vehicles and mobile robots using the techniques such as **SLAM (Simultaneous Localization and Mapping)**, **Computer Vision**, and **AI/ML**. Innovation that self-driving cars and intelligent robots will bring in the future is what intrigues and drives me to pursue a career in this research and industry area.
+Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanford University and a recent graduate from Northeastern University, where I earned my B.S. in Computer Engineering with a minor in Robotics. I'm passionate about developing and researching intelligent robotic systems, with a particular focus on the perception stack.
 
 ---
 

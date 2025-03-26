@@ -20,7 +20,7 @@ title                    : "Tae Yang"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Tae Yang"
-description              : "Computer Engineering student minoring in Robotics at Northeastern University."
+description              : ""
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "tae-h-yang/tae-h-yang.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,13 +106,13 @@ analytics:
 author:
   name             : "Tae Yang"
   avatar           : "/assets/images/profile2.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Computer Engineering student minoring in Robotics at Northeastern University.<br /><br />Talks about Autonomous Driving, Robotics, SLAM, Computer Vision, and AI/ML"
-  location         : "Boston, MA"
+  bio              : "Master’s student in Computer Science (AI specialization) at Stanford University.<br /><br />"
+  location         : "Stanford, CA"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:yang.tae@northeastern.edu"
+      url: "mailto:taeyang@stanford.edu"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"

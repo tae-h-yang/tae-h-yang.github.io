@@ -5,14 +5,23 @@ permalink: /courses/
 author_profile: true
 ---
 
+{% include base_path %}
+
+{% assign stanford_courses = site.courses | where: "type", "Stanford" | reverse %}
+{% assign northeastern_courses = site.courses | where: "type", "Northeastern" | reverse %}
+
+<header>
+  <h2>Stanford University Courses</h2>
+</header>
+<hr>
+{% for post in stanford_courses %}
+  {% include archive-single-course-toggle.html %}
+{% endfor %}
+
 <header>
   <h2>Northeastern University Courses</h2>
 </header>
-
 <hr>
-
-{% include base_path %}
-    
-{% for post in site.courses reversed %}
+{% for post in northeastern_courses %}
   {% include archive-single-course-toggle.html %}
 {% endfor %}

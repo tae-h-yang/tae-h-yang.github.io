@@ -16,8 +16,8 @@ main:
     url: /projects/
   # - title: "Studies"
   #   url: /studies/
-  - title: "Work Experiences"
-    url: /work-experiences/
+  - title: "Work Experience"
+    url: /work-experience/
   - title: "Activities"
     url: /activities/
   - title: "Resume"

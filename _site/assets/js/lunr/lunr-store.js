@@ -143,6 +143,42 @@ var store = [{
         "url": "/courses/2024-1-9-EECE5639/",
         "teaser": null
       },{
+        "title": "CS221 AI: Principles and Techniques",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/courses/2024-9-1-CS221/",
+        "teaser": null
+      },{
+        "title": "CS227A Robot Perception",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/courses/2024-9-1-CS227A/",
+        "teaser": null
+      },{
+        "title": "CS238 Decision Making under Uncertainty",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/courses/2024-9-1-CS238/",
+        "teaser": null
+      },{
+        "title": "CS229 Machine Learning",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/courses/2025-1-1-CS229/",
+        "teaser": null
+      },{
+        "title": "CS381 Sensorimotor Learning for Embodied Agents",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/courses/2025-1-1-CS381/",
+        "teaser": null
+      },{
+        "title": "ENGR319 Robotics and Autonomous Systems Seminar",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/courses/2025-1-1-ENGR319/",
+        "teaser": null
+      },{
         "title": "About",
         "excerpt":"여기엔 Markdown문법으로 적으면 된다. 나는 블로그를 만들었을때 시간이 많이 들었지만, 다른사람들은 이글을 보고 조금 더 빨리 만들었으면 좋겠다.  ","categories": [],
         "tags": ["Blog"],

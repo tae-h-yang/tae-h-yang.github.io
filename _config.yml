@@ -106,7 +106,7 @@ analytics:
 author:
   name             : "Tae Yang"
   avatar           : "/assets/images/profile2.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "MSCS @ Stanford University.<br /><br />"
+  bio              : "MSCS @ Stanford University<br /><br />"
   location         : "Stanford, CA"
   email            :
   links:

@@ -21,7 +21,7 @@ excerpt: "Improved monocular depth estimation accuracy by learning an image-cond
 This page is based on the following resources:<br />
 <a style="text-decoration: none;" href="https://github.com/tae-h-yang/cs229-project/blob/main/docs/cs229_project_report.pdf" target="_blank">Report <i class="fa fa-file"></i></a><br />
 <a style="text-decoration: none;" href="https://github.com/tae-h-yang/cs229-project/blob/main/docs/cs299_project_poster.pdf" target="_blank">Poster <i class="fa fa-file"></i></a><br />
-<a style="text-decoration: none;" href="https://github.com/tae-h-yang/cs229-project" target="_blank">Code <i class="fa fa-code"></i></a><br />
+<a style="text-decoration: none;" href="https://github.com/tae-h-yang/adaptive-depth-estimation" target="_blank">Code <i class="fa fa-code"></i></a><br />
 
 ## Introduction
 Monocular depth estimation (MDE) is a core task in computer vision with applications in autonomous driving, robotics, and augmented reality (AR) <a href="#1">[1]</a><a href="#2">[2]</a>. Despite advances in deep learning, predicting **metric depth** from a single image remains difficult due to **scale ambiguity** — the loss of absolute scale during perspective projection <a href="#3">[3]</a><a href="#4">[4]</a>. This limits real-world deployment in tasks like robot navigation and 3D reconstruction <a href="#5">[5]</a>.

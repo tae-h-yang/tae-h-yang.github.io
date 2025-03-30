@@ -245,6 +245,12 @@ var store = [{
         "url": "/projects/wiimote-create3/",
         "teaser": null
       },{
+        "title": "Enhancing Monocular Metric Depth Estimation through Adaptive Scaling",
+        "excerpt":"On this page Introduction Method Generating Optimal Scaling Factors Training a Depth Scaling Predictor CNN Architecture Training Configuration Experimental Results Training and Validation Loss Scaling Factor Prediction Accuracy Depth Estimation Performance Point Cloud Comparisons Conclusion Future Work References This page is based on the following resources: Report Poster Code Introduction...","categories": [],
+        "tags": [],
+        "url": "/projects/mde-adaptive-scaling/",
+        "teaser": null
+      },{
         "title": "Advances in Inference and Representation for Simultaneous Localization and Mapping",
         "excerpt":" ","categories": [],
         "tags": [],

@@ -4,7 +4,7 @@ collection: projects
 type: #"northeastern"
 permalink: /projects/vehicle-detection/ 
 # date: 2023-5-8
-period: May 2023 - June 2023
+period: May 2023 - Jun 2023
 location: 
 classes: wide
 excerpt: "Trained and tested deep learning based object detection models, RetinaNet and YOLOv5, on an on-road vehicle dataset and their performance was investigated."

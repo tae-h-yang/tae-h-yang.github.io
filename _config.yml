@@ -16,10 +16,10 @@ minimal_mistakes_skin    : # "air", "aqua", "contrast", "dark", "dirt", "neon", 
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Tae Yang"
+title                    : "Tae Hoon Yang"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Tae Yang"
+name                     : "Tae Hoon Yang"
 description              : ""
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -104,7 +104,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Tae Yang"
+  name             : "Tae Hoon Yang"
   avatar           : "/assets/images/profile2.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "MSCS @ Stanford University<br /><br />"
   location         : "Stanford, CA"

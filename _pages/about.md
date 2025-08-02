@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About"
+title: "About Me"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -16,6 +16,6 @@ classes: wide
 #     title: "High-Speed Off-Road Navigation"
 ---
 
-Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanford University and a recent graduate from Northeastern University, where I earned my B.S. in Computer Engineering with a minor in Robotics. I'm passionate about developing and researching intelligent robotic systems, with a particular focus on the perception stack.
+Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanford University. I earned my B.S. in Computer Engineering with a minor in Robotics from Northeastern University. I'm passionate about developing and researching embodied AI, with a focus on robot learning.
 
 ---

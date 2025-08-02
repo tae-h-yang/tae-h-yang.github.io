@@ -1,5 +1,5 @@
 ---
-title: "Go1 DLIOM-based Autonomous Navigation"
+title: "Go1 DLIOM-Based Autonomous Navigation"
 # toc: true
 # toc_sticky: true
 collection: projects

@@ -1,5 +1,5 @@
 ---
-title: "Flower-care Monitor System"
+title: "Flower-Care Monitoring System"
 collection: projects
 type: ROK Army Startup Competition
 # permalink: /projects/flower-care-sensor/ 
@@ -7,7 +7,7 @@ type: ROK Army Startup Competition
 period: Jul 2021 - Sep 2021
 location: 
 classes: wide
-excerpt: "Designed a flower-care monitor system using various sensors such as moisture, light, and temperature sensors and stored the sensor data in a Google Cloud server through Wi-Fi to analyze futher."
+excerpt: "Designed a flower-care monitoring system using various sensors such as moisture, light, and temperature sensors and transmitted sensor data via Wi-Fi to a Google Cloud server for further analysis."
 ---
 
 # Introduction

@@ -9,7 +9,7 @@ permalink: /projects/mde-adaptive-scaling/
 period: Jan 2025 - Mar 2025
 location: 
 classes: wide
-excerpt: "Improved monocular depth estimation accuracy by learning an image-conditioned scaling factor to correct metric scale errors, enabling reliable 3D scene understanding without additional sensors."
+excerpt: "Enhanced monocular metric depth estimation by learning an image-conditioned scaling factor that corrects global scale bias, enabling accurate 3D perception without relying on additional sensors."
 ---
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async

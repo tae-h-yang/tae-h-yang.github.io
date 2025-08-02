@@ -16,7 +16,7 @@ classes: wide
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 
-{% include toc %}
+<!-- {% include toc %} -->
 
 This work was conducted during my time as a [Research Assistant at Northeastern University’s Autonomy & Intelligence Lab](https://tae-h-yang.github.io/work-experience/#:~:text=Autonomy%20%26%20Intelligence%20Lab%20RA%20%2D%20Northeastern%20University).
 

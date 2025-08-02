@@ -13,4 +13,4 @@ This page is based on the following resource:<br />
 <a style="text-decoration: none;" href="https://github.com/tae-h-yang/imu-pose-estimation" target="_blank">Code <i class="fa fa-code"></i></a><br />
 
 # IMU 3D Rotation Tracking
-<p style="text-align: center;"><iframe width="200" height="129" src="https://www.youtube.com/embed/cCN5rvS8Ek8" title="IMU 3D Rotation Tracking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><strong>Video 1: Controlling Create 3 with Wii-mote controller.</strong></p>
+<p style="text-align: center;"><iframe width="200" height="129" src="https://www.youtube.com/embed/cCN5rvS8Ek8" title="IMU 3D Rotation Tracking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><strong></strong></p>

@@ -4,7 +4,7 @@ collection: activities
 type: startup
 permalink: /activities/med-finder/ 
 role: Engineering Lead
-period: Aug 2023 - Present
+period: Aug 2023 - Dec 2023
 authors: 
 bookcover: 
 classes: wide

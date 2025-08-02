@@ -6,7 +6,7 @@ collection: projects
 type: 
 permalink: /projects/go1-navigation/ 
 # date: 2023-5-8
-period: Jan 2024 - Aug 2024
+period: Dec 2023 - Aug 2024
 location: 
 classes: wide
 # excerpt: "Improved monocular depth estimation accuracy by learning an image-conditioned scaling factor to correct metric scale errors, enabling reliable 3D scene understanding without additional sensors."

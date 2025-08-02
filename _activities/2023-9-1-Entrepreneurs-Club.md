@@ -4,7 +4,7 @@ collection: activities
 type: club
 permalink: /activities/entrepreneurs-club/ 
 role: Member
-period: Sep 2023 - Present
+period: Sep 2023 - Dec 2023
 authors: 
 bookcover: 
 location: 

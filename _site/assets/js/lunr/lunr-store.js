@@ -264,7 +264,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Action Affordance Learning for Robotic Pick-and-Place",
-        "excerpt":"             ","categories": [],
+        "excerpt":"On this page Introduction Method Results and Demonstrations Quantitative Results Video Demonstrations Conclusion Introduction Teaching a robot to pick up and move arbitrary objects is a fundamental challenge in robotics. Instead of training a model to recognize specific objects, a more generalizable approach is to teach it the concept of...","categories": [],
         "tags": [],
         "url": "/projects/pick-and-place-learning/",
         "teaser": null

@@ -27,66 +27,57 @@ This page is based on the following resources:<br />
 
 ## Introduction
 
-The increasing adoption of autonomous vehicles (AVs) presents significant challenges for ensuring safety and efficiency in complex traffic scenarios. Among these, navigating uncontrolled four-way intersections is particularly challenging due to the absence of traffic signals and the presence of diverse human driving styles.
+Navigating uncontrolled intersections is a critical challenge for autonomous vehicles. Without traffic signals, an AV must make real-time decisions by interacting with other road users, each with their own unique, unstated driving style. How can a car learn to be safe when it doesn't know if the other driver is cautious or aggressive?
 
-We simulate such scenarios using SUMO (Simulation of Urban Mobility), where **latent driving styles** are governed by an **"impatience" parameter**:
-- **Aggressive (Impatient)**: Impatience = `1.0`, fast acceleration and risky decisions.
-- **Cautious (Patient)**: Impatience = `off`, slow, defensive driving.
+This project, **SHIELD**, explores this problem by training reinforcement learning agents in a SUMO simulation. We model **latent driving styles** using an "impatience" parameter:
+- **Aggressive (Impatient)**: High impatience, leading to faster acceleration and riskier maneuvers.
+- **Cautious (Patient)**: Low impatience, resulting in more defensive driving.
 
-This project formulates the task as both a fully observable **Markov Decision Process (MDP)** and a more realistic **Partially Observable Markov Decision Process (POMDP)** to account for hidden intent.
+My work focused on two primary approaches: first, tackling the problem with full information (an MDP), and second, addressing the more realistic scenario where driving styles are hidden (a POMDP).
 
----
+## My Approach: From Full Information to Hidden Intent
 
-## Method
+### 1. The Combined DQN Model (MDP)
+My first approach modeled the intersection as a fully observable **Markov Decision Process (MDP)**. Here, the ego vehicle knows the exact impatience level of every other car. I developed a **Deep Q-Network (DQN)** agent that processes a high-dimensional state, including the ego vehicle and up to 20 surrounding vehicles, to make a single, holistic decision. While this provides a strong performance baseline, the sheer size of the state space presents a significant learning challenge.
 
-### MDP: Full Observability
-
-We assume the ego vehicle knows each vehicle’s impatience level and train using **Deep Q-Networks (DQN)**:
-
-- **Combined MDP**: One high-dimensional state space (ego + 20 agents). Difficult to train due to state complexity.
-- **Independent MDPs**: Separate small DQNs per foe agent. Final action chosen conservatively based on worst-case Q-value, improving safety.
-
-### POMDP: Hidden Styles
-
-We model hidden impatience as a latent state and use:
-
-- **Deep Recurrent Q-Network (DRQN)**: Uses LSTM to infer latent styles from observation history.
-- **DQN + LSTM Estimator**: An LSTM explicitly predicts impatience levels; decisions are made using the pretrained Independent DQN.
+### 2. The DRQN Model (POMDP)
+To address the more realistic scenario where driving styles are unknown, I formulated the problem as a **Partially Observable MDP (POMDP)**. My solution was to implement a **Deep Recurrent Q-Network (DRQN)**. This model uses an LSTM layer to maintain a memory of past observations (like a vehicle's speed and acceleration over time). By analyzing these behavioral patterns, the DRQN learns to **infer the hidden driving style** of other agents and adapt its strategy accordingly, without ever being explicitly told whether another driver is aggressive or cautious.
 
 ---
 
 ## Demo Videos & Results
 
-Trained over 5,000 episodes. In the videos:
-- **Ego vehicle**: Yellow  
-- **Cautious (patient)**: Green  
+The agents were trained for 5,000 episodes. The videos below demonstrate the performance of different policies.
+- **Ego vehicle**: Yellow
+- **Cautious (patient)**: Green
 - **Aggressive (impatient)**: Red
 
 ### Random Policy (Baseline)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g9itaHs5lTc" frameborder="0" allowfullscreen></iframe>  
-Random acceleration decisions. Results in frequent collisions due to poor reaction to other vehicles.
+The ego vehicle randomly samples acceleration values. This approach is completely unaware of its surroundings and, as expected, results in frequent and dangerous collisions.
 
-### DQN Policy (Full Observability)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CE1KN5p64ow" frameborder="0" allowfullscreen></iframe>  
-Access to true driving styles allows cautious and efficient crossing, outperforming the random baseline.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g9itaHs5lTc?si=Ao3RBgU0p8tPsQF7" frameborder="0" allowfullscreen></iframe>
 
-### DRQN Policy (Partial Observability)
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QDEmzOe_8p8" frameborder="0" allowfullscreen></iframe>  
-Learns to infer behavior from past trajectories. Performs well but slightly less efficient due to uncertainty and undertraining.
+### Combined DQN Policy (My MDP Solution)
+This agent has full knowledge of other vehicles' driving styles. It learns to be cautious, especially around aggressive (red) vehicles, and successfully crosses the intersection much more safely and efficiently than the random baseline.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CE1KN5p64ow?si=RDAabycyFirEW9-D" frameborder="0" allowfullscreen></iframe>
+
+### Combined DRQN Policy (My POMDP Solution)
+This agent must **infer** the driving styles from behavior alone. The video shows it successfully navigating the intersection, demonstrating its ability to handle uncertainty. While slightly less efficient than the fully observable DQN due to the complexity of its task, it represents a more robust and realistic approach for real-world scenarios.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QDEmzOe_8p8?si=m2Jk4vOo-pqe7pVz" frameborder="0" allowfullscreen></iframe>
 
 ---
 
 ## Conclusion
 
-This project highlights trade-offs in safe autonomous navigation:
-- **Independent MDPs** outperform high-dimensional DQNs by simplifying the state space.
-- **Explicit Latent State Estimation** improves policy reliability under partial observability.
-- **POMDP methods** require more training data but offer realism for real-world deployment.
+This project demonstrates that reinforcement learning can produce robust policies for complex, multi-agent navigation tasks. My work specifically highlights two key takeaways:
 
----
+1.  **Handling High-Dimensional States**: While the Combined DQN provides a holistic view, its performance can be limited by the complexity of its state space.
+2.  **Inferring Latent States is Key**: The DRQN shows that it is possible to learn safe and effective policies even with incomplete information by using memory to infer the hidden intentions of other drivers. This is a crucial step toward building autonomous systems that can safely coexist with unpredictable human drivers.
 
 ## Future Work
 
-- Improve reward design to better balance safety and efficiency.
-- Add complexity: left turns, lane merges, and human AV mix.
-- Explore probabilistic belief update methods for latent state inference.
+- **Refined Reward Engineering**: To better balance safety with traffic efficiency.
+- **Increased Scenario Complexity**: Incorporate more complex maneuvers like left turns and lane merges.
+- **Advanced Belief Update Mechanisms**: Explore more sophisticated probabilistic methods for inferring latent states to improve the agent's understanding under uncertainty.

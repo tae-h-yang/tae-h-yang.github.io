@@ -8,5 +8,11 @@ authors:
 bookcover: 
 location: Boston, MA
 classes: wide
-description: <p><ul><li>Held office hours to answer questions related to Python programming syntaxes, libraries, and DSA (Data Structures and Algorithms).</li><li>Graded Python assignment evaluating and comparing students' scripts to rubrics.</li><li>Determined point distributions for each question of Python assignment depending on their difficulties and importances.</li></ul></p>
+description: |
+  <ul>
+    <li>Instructed students during labs covering FPGA boards, Linux, C++, Quartus Prime, and robotic arms.</li>
+    <li>Held office hours and extra lab sessions to answer questions on C++, Digital Logic Design, and lab assignments.</li>
+    <li>Verified lab instructions by pre-testing all materials before each session.</li>
+    <li>Course reference: <a href="https://www1.coe.neu.edu/~jkimani/eece2160/" target="_blank">EECE 2160 – Embedded Design: Enabling Robotics</a></li>
+  </ul>
 ---

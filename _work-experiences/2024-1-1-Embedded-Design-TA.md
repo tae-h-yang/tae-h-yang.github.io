@@ -8,5 +8,12 @@ authors:
 bookcover: 
 location: Boston, MA
 classes: wide
-description: <p><ul><li>Instruct students during labs covering FPGA board, Linux, C++, Quartus Prime, and robotic arm.</li><li>Hold office hours and extra lab hours to answer questions related to C++, Digital Logic Design and lab assignment.<li>Verify lab materials by testing each instruction prior to lab sessions.</ul></p>
+description: |
+  <ul>
+    <li>Instructed students during labs covering FPGA boards, Linux, C++, Quartus Prime, and robotic arms.</li>
+    <li>Held office hours and extra lab sessions to answer questions on C++, Digital Logic Design, and lab assignments.</li>
+    <li>Verified lab instructions by pre-testing all materials before each session.</li>
+    <li>Course reference: <a href="https://www1.coe.neu.edu/~jkimani/eece2160/" target="_blank">EECE 2160 – Embedded Design: Enabling Robotics</a></li>
+  </ul>
+
 ---

@@ -1,5 +1,5 @@
 ---
-title: "RL-Based Safe Autonomous Driving at Uncontrolled Intersections"
+title: "Safe Autonomous Driving at Uncontrolled Intersections with Latent Style Awareness"
 # toc: true
 # toc_sticky: true
 collection: projects

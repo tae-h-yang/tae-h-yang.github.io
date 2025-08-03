@@ -98,14 +98,50 @@ This agent must infer driving styles from behavior alone. It exhibits more caref
 
 The table below summarizes the performance of **Combined DQN** and **Combined DRQN** models over 500 evaluation episodes.
 
-| Metric | Combined DQN | Combined DRQN |
+<!-- | Metric | Combined DQN | Combined DRQN |
 | :--- | :---: | :---: |
 | **Successful Passes** | 442 | 439 |
 | **Average Time on Successful Passes (s)** | 6.81 | 9.14 |
 | **Number of Collisions** | 58 | 61 |
 | **Average Number of Emergency Stoppings from Road Users** | 0.79 | 0.97 |
 
-<p style="text-align: center;"><strong>Table 1: Comparison of Evaluation Results for Models</strong></p>
+<p style="text-align: center;"><strong>Table 1: Comparison of Evaluation Results for Models</strong></p> -->
+
+<div style="display: table; margin: 0 auto;">
+  <table>
+    <caption><strong>Table 1: Comparison of Evaluation Results for Models</strong></caption>
+    <thead>
+      <tr>
+        <th>Metric</th>
+        <th>Combined DQN</th>
+        <th>Combined DRQN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Successful Passes</strong></td>
+        <td>442</td>
+        <td>439</td>
+      </tr>
+      <tr>
+        <td><strong>Average Time on Successful Passes (s)</strong></td>
+        <td>6.81</td>
+        <td>9.14</td>
+      </tr>
+      <tr>
+        <td><strong>Number of Collisions</strong></td>
+        <td>58</td>
+        <td>61</td>
+      </tr>
+      <tr>
+        <td><strong>Average Number of Emergency Stoppings from Road Users</strong></td>
+        <td>0.79</td>
+        <td>0.97</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
 As expected, the **Combined DQN**, with its access to perfect information, performs well. It is significantly faster than DRQN model (6.81s vs. 9.14s) and results in fewer collisions (58 vs. 61).
 

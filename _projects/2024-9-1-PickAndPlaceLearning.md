@@ -43,10 +43,32 @@ The agent was trained using supervised learning for over 100 epochs, achieving h
 
 ### Quantitative Results
 
-| Evaluation Set     | Success Rate |
+<!-- | Evaluation Set     | Success Rate |
 |--------------------|--------------|
 | Seen Objects       | **86.7%**     |
-| Unseen Objects     | **76.7%**     |
+| Unseen Objects     | **76.7%**     | -->
+
+<div style="display: table; margin: 0 auto;">
+  <table>
+    <caption><strong>Table 1: Pick-and-Place Success Rates on Seen and Unseen Objects</strong></caption>
+    <thead>
+      <tr>
+        <th>Evaluation Set</th>
+        <th>Success Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Seen Objects</td>
+        <td><strong>86.7%</strong></td>
+      </tr>
+      <tr>
+        <td>Unseen Objects</td>
+        <td><strong>76.7%</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 The success rates confirm that the affordance-based model generalizes well beyond its training set by focusing on spatial geometry rather than specific object identity.
 

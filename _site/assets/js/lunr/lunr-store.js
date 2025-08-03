@@ -179,6 +179,18 @@ var store = [{
         "url": "/courses/2025-1-1-ENGR319/",
         "teaser": null
       },{
+        "title": "CS224R Deep Reinforcement Learning",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/courses/2025-4-1-CS224R/",
+        "teaser": null
+      },{
+        "title": "CS231N Deep Learning for Computer Vision",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/courses/2025-4-1-CS231N/",
+        "teaser": null
+      },{
         "title": "About",
         "excerpt":"여기엔 Markdown문법으로 적으면 된다. 나는 블로그를 만들었을때 시간이 많이 들었지만, 다른사람들은 이글을 보고 조금 더 빨리 만들었으면 좋겠다.  ","categories": [],
         "tags": ["Blog"],
@@ -192,12 +204,12 @@ var store = [{
         "teaser": null
       },{
         "title": "Wii-mote Controlled Robot Arm",
-        "excerpt":"Introduction  ","categories": [],
+        "excerpt":"     Demo Video   ","categories": [],
         "tags": [],
-        "url": "/projects/2019-12-1-RemoteRobotArm/",
+        "url": "/projects/remote-robot-arm/",
         "teaser": null
       },{
-        "title": "Flower-care Monitor System",
+        "title": "Flower-Care Monitoring System",
         "excerpt":"Introduction  ","categories": [],
         "tags": [],
         "url": "/projects/2021-7-1-FlowerCareSensor/",
@@ -222,7 +234,7 @@ var store = [{
         "teaser": null
       },{
         "title": "UUV (Underwater Unmanned Vehicle) Localization",
-        "excerpt":"This page is based on the following resource:  Code     IMU 3D Rotation Tracking  Video 1: Controlling Create 3 with Wii-mote controller.  ","categories": [],
+        "excerpt":"This page is based on the following resource:  Code     IMU 3D Rotation Tracking    ","categories": [],
         "tags": [],
         "url": "/projects/underwater-localization/",
         "teaser": null
@@ -243,6 +255,24 @@ var store = [{
         "excerpt":"This page is based on the following resources: Documentation Code Introduction The goal of iRobot Intern Challenge was to develop a mobile robot that could collect balls and place them in a goal area. Create 3 which was an educational robot produced by iRobot was provided for the development. Create...","categories": [],
         "tags": [],
         "url": "/projects/wiimote-create3/",
+        "teaser": null
+      },{
+        "title": "Go1 DLIOM-Based Autonomous Navigation",
+        "excerpt":"      This work was conducted during my time as a Research Assistant at Northeastern University’s Autonomy &amp; Intelligence Lab.     ","categories": [],
+        "tags": [],
+        "url": "/projects/go1-navigation/",
+        "teaser": null
+      },{
+        "title": "Action Affordance Learning for Robotic Pick-and-Place",
+        "excerpt":"             ","categories": [],
+        "tags": [],
+        "url": "/projects/pick-and-place-learning/",
+        "teaser": null
+      },{
+        "title": "Safe Autonomous Driving at Uncontrolled Intersections with Latent Style Awareness",
+        "excerpt":"On this page Introduction Method 1. Combined Deep Q-Network (DQN): Full Observability (MDP) 2. Deep Recurrent Q-Network (DRQN): Partial Observability (POMDP) Action Space &amp; Training Details Demo Videos &amp; Results 1. Random Policy (Baseline) 2. Combined DQN Policy 3. Combined DRQN Policy Quantitative Analysis Conclusion Future Work This page is...","categories": [],
+        "tags": [],
+        "url": "/projects/rl-autonomous-driving/",
         "teaser": null
       },{
         "title": "Enhancing Monocular Metric Depth Estimation through Adaptive Scaling",

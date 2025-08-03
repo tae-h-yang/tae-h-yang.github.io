@@ -1,0 +1,572 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Safe Autonomous Driving at Uncontrolled Intersections with Latent Style Awareness - Tae Hoon Yang</title>
+<meta name="description" content="Developed and compared MDP and POMDP-based reinforcement learning agents to navigate an autonomous vehicle through an uncontrolled intersection with other agents of unknown, latent driving styles.">
+
+
+  <meta name="author" content="Tae Hoon Yang">
+  
+  <meta property="article:author" content="Tae Hoon Yang">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Tae Hoon Yang">
+<meta property="og:title" content="Safe Autonomous Driving at Uncontrolled Intersections with Latent Style Awareness">
+<meta property="og:url" content="http://localhost:4000/projects/rl-autonomous-driving/">
+
+
+  <meta property="og:description" content="Developed and compared MDP and POMDP-based reinforcement learning agents to navigate an autonomous vehicle through an uncontrolled intersection with other agents of unknown, latent driving styles.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-09-01T00:00:00-07:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/projects/rl-autonomous-driving/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Tae Hoon Yang",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Tae Hoon Yang Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--project wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Tae Hoon Yang
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/courses/">Courses</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/work-experience/">Work Experience</a>
+            </li><li class="masthead__menu-item">
+              <a href="/activities/">Activities</a>
+            </li><li class="masthead__menu-item">
+              <a href="/resume/">Resume</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/images/profile2.png" alt="Tae Hoon Yang" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Tae Hoon Yang</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>MSCS @ Stanford University<br /><br /></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Stanford, CA</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:taeyang@stanford.edu" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/tae-h-yang/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/tae-h-yang/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.instagram.com/hoonyy_11/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Safe Autonomous Driving at Uncontrolled Intersections with Latent Style Awareness">
+    <meta itemprop="description" content="Developed and compared MDP and POMDP-based reinforcement learning agents to navigate an autonomous vehicle through an uncontrolled intersection with other agents of unknown, latent driving styles.">
+    <meta itemprop="datePublished" content="September 01, 2024">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Safe Autonomous Driving at Uncontrolled Intersections with Latent Style Awareness
+</h1>
+          
+        
+          <p class="page__meta">Sep 2024 - Dec 2024</p>
+        
+          <!--  -->
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <!--  -->
+
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<script type="text/javascript" id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
+  <li><a href="#method" id="markdown-toc-method">Method</a>    <ul>
+      <li><a href="#1-combined-deep-q-network-dqn-full-observability-mdp" id="markdown-toc-1-combined-deep-q-network-dqn-full-observability-mdp">1. Combined Deep Q-Network (DQN): Full Observability (MDP)</a></li>
+      <li><a href="#2-deep-recurrent-q-network-drqn-partial-observability-pomdp" id="markdown-toc-2-deep-recurrent-q-network-drqn-partial-observability-pomdp">2. Deep Recurrent Q-Network (DRQN): Partial Observability (POMDP)</a></li>
+      <li><a href="#action-space--training-details" id="markdown-toc-action-space--training-details">Action Space &amp; Training Details</a></li>
+    </ul>
+  </li>
+  <li><a href="#demo-videos--results" id="markdown-toc-demo-videos--results">Demo Videos &amp; Results</a>    <ul>
+      <li><a href="#1-random-policy-baseline" id="markdown-toc-1-random-policy-baseline">1. Random Policy (Baseline)</a></li>
+      <li><a href="#2-combined-dqn-policy" id="markdown-toc-2-combined-dqn-policy">2. Combined DQN Policy</a></li>
+      <li><a href="#3-combined-drqn-policy" id="markdown-toc-3-combined-drqn-policy">3. Combined DRQN Policy</a></li>
+      <li><a href="#quantitative-analysis" id="markdown-toc-quantitative-analysis">Quantitative Analysis</a></li>
+    </ul>
+  </li>
+  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+  <li><a href="#future-work" id="markdown-toc-future-work">Future Work</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<!-- https://docs.google.com/document/d/1IRCccUOwx-f1--FEx6aE-qLXbhfnBbiPrwmLhwSZVj0/edit?usp=sharing -->
+
+<p>This page is based on the following resources:<br />
+<a style="text-decoration: none;" href="/assets/projects/rl-autonomous-dirving/AA228_CS238_Project_Report.pdf" target="_blank">Report <i class="fa fa-file"></i></a><br />
+<a style="text-decoration: none;" href="https://github.com/tae-h-yang/SHIELD" target="_blank">Code <i class="fa fa-code"></i></a><br /></p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Navigating uncontrolled intersections is a critical challenge for autonomous vehicles. Without traffic signals, an AV must make real-time decisions by interacting with other road users, each with their own unique, unstated driving style. How can a car learn to be safe when it doesn’t know if the other driver is cautious or aggressive?</p>
+
+<p>This project explores this question by modeling intersection navigation as a <strong>multi-agent reinforcement learning problem</strong>. Each vehicle exhibits a latent <strong>driving style</strong>—ranging from aggressive to cautious—that is not directly observable, but significantly impacts safety. The goal is to train a policy that can safely and efficiently cross intersections, even when the intentions of other drivers are unknown.</p>
+
+<p>To tackle this, the task is framed under two decision-making paradigms:</p>
+<ul>
+  <li>A <strong>Markov Decision Process (MDP)</strong>, where driving styles are fully observable</li>
+  <li>A more realistic <strong>Partially Observable MDP (POMDP)</strong>, where the agent must <strong>infer hidden driver behaviors from past observations</strong></li>
+</ul>
+
+<p>The resulting system, <strong>SHIELD</strong> (<em>Safe Handling of Intersection Events under Latent Driving Styles</em>), is trained in a SUMO-based traffic simulator with diverse traffic patterns and driving styles. The agent must learn to adapt its behavior dynamically to ensure safety in the presence of uncertainty—just as a human driver would.</p>
+
+<h2 id="method">Method</h2>
+
+<p>The SHIELD system was trained using deep reinforcement learning to handle intersection scenarios involving multiple agents with unknown intent. Two distinct formulations were used to investigate the trade-offs between full observability and realistic, partial information.</p>
+
+<h3 id="1-combined-deep-q-network-dqn-full-observability-mdp">1. Combined Deep Q-Network (DQN): Full Observability (MDP)</h3>
+
+<p>In the first approach, we assume a fully observable environment where the driving style of every other vehicle is known. This scenario is modeled as a <strong>Markov Decision Process (MDP)</strong>.</p>
+
+<p>The state is represented by a high-dimensional <strong>105-D vector</strong>, which includes the ego vehicle’s state plus the states of up to 20 surrounding vehicles (position, velocity, acceleration, and impatience level). A single <strong>Deep Q-Network (DQN)</strong> is trained on this combined state to learn a centralized policy. While this gives the agent complete information, the high dimensionality makes it challenging for the model to learn efficiently.</p>
+
+<h3 id="2-deep-recurrent-q-network-drqn-partial-observability-pomdp">2. Deep Recurrent Q-Network (DRQN): Partial Observability (POMDP)</h3>
+
+<p>To model a more realistic driving scenario, we treat other agents’ intentions as unobservable, reframing the task as a <strong>Partially Observable MDP (POMDP)</strong>. In this setup, the agent must infer a vehicle’s driving style from its behavior over time.</p>
+
+<p>A <strong>Deep Recurrent Q-Network (DRQN)</strong> with an LSTM layer is used to process sequences of observations. At each timestep, the DRQN receives only the physical states of nearby vehicles (position, speed, etc.), without their true impatience labels. By maintaining a memory of past actions, the DRQN learns to implicitly identify aggressive versus cautious drivers and adapt its strategy accordingly.</p>
+
+<h3 id="action-space--training-details">Action Space &amp; Training Details</h3>
+
+<p>In both formulations, the models were trained with a consistent setup to ensure a fair comparison.</p>
+
+<ul>
+  <li>
+    <p><strong>Action Space</strong>: The ego vehicle selects from a discrete set of 7 acceleration commands, ranging from <strong>-3 m/s² to +3 m/s²</strong>.</p>
+  </li>
+  <li>
+    <p><strong>Training Details</strong>:</p>
+    <ul>
+      <li><strong>Episodes</strong>: 5,000 per policy</li>
+      <li><strong>Simulator</strong>: SUMO (Simulation of Urban Mobility) with Python/TraCI bindings</li>
+      <li><strong>Reward Function</strong>: Designed to promote safe and efficient navigation:
+        <ul>
+          <li><strong>+10</strong> for successfully crossing the intersection</li>
+          <li><strong>-100</strong> for a collision</li>
+          <li><strong>-0.5 per timestep</strong> to penalize delays</li>
+          <li>Additional penalties for speed limit violations and causing other vehicles to brake suddenly</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>This dual-method approach allows for a direct comparison between an agent with perfect information and a more practical agent that must navigate the uncertainty of real-world driving by inferring latent intent.</p>
+
+<h2 id="demo-videos--results">Demo Videos &amp; Results</h2>
+
+<p>The policies were trained over 5,000 episodes and evaluated on their ability to safely and efficiently cross the intersection. In the videos below:</p>
+<ul>
+  <li><strong>Ego vehicle</strong>: Yellow</li>
+  <li><strong>Cautious (patient)</strong>: Green</li>
+  <li><strong>Aggressive (impatient)</strong>: Red</li>
+</ul>
+
+<h3 id="1-random-policy-baseline">1. Random Policy (Baseline)</h3>
+<p>The ego vehicle selects its acceleration from a uniform random distribution. This policy is completely unaware of its surroundings and, as the video clearly shows, definitely results in frequent and dangerous collisions.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g9itaHs5lTc?si=Ao3RBgU0p8tPsQF7" frameborder="0" allowfullscreen=""></iframe>
+
+<h3 id="2-combined-dqn-policy">2. Combined DQN Policy</h3>
+<p>With full observability of other agents’ driving styles, the DQN learns an effective policy. It passes through safely, clearly aware of the other vehicles, especially the aggressive (red) ones. This allows it to navigate the intersection both safely and efficiently.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CE1KN5p64ow?si=RDAabycyFirEW9-D" frameborder="0" allowfullscreen=""></iframe>
+
+<h3 id="3-combined-drqn-policy">3. Combined DRQN Policy</h3>
+<p>This agent must infer driving styles from behavior alone. It exhibits more careful behavior, such as a brief slowdown at the beginning, because it needs more time to observe and figure out the other vehicles’ intentions. This demonstrates a more realistic and cautious approach, highlighting that the agent learned the importance of being aware of latent driving styles for safe decision-making.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QDEmzOe_8p8?si=m2Jk4vOo-pqe7pVz" frameborder="0" allowfullscreen=""></iframe>
+
+<hr />
+
+<h3 id="quantitative-analysis">Quantitative Analysis</h3>
+
+<p>The table below summarizes the performance of <strong>Combined DQN</strong> and <strong>Combined DRQN</strong> models over 500 evaluation episodes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Metric</th>
+      <th style="text-align: center">Combined DQN</th>
+      <th style="text-align: center">Combined DRQN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>Successful Passes</strong></td>
+      <td style="text-align: center">442</td>
+      <td style="text-align: center">439</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Average Time on Successful Passes (s)</strong></td>
+      <td style="text-align: center">6.81</td>
+      <td style="text-align: center">9.14</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Number of Collisions</strong></td>
+      <td style="text-align: center">58</td>
+      <td style="text-align: center">61</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Average Number of Emergency Stoppings from Road Users</strong></td>
+      <td style="text-align: center">0.79</td>
+      <td style="text-align: center">0.97</td>
+    </tr>
+  </tbody>
+</table>
+
+<p style="text-align: center;"><strong>Table 1: Comparison of Evaluation Results for Models</strong></p>
+
+<p>As expected, the <strong>Combined DQN</strong>, with its access to perfect information, performs well. It is significantly faster than DRQN model (6.81s vs. 9.14s) and results in fewer collisions (58 vs. 61).</p>
+
+<p>The <strong>Combined DRQN’s</strong> longer crossing time reflects the cautious behavior seen in the demo video. Because it must infer intent, it acts more defensively, leading to a safer but less efficient policy. The slightly higher number of collisions and the greater number of emergency stops it causes (0.97) suggest that inferring latent states from noisy observations is a challenging task. These results effectively quantify the trade-off between having complete information and the necessity of navigating real-world uncertainty.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This project successfully demonstrates that deep reinforcement learning can produce robust policies for navigating complex, multi-agent intersection scenarios. The works on the <strong>Combined DQN</strong> and <strong>DRQN</strong> models highlights two key findings:</p>
+
+<ol>
+  <li>
+    <p><strong>The Challenge of High-Dimensional States</strong>: While the Combined DQN, with its perfect information, provides a strong performance baseline, its effectiveness is challenged by the sheer complexity of a 105-dimensional state space, which makes efficient learning difficult.</p>
+  </li>
+  <li>
+    <p><strong>The Power of Inferring Latent States</strong>: The DRQN model proves that it is possible to learn a safe and functional policy even with incomplete information. By using its recurrent memory to analyze behavior over time, it can implicitly infer the hidden driving styles of other agents. This represents a crucial step toward building autonomous systems that can safely coexist with unpredictable human drivers in real-world environments.</p>
+  </li>
+</ol>
+
+<p>Interestingly, the results suggest that effectively managing the observable state may be more critical than having perfect but overwhelmingly complex information about latent states.</p>
+
+<h2 id="future-work">Future Work</h2>
+
+<p>To build upon this project, future work could focus on several key areas for improvement:</p>
+
+<ul>
+  <li><strong>Refined Reward Engineering</strong>: The reward function could be further refined to better balance the trade-offs between safety, such as avoiding collisions, and traffic efficiency, like minimizing crossing time.</li>
+  <li><strong>Increased Scenario Complexity</strong>: The simulation environment could be enhanced to include more complex and realistic traffic scenarios, such as vehicles turning, merging, or changing lanes.</li>
+  <li><strong>Advanced Belief Update Mechanisms</strong>: More sophisticated architectures could be explored for inferring hidden states, which could lead to more effective and reliable solutions for partially observable environments.</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/projects/pick-and-place-learning/" class="pagination--pager" title="Action Affordance Learning for Robotic Pick-and-Place
+">Previous</a>
+    
+    
+      <a href="/projects/mde-adaptive-scaling/" class="pagination--pager" title="Enhancing Monocular Metric Depth Estimation through Adaptive Scaling
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <!-- <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div> -->
+
+<div class="page__footer-copyright">&copy; 2025 Tae Hoon Yang. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

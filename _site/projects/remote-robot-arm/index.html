@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Wii-mote Controlled Robot Arm - Tae Hoon Yang</title>
-<meta name="description" content="Configured a robotic arm on a FPGA board and programmed the arm to follow motions of a Wii-mote controller.">
+<meta name="description" content="Configured a robotic arm on an FPGA development board using memory-mapped I/O. Programmed control logic in C++ to interpret directional gestures from a Wii-mote’s onboard IMU. Detected up, down, left, and right motions to drive the arm’s servos in real time. Mapped Wii-mote button inputs to control the gripper’s open and close actions. Integrated sensor data processing, embedded control, and wireless communication for gesture-based robotic manipulation.">
 
 
   <meta name="author" content="Tae Hoon Yang">
@@ -23,10 +23,10 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Tae Hoon Yang">
 <meta property="og:title" content="Wii-mote Controlled Robot Arm">
-<meta property="og:url" content="http://localhost:4000/projects/2019-12-1-RemoteRobotArm/">
+<meta property="og:url" content="http://localhost:4000/projects/remote-robot-arm/">
 
 
-  <meta property="og:description" content="Configured a robotic arm on a FPGA board and programmed the arm to follow motions of a Wii-mote controller.">
+  <meta property="og:description" content="Configured a robotic arm on an FPGA development board using memory-mapped I/O. Programmed control logic in C++ to interpret directional gestures from a Wii-mote’s onboard IMU. Detected up, down, left, and right motions to drive the arm’s servos in real time. Mapped Wii-mote button inputs to control the gripper’s open and close actions. Integrated sensor data processing, embedded control, and wireless communication for gesture-based robotic manipulation.">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/projects/2019-12-1-RemoteRobotArm/">
+<link rel="canonical" href="http://localhost:4000/projects/remote-robot-arm/">
 
 
 
@@ -200,7 +200,7 @@
           
         
           
-            <li><a href="https://www.linkedin.com/in/tae-yang/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://www.linkedin.com/in/tae-h-yang/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
           
         
           
@@ -275,7 +275,7 @@
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Wii-mote Controlled Robot Arm">
-    <meta itemprop="description" content="Configured a robotic arm on a FPGA board and programmed the arm to follow motions of a Wii-mote controller.">
+    <meta itemprop="description" content="Configured a robotic arm on an FPGA development board using memory-mapped I/O. Programmed control logic in C++ to interpret directional gestures from a Wii-mote’s onboard IMU. Detected up, down, left, and right motions to drive the arm’s servos in real time. Mapped Wii-mote button inputs to control the gripper’s open and close actions. Integrated sensor data processing, embedded control, and wireless communication for gesture-based robotic manipulation.">
     <meta itemprop="datePublished" content="December 01, 2019">
     
 
@@ -286,7 +286,7 @@
 </h1>
           
         
-          <p class="page__meta">Nov 2019 - Dec 2019</p>
+          <p class="page__meta">Sep 2019 - Dec 2019</p>
         
           <!--  -->
 
@@ -296,7 +296,14 @@
       <section class="page__content" itemprop="text">
         <!--  -->
 
-        <h1 id="introduction">Introduction</h1>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<script type="text/javascript" id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<!-- # Introduction -->
+<h1 id="demo-video">Demo Video</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zFDCIXBUb7U?si=drj4DB1HBx-xG6_7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
 
         
       </section>
@@ -316,7 +323,7 @@
       <a href="#" class="pagination--pager disabled">Previous</a>
     
     
-      <a href="/projects/2021-7-1-FlowerCareSensor/" class="pagination--pager" title="Flower-care Monitor System
+      <a href="/projects/2021-7-1-FlowerCareSensor/" class="pagination--pager" title="Flower-Care Monitoring System
 ">Next</a>
     
   </nav>

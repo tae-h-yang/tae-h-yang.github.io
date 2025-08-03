@@ -27,80 +27,104 @@ This page is based on the following resources:<br />
 
 ## Introduction
 
-Navigating uncontrolled intersections remains a significant challenge for autonomous vehicles (AVs). These intersections lack signaling infrastructure, forcing AVs to make safe and efficient decisions while interacting with other road users whose **driving styles** are not directly observable.
+Navigating uncontrolled intersections is a critical challenge for autonomous vehicles. Without traffic signals, an AV must make real-time decisions by interacting with other road users, each with their own unique, unstated driving style. How can a car learn to be safe when it doesn't know if the other driver is cautious or aggressive?
 
-This project introduces **SHIELD** (**S**afe **H**andling of **I**ntersection **E**vents under **L**atent **D**riving Styles), a reinforcement learning framework designed to handle such situations. Agents are trained in a SUMO simulation where the driving style of each vehicle is governed by an **"impatience" parameter**:
+This project explores this question by modeling intersection navigation as a **multi-agent reinforcement learning problem**. Each vehicle exhibits a latent **driving style**—ranging from aggressive to cautious—that is not directly observable, but significantly impacts safety. The goal is to train a policy that can safely and efficiently cross intersections, even when the intentions of other drivers are unknown.
 
-- **Aggressive (Impatient)**: Fast acceleration, riskier crossing behavior.
-- **Cautious (Patient)**: Slow, defensive behavior.
+To tackle this, the task is framed under two decision-making paradigms:
+- A **Markov Decision Process (MDP)**, where driving styles are fully observable
+- A more realistic **Partially Observable MDP (POMDP)**, where the agent must **infer hidden driver behaviors from past observations**
 
-The task is modeled both as a **Markov Decision Process (MDP)** with full observability and as a **Partially Observable MDP (POMDP)** where driving styles must be inferred from behavior.
+The resulting system, **SHIELD** (*Safe Handling of Intersection Events under Latent Driving Styles*), is trained in a SUMO-based traffic simulator with diverse traffic patterns and driving styles. The agent must learn to adapt its behavior dynamically to ensure safety in the presence of uncertainty—just as a human driver would.
 
-## Methodology
+## Method
 
-### MDP with Known Driving Styles
+The SHIELD system was trained using deep reinforcement learning to handle intersection scenarios involving multiple agents with unknown intent. Two distinct formulations were used to investigate the trade-offs between full observability and realistic, partial information.
 
-In the MDP formulation, the agent has access to true impatience levels of all vehicles. Two strategies are explored:
+### 1. Combined Deep Q-Network (DQN): Full Observability (MDP)
 
-- **Combined DQN**: A Deep Q-Network trained on a large joint state space representing the ego vehicle and up to 20 nearby vehicles.
-- **Independent DQNs**: One Q-network per ego–foe pair; the final action is chosen conservatively based on the minimum Q-value across pairs.
+In the first approach, we assume a fully observable environment where the driving style of every other vehicle is known. This scenario is modeled as a **Markov Decision Process (MDP)**.
 
-### POMDP with Latent Driving Styles
+The state is represented by a high-dimensional **105-D vector**, which includes the ego vehicle's state plus the states of up to 20 surrounding vehicles (position, velocity, acceleration, and impatience level). A single **Deep Q-Network (DQN)** is trained on this combined state to learn a centralized policy. While this gives the agent complete information, the high dimensionality makes it challenging for the model to learn efficiently.
 
-For the more realistic scenario where impatience is hidden:
+### 2. Deep Recurrent Q-Network (DRQN): Partial Observability (POMDP)
 
-- **DRQN (Deep Recurrent Q-Network)**: An LSTM-based Q-network uses temporal sequences of vehicle states to infer driving styles and guide decision-making under uncertainty.
+To model a more realistic driving scenario, we treat other agents' intentions as unobservable, reframing the task as a **Partially Observable MDP (POMDP)**. In this setup, the agent must infer a vehicle's driving style from its behavior over time.
 
-## Evaluation
+A **Deep Recurrent Q-Network (DRQN)** with an LSTM layer is used to process sequences of observations. At each timestep, the DRQN receives only the physical states of nearby vehicles (position, speed, etc.), without their true impatience labels. By maintaining a memory of past actions, the DRQN learns to implicitly identify aggressive versus cautious drivers and adapt its strategy accordingly.
 
-Agents were trained for 5,000 episodes and evaluated over 200 randomized test cases.
+### Action Space & Training Details
 
-| **Policy**            | **Visibility**     | **Success Rate** | **Collision Rate** | **Avg. Time (s)** |
-|-----------------------|--------------------|------------------|--------------------|-------------------|
-| Random Baseline       | None               | 24.5%            | 63.2%              | 9.81              |
-| Combined DQN          | Full (MDP)         | 91.8%            | 4.7%               | 5.62              |
-| Independent DQNs      | Full (MDP)         | 95.4%            | 1.3%               | 5.41              |
-| DRQN                  | Partial (POMDP)    | 88.0%            | 7.2%               | 6.31              |
+In both formulations, the models were trained with a consistent setup to ensure a fair comparison.
 
-- *Success Rate*: Ego vehicle safely crosses the intersection.
-- *Collision Rate*: Episode ends with a crash.
-- *Avg. Time*: Time to cross intersection.
+-   **Action Space**: The ego vehicle selects from a discrete set of 7 acceleration commands, ranging from **-3 m/s² to +3 m/s²**.
 
-## Demo Videos
+-   **Training Details**:
+    -   **Episodes**: 5,000 per policy
+    -   **Simulator**: SUMO (Simulation of Urban Mobility) with Python/TraCI bindings
+    -   **Reward Function**: Designed to promote safe and efficient navigation:
+        -   **+10** for successfully crossing the intersection
+        -   **-100** for a collision
+        -   **-0.5 per timestep** to penalize delays
+        -   Additional penalties for speed limit violations and causing other vehicles to brake suddenly
 
-Vehicles are color-coded:
-- Ego: **Yellow**
-- Cautious (patient): **Green**
-- Aggressive (impatient): **Red**
+This dual-method approach allows for a direct comparison between an agent with perfect information and a more practical agent that must navigate the uncertainty of real-world driving by inferring latent intent.
 
-### Random Policy
+## Demo Videos & Results
 
-No learned behavior; chooses random acceleration.
+The policies were trained over 5,000 episodes and evaluated on their ability to safely and efficiently cross the intersection. In the videos below:
+- **Ego vehicle**: Yellow
+- **Cautious (patient)**: Green
+- **Aggressive (impatient)**: Red
+
+### 1. Random Policy (Baseline)
+The ego vehicle selects its acceleration from a uniform random distribution. This policy is completely unaware of its surroundings and, as the video clearly shows, definitely results in frequent and dangerous collisions.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/g9itaHs5lTc?si=Ao3RBgU0p8tPsQF7" frameborder="0" allowfullscreen></iframe>
 
-### Combined DQN Policy
-
-Trained with full access to impatience levels.
+### 2. Combined DQN Policy
+With full observability of other agents' driving styles, the DQN learns an effective policy. It passes through safely, clearly aware of the other vehicles, especially the aggressive (red) ones. This allows it to navigate the intersection both safely and efficiently.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CE1KN5p64ow?si=RDAabycyFirEW9-D" frameborder="0" allowfullscreen></iframe>
 
-### DRQN Policy
-
-Infers latent driver intent from temporal behavior.
+### 3. Combined DRQN Policy 
+This agent must infer driving styles from behavior alone. It exhibits more careful behavior, such as a brief slowdown at the beginning, because it needs more time to observe and figure out the other vehicles' intentions. This demonstrates a more realistic and cautious approach, highlighting that the agent learned the importance of being aware of latent driving styles for safe decision-making.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QDEmzOe_8p8?si=m2Jk4vOo-pqe7pVz" frameborder="0" allowfullscreen></iframe>
 
+---
+
+### Quantitative Analysis
+
+The table below summarizes the performance of **Combined DQN** and **Combined DRQN** models over 500 evaluation episodes.
+
+| Metric | Combined DQN | Combined DRQN |
+| :--- | :---: | :---: |
+| **Successful Passes** | 442 | 439 |
+| **Average Time on Successful Passes (s)** | 6.81 | 9.14 |
+| **Number of Collisions** | 58 | 61 |
+| **Average Number of Emergency Stoppings from Road Users** | 0.79 | 0.97 |
+
+<p style="text-align: center;"><strong>Table 1: Comparison of Evaluation Results for Models</strong></p>
+
+As expected, the **Combined DQN**, with its access to perfect information, performs well. It is significantly faster than DRQN model (6.81s vs. 9.14s) and results in fewer collisions (58 vs. 61).
+
+The **Combined DRQN's** longer crossing time reflects the cautious behavior seen in the demo video. Because it must infer intent, it acts more defensively, leading to a safer but less efficient policy. The slightly higher number of collisions and the greater number of emergency stops it causes (0.97) suggest that inferring latent states from noisy observations is a challenging task. These results effectively quantify the trade-off between having complete information and the necessity of navigating real-world uncertainty.
+
 ## Conclusion
 
-This work demonstrates that reinforcement learning can enable safe autonomous intersection handling under uncertainty. Key takeaways:
+This project successfully demonstrates that deep reinforcement learning can produce robust policies for navigating complex, multi-agent intersection scenarios. The works on the **Combined DQN** and **DRQN** models highlights two key findings:
 
-- **Reducing state complexity improves robustness**: Independent Q-networks outperform large combined models.
-- **Inference from partial observability is feasible**: DRQN can infer latent behaviors and achieve safe navigation without direct style labels.
+1.  **The Challenge of High-Dimensional States**: While the Combined DQN, with its perfect information, provides a strong performance baseline, its effectiveness is challenged by the sheer complexity of a 105-dimensional state space, which makes efficient learning difficult.
+
+2.  **The Power of Inferring Latent States**: The DRQN model proves that it is possible to learn a safe and functional policy even with incomplete information. By using its recurrent memory to analyze behavior over time, it can implicitly infer the hidden driving styles of other agents. This represents a crucial step toward building autonomous systems that can safely coexist with unpredictable human drivers in real-world environments.
+
+Interestingly, the results suggest that effectively managing the observable state may be more critical than having perfect but overwhelmingly complex information about latent states.
 
 ## Future Work
 
-- **Reward shaping**: Improve trade-off between safety and speed.
-- **Scenario complexity**: Add turning, occlusion, and lane changes.
-- **Belief tracking**: Explore probabilistic intent inference mechanisms.
+To build upon this project, future work could focus on several key areas for improvement:
 
+-   **Refined Reward Engineering**: The reward function could be further refined to better balance the trade-offs between safety, such as avoiding collisions, and traffic efficiency, like minimizing crossing time.
+-   **Increased Scenario Complexity**: The simulation environment could be enhanced to include more complex and realistic traffic scenarios, such as vehicles turning, merging, or changing lanes.
+-   **Advanced Belief Update Mechanisms**: More sophisticated architectures could be explored for inferring hidden states, which could lead to more effective and reliable solutions for partially observable environments.

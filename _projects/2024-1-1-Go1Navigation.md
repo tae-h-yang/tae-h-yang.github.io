@@ -9,7 +9,7 @@ permalink: /projects/go1-navigation/
 period: Dec 2023 - Aug 2024
 location: 
 classes: wide
-# excerpt: "Improved monocular depth estimation accuracy by learning an image-conditioned scaling factor to correct metric scale errors, enabling reliable 3D scene understanding without additional sensors."
+excerpt: "Configured Unitree Go1 with 3D LiDAR and onboard Direct LiDAR-Inertial Odometry and Mapping (DLIOM) to enable accurate state estimation and autonomous navigation using ROS2 and Nav2 in real-world environments."
 ---
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async

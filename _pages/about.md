@@ -97,7 +97,7 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
       <strong>Tae Hoon Yang</strong>, Jiacheng Hu, Haochen Shi, Zhicong Zhang, Daniel Jiang, Weizhuo Wang, Yao He, Zhen Wu, Yifan Hou, Monroe Kennedy, Shuran Song, Karen Liu
     </div>
     <div class="publication-venue">
-      Submitted to IEEE International Conference on Robotics and Automation (ICRA), 2026
+      In submission
     </div>
     <div class="publication-links">
       <a href="/assets/papers/ICRA_2026__Whole_Body_Locomotion_Copy.pdf">PDF</a>

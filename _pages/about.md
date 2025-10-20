@@ -100,8 +100,8 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
       In submission
     </div>
     <div class="publication-links">
-      <a href="/assets/papers/ICRA_2026__Whole_Body_Locomotion_Copy.pdf">PDF</a>
-      <a href="/assets/papers/ICRA26_5165_VI_i.mp4">Video</a>
+      <a href="/assets/papers/locomotion_beyond_feet.pdf">PDF</a>
+      <a href="/assets/papers/locomotion_beyond_feet.mp4">Video</a>
     </div>
   </div>
 </div>

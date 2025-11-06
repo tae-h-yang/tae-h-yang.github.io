@@ -100,8 +100,8 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
       In submission
     </div>
     <div class="publication-links">
-      <a href="/assets/papers/locomotion_beyond_feet.pdf">PDF</a>
-      <a href="/assets/papers/locomotion_beyond_feet.mp4">Video</a>
+      <!-- <a href="/assets/papers/locomotion_beyond_feet.pdf">PDF</a> -->
+      <!-- <a href="/assets/papers/locomotion_beyond_feet.mp4">Video</a> -->
     </div>
   </div>
 </div>

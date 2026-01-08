@@ -94,13 +94,27 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
   <div class="publication-info">
     <div class="publication-title">Locomotion Beyond Feet</div>
     <div class="publication-authors">
-      <strong>Tae Hoon Yang</strong>, Jiacheng Hu, Haochen Shi, Zhicong Zhang, Daniel Jiang, Weizhuo Wang, Yao He, Zhen Wu, Yifan Hou, Monroe Kennedy, Shuran Song, Karen Liu
+      <strong><a href="https://tae-h-yang.github.io/">Tae Hoon Yang</a></strong><sup>*</sup>,
+      <a href="https://hshi74.github.io/">Haochen Shi</a><sup>*</sup>,
+      <a href="https://www.linkedin.com/in/jc-hu/">Jiacheng Hu</a><sup>*</sup>,
+      <a href="https://www.linkedin.com/in/zhicongzhang/">Zhicong Zhang</a>,
+      <a href="https://www.linkedin.com/in/danieljiangdj/">Daniel Jiang</a>,
+      <a href="http://me.weizhuowang.com/">Weizhuo Wang</a>,
+      <a href="https://shockwavehe.github.io/">Yao He</a>,
+      <a href="https://zhenwu061.github.io/">Zhen Wu</a>,
+      <a href="https://www.linkedin.com/in/matt-chen-ym/">Yuming Chen</a>,
+      <a href="https://yifan-hou.github.io/">Yifan Hou</a>,
+      <a href="https://monroekennedy3.com/">Monroe Kennedy III</a>,
+      <a href="https://shurans.github.io/">Shuran Song</a><sup>†</sup>,
+      <a href="https://tml.stanford.edu/people/karen-liu">C. Karen Liu</a><sup>†</sup>
+      <br><small><sup>*</sup>Equal contribution, <sup>†</sup>Equal advising</small>
     </div>
     <div class="publication-venue">
       In submission
     </div>
     <div class="publication-links">
-      <!-- <a href="/assets/papers/locomotion_beyond_feet.pdf">PDF</a> -->
+      <a href="https://locomotion-beyond-feet.github.io/">Project Page</a>
+      <a href="https://arxiv.org/abs/2601.03607">Paper</a>
       <!-- <a href="/assets/papers/locomotion_beyond_feet.mp4">Video</a> -->
     </div>
   </div>

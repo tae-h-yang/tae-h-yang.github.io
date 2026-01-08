@@ -60,6 +60,14 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
   color: #555;
 }
 
+.publication-authors a {
+  text-decoration: none;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
 .publication-venue {
   margin-bottom: 12px;
   font-style: italic;

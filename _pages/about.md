@@ -97,7 +97,7 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
 
 <div class="publication-card">
   <div class="publication-thumbnail">
-    <img src="/assets/papers/locomotion_beyond_feet_thumbnail.gif" alt="Locomotion Beyond Feet">
+    <img src="/assets/papers/robustness_thumbnail.gif" alt="Locomotion Beyond Feet">
   </div>
   <div class="publication-info">
     <div class="publication-title">Locomotion Beyond Feet</div>

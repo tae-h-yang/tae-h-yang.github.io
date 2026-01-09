@@ -16,7 +16,7 @@ classes: wide
 #     title: "High-Speed Off-Road Navigation"
 ---
 
-Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanford University. I earned my B.S. in Computer Engineering with a minor in Robotics from Northeastern University. I'm passionate about developing and researching embodied AI, with a focus on robot learning.
+Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanford University, advised by <a href="https://shurans.github.io/" style="text-decoration: none;">Shuran Song</a> and <a href="https://tml.stanford.edu/people/karen-liu" style="text-decoration: none;">C. Karen Liu</a>. I earned my B.S. in Computer Engineering with a minor in Robotics from Northeastern University, where I was advised by <a href="https://mfe7.github.io/" style="text-decoration: none;">Michael Everett</a>. I'm passionate about developing and researching embodied AI, with a focus on robot learning.
 
 ---
 
@@ -121,9 +121,10 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
       In submission
     </div>
     <div class="publication-links">
-      <a href="https://locomotion-beyond-feet.github.io/">Project Page</a>
-      <a href="https://arxiv.org/abs/2601.03607">Paper</a>
-      <!-- <a href="/assets/papers/locomotion_beyond_feet.mp4">Video</a> -->
+      <a href="https://locomotion-beyond-feet.github.io/"><i class="fas fa-globe"></i> Project Page</a>
+      <a href="https://arxiv.org/abs/2601.03607"><i class="fas fa-file-pdf"></i> Paper</a>
+      <a href="https://github.com/hshi74/toddlerbot"><i class="fab fa-github"></i> Code</a>
+      <a href="https://x.com/taeyang___11/status/2009359173302276391">𝕏 Tweet</a>
     </div>
   </div>
 </div>
@@ -141,7 +142,7 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
       Manuscript in revision for IEEE Transactions on Microwave Theory and Techniques (TMTT)
     </div>
     <div class="publication-links">
-      <a href="/assets/papers/TMTT_Xingyu_Final.pdf">PDF</a>
+      <a href="/assets/papers/TMTT_Xingyu_Final.pdf"><i class="fas fa-file-pdf"></i> PDF</a>
     </div>
   </div>
 </div>
@@ -247,8 +248,8 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
       </ul>
     </div>
     <div class="project-links">
-      <a href="https://toddlerbot.github.io/">Website</a>
-      <a href="https://github.com/hshi74/toddlerbot">Code</a>
+      <a href="https://toddlerbot.github.io/"><i class="fas fa-globe"></i> Project Page</a>
+      <a href="https://github.com/hshi74/toddlerbot"><i class="fab fa-github"></i> Code</a>
       <a href="https://github.com/hshi74/toddlerbot/stargazers" style="background: none; padding: 0;">
         <img src="https://img.shields.io/github/stars/hshi74/toddlerbot?style=social" alt="Stars" style="height: 30px; display: block;">
       </a>
@@ -275,8 +276,83 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
       </ul>
     </div>
     <div class="project-links">
-      <a href="https://www.youtube.com/watch?v=rXD-VD9xano&t=1s">Video</a>
+      <a href="https://www.youtube.com/watch?v=rXD-VD9xano&t=1s"><i class="fab fa-youtube"></i> Video</a>
     </div>
+  </div>
+</div>
+
+---
+
+# Teaching
+
+<style>
+.teaching-card {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.teaching-info {
+  flex-grow: 1;
+}
+
+.teaching-title {
+  font-size: 1.05em;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.teaching-role {
+  color: #555;
+  font-size: 0.95em;
+}
+
+.teaching-period {
+  color: #666;
+  font-size: 0.9em;
+}
+</style>
+
+### Stanford University
+
+<div class="teaching-card">
+  <div class="teaching-info">
+    <div class="teaching-title">CS229 – Machine Learning</div>
+    <div class="teaching-period">Winter 2026</div>
+  </div>
+</div>
+
+<div class="teaching-card">
+  <div class="teaching-info">
+    <div class="teaching-title"><a href="https://cs229.stanford.edu/" style="text-decoration: none;">CS229 – Machine Learning</a></div>
+    <div class="teaching-period">Autumn 2025</div>
+  </div>
+</div>
+
+### Northeastern University
+
+<div class="teaching-card">
+  <div class="teaching-info">
+    <div class="teaching-title"><a href="https://www1.coe.neu.edu/~jkimani/eece2160/" style="text-decoration: none;">EECE 2160 – Embedded Design: Enabling Robotics</a></div>
+    <div class="teaching-period">Spring 2024</div>
+  </div>
+</div>
+
+<div class="teaching-card">
+  <div class="teaching-info">
+    <div class="teaching-title"><a href="https://catalog.northeastern.edu/course-descriptions/eece/" style="text-decoration: none;">EECE 2140 – Computing Fundamentals for Engineers</a></div>
+    <div class="teaching-period">Spring 2023</div>
+  </div>
+</div>
+
+<div class="teaching-card">
+  <div class="teaching-info">
+    <div class="teaching-title"><a href="https://www1.coe.neu.edu/~jkimani/eece2160/" style="text-decoration: none;">EECE 2160 – Embedded Design: Enabling Robotics</a></div>
+    <div class="teaching-period">Fall 2022</div>
   </div>
 </div>
 

@@ -93,6 +93,18 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
 .publication-links a:hover {
   background: #0056b3;
 }
+
+@media (max-width: 600px) {
+  .publication-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .publication-thumbnail {
+    width: 100%;
+    max-width: 300px;
+  }
+}
 </style>
 
 <div class="publication-card">
@@ -229,6 +241,18 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
 
 .project-links a:hover {
   background: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-thumbnail {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 </style>

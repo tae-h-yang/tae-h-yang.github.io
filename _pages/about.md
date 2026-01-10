@@ -345,14 +345,14 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
 
 <div class="teaching-card">
   <div class="teaching-info">
-    <div class="teaching-title">CS229 – Machine Learning</div>
+    <div class="teaching-title"><a href="https://cs229.stanford.edu/" style="text-decoration: none;">CS229 – Machine Learning</a></div>
     <div class="teaching-period">Winter 2026</div>
   </div>
 </div>
 
 <div class="teaching-card">
   <div class="teaching-info">
-    <div class="teaching-title"><a href="https://cs229.stanford.edu/" style="text-decoration: none;">CS229 – Machine Learning</a></div>
+    <div class="teaching-title"><a href="https://cs229.stanford.edu/index.html-fall25" style="text-decoration: none;">CS229 – Machine Learning</a></div>
     <div class="teaching-period">Autumn 2025</div>
   </div>
 </div>

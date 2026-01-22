@@ -124,9 +124,9 @@ author:
       url: "https://www.linkedin.com/in/tae-h-yang/"
     - label: "X"
       url: "https://x.com/taeyang___11"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://www.instagram.com/hoonyy_11/"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://www.instagram.com/hoonyy_11/"
 
 # Site Footer
 footer:

@@ -16,7 +16,7 @@ classes: wide
 #     title: "High-Speed Off-Road Navigation"
 ---
 
-Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanford University, advised by <a href="https://shurans.github.io/" style="text-decoration: none;">Shuran Song</a> and <a href="https://tml.stanford.edu/people/karen-liu" style="text-decoration: none;">C. Karen Liu</a>. I earned my B.S. in Computer Engineering with a minor in Robotics from Northeastern University, where I was advised by <a href="https://mfe7.github.io/" style="text-decoration: none;">Michael Everett</a>. I'm passionate about developing and researching embodied AI, with a focus on robot learning.
+Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanford University, advised by Professor <a href="https://shurans.github.io/" style="text-decoration: none;">Shuran Song</a> and Professor <a href="https://tml.stanford.edu/people/karen-liu" style="text-decoration: none;">C. Karen Liu</a>. I earned my B.S. in Computer Engineering with a minor in Robotics from Northeastern University, where I was advised by Professor <a href="https://mfe7.github.io/" style="text-decoration: none;">Michael Everett</a>. I'm passionate about developing and researching embodied AI, with a focus on robot learning.
 
 ---
 

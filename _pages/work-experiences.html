@@ -3,10 +3,14 @@ layout: archive
 title: "Work Experience"
 permalink: /work-experience/
 author_profile: true
+classes: wide
 ---
 
 {% include base_path %}
     
 {% for post in site.work-experiences reversed %}
+  {% if post.title contains " TA " or post.title contains " RA " %}
+  {% else %}
   {% include archive-single-work-experiences.html %}
+  {% endif %}
 {% endfor %}

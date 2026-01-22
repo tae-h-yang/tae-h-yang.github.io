@@ -7,7 +7,7 @@ permalink: /projects/remote-robot-arm/
 period: Sep 2019 - Dec 2019
 location: 
 classes: wide
-excerpt: "Configured a robotic arm on an FPGA development board using memory-mapped I/O. Programmed control logic in C++ to interpret directional gestures from a Wii-mote’s onboard IMU. Detected up, down, left, and right motions to drive the arm’s servos in real time. Mapped Wii-mote button inputs to control the gripper's open and close actions. Integrated sensor data processing, embedded control, and wireless communication for gesture-based robotic manipulation."
+excerpt: "<ul><li>Configured a robotic arm on an FPGA development board using memory-mapped I/O.</li><li>Programmed control logic in C++ to interpret directional gestures from a Wii-mote's onboard IMU.</li><li>Mapped Wii-mote button inputs to control the gripper and detected motions to drive servos in real time.</li></ul>"
 ---
 
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>

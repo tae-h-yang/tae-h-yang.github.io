@@ -7,7 +7,7 @@ permalink: /projects/underwater-localization/
 period: May 2023 - Apr 2024
 location: 
 classes: wide
-excerpt: "Designed an underwater localization system for UUVs utilizing inertial pose estimation and beacon triangulation based on acoustic communication understanding constraints of underwater communication and dead reckoning using IMU."
+excerpt: "<ul><li>Designed an underwater localization system for UUVs utilizing inertial pose estimation and beacon triangulation.</li><li>Implemented dead reckoning using IMU with understanding of underwater communication constraints.</li></ul>"
 ---
 This page is based on the following resource:<br />
 <a style="text-decoration: none;" href="https://github.com/tae-h-yang/imu-pose-estimation" target="_blank">Code <i class="fa fa-code"></i></a><br />

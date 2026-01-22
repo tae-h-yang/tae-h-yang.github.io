@@ -9,7 +9,9 @@ permalink: /projects/pick-and-place-learning/
 period: Sep 2024 - Dec 2024
 location: 
 classes: wide
-excerpt: "Trained a robotic manipulator for pick-and-place tasks using an action affordance model, achieving high success rates on both seen and unseen objects."
+header:
+  teaser: /assets/projects/pick-and-place-learning/pick-and-place-learning-thumbnail.gif
+excerpt: "<ul><li>Implemented a Mini-UNet affordance model for robotic grasping, achieving 86.7% success on seen and 76.7% on unseen objects.</li><li>Added test-time improvement to prevent repeated failed grasps by updating affordance maps dynamically.</li></ul>"
 ---
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async

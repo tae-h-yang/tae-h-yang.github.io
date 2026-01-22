@@ -13,20 +13,17 @@ author_profile: true
   border-collapse: separate;
   border-spacing: 0 0.5em;
   margin-bottom: 2em;
+  table-layout: fixed;
 }
 
 .course-row {
   cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.course-row:hover {
-  transform: translateX(4px);
+  transition: background 0.2s ease;
 }
 
 .course-row td {
   background: #f8f9fa;
-  padding: 0.8em 1em;
+  padding: 1em 1.2em;
   vertical-align: middle;
 }
 
@@ -40,12 +37,17 @@ author_profile: true
 
 .course-row td:first-child {
   border-radius: 8px 0 0 8px;
-  box-shadow: -2px 2px 4px rgba(0,0,0,0.06);
+  width: 100px;
+}
+
+.course-row td:nth-child(2) {
+  width: auto;
 }
 
 .course-row td:last-child {
   border-radius: 0 8px 8px 0;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.06);
+  width: 120px;
+  text-align: right;
 }
 
 .course-code {
@@ -75,23 +77,32 @@ author_profile: true
 }
 
 .course-excerpt-row td {
-  padding: 0 1em 1em 1em;
+  padding: 0.5em 1.2em 1.2em 1.2em;
   font-size: 0.9em;
   color: #555;
   line-height: 1.6;
-  background: #f8f9fa;
-  border-radius: 0 0 8px 8px;
+  background: #eef1f4;
 }
 
 @media (max-width: 600px) {
-  .course-table td {
-    padding: 0.5em 0.6em;
-    font-size: 0.9em;
+  .course-table {
+    table-layout: auto;
+  }
+
+  .course-row td {
+    padding: 0.8em;
+  }
+
+  .course-row td:first-child {
+    width: auto;
+  }
+
+  .course-row td:last-child {
+    width: auto;
   }
 
   .course-code {
     font-size: 0.85em;
-    padding: 0.2em 0.4em;
   }
 
   .course-semester {

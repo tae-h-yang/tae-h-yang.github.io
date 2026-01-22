@@ -7,7 +7,7 @@ type: ROK Armed Forces Hackathon
 period: Aug 2021 - Oct 2021
 location: 
 classes: wide
-excerpt: "Designed a wearable fitness tracker using an IMU sensor and complementary filter to estimate body orientation and motion in real time. Implemented posture classification and repetition counting algorithms for exercises (e.g., squats), using calibrated angle and angular velocity thresholds to detect form and timing accuracy."
+excerpt: "<ul><li>Designed a wearable fitness tracker using an IMU sensor and complementary filter for real-time body orientation estimation.</li><li>Implemented posture classification and repetition counting algorithms for exercises (e.g., squats).</li><li>Used calibrated angle and angular velocity thresholds to detect form and timing accuracy.</li></ul>"
 ---
 
 # Introduction

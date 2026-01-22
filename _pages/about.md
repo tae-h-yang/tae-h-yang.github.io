@@ -379,4 +379,3 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
     <div class="teaching-period">Fall 2022</div>
   </div>
 </div>
-

@@ -3,10 +3,259 @@ layout: archive
 title: "Projects"
 permalink: /projects/
 author_profile: true
+classes: wide
 ---
 
 {% include base_path %}
-    
-{% for post in site.projects reversed %}
-  {% include archive-single-project.html %}
+
+<style>
+.project-card {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.project-thumbnail {
+  flex-shrink: 0;
+  width: 180px;
+  height: 120px;
+  background: #e9ecef;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.project-thumbnail .placeholder {
+  color: #adb5bd;
+  font-size: 0.8em;
+}
+
+.project-info {
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 1.05em;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.project-title a {
+  text-decoration: none;
+  color: #3b9cba;
+}
+
+.project-title a:hover {
+  text-decoration: underline;
+}
+
+.project-period {
+  margin-bottom: 6px;
+  color: #666;
+  font-size: 0.85em;
+}
+
+.project-affiliation {
+  margin-bottom: 6px;
+  color: #555;
+  font-size: 0.85em;
+}
+
+.project-description {
+  margin-bottom: 6px;
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.9em;
+}
+
+.project-description ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.project-description li {
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.project-description p {
+  margin: 0;
+  color: #555;
+}
+
+.project-links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.project-links a {
+  padding: 5px 12px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85em;
+  transition: background 0.3s;
+}
+
+.project-links a:hover {
+  background: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .project-thumbnail {
+    width: 100%;
+    max-width: 250px;
+    height: 150px;
+  }
+}
+</style>
+
+<div class="project-card">
+  <div class="project-thumbnail">
+    <img src="/assets/projects/toddlerbot-2.0/keyframe.gif" alt="ToddlerBot 2.0">
+  </div>
+  <div class="project-info">
+    <div class="project-title">ToddlerBot 2.0: Open-Source ML-Compatible Humanoid Platform</div>
+    <div class="project-period">Dec 2024 - Aug 2025</div>
+    <div class="project-affiliation">Robotics and Embodied Artificial Intelligence (REAL) Lab and The Movement Lab, Stanford University</div>
+    <div class="project-description">
+      <ul>
+        <li>Contributed to the 2.0 release by improving the custom keyframe animation app and adding non-physics motion generating and RL training tools.</li>
+        <li>Built an RL training pipeline with custom terrain generation, integrated stereo depth perception using the deep learning model FoundationStereo, and added RGB-D rendering and elevation mapping features in simulation.</li>
+      </ul>
+    </div>
+    <div class="project-links">
+      <a href="https://toddlerbot.github.io/"><i class="fas fa-globe"></i> Project Page</a>
+      <a href="https://github.com/hshi74/toddlerbot"><i class="fab fa-github"></i> Code</a>
+      <a href="https://github.com/hshi74/toddlerbot/stargazers" style="background: none; padding: 0;">
+        <img src="https://img.shields.io/github/stars/hshi74/toddlerbot?style=social" alt="Stars" style="height: 24px; display: block;">
+      </a>
+      <a href="https://github.com/hshi74/toddlerbot/network/members" style="background: none; padding: 0;">
+        <img src="https://img.shields.io/github/forks/hshi74/toddlerbot?style=social" alt="Forks" style="height: 24px; display: block;">
+      </a>
+    </div>
+  </div>
+</div>
+
+{% assign sorted_projects = site.projects | sort: "date" | reverse %}
+{% assign after_go1 = false %}
+{% for post in sorted_projects %}
+{% if post.permalink == "/projects/go1-navigation/" %}
+<div class="project-card">
+  <div class="project-thumbnail">
+    <img src="/assets/projects/go1-navigation/go1-thumbnail.gif" alt="Go1 Navigation">
+  </div>
+  <div class="project-info">
+    <div class="project-title">Go1 DLIOM-Based Autonomous Navigation</div>
+    <div class="project-period">Dec 2023 - Aug 2024</div>
+    <div class="project-affiliation">Autonomy & Intelligence Lab, Northeastern University</div>
+    <div class="project-description">
+      <ul>
+        <li>Configured Unitree Go1 robot dog with 3D LiDAR sensor fixture and ROS2 environment on robot's Jetson board.</li>
+        <li>Integrated state estimation from DLIOM (Direct LiDAR Inertial Odometry and Mapping) with ROS2 Nav2.</li>
+        <li>Achieved robot navigation with custom nodes that convert velocities from Nav2 to robot's high-level SDK commands.</li>
+      </ul>
+    </div>
+    <div class="project-links">
+      <a href="https://www.youtube.com/watch?v=rXD-VD9xano&t=1s"><i class="fab fa-youtube"></i> Video</a>
+    </div>
+  </div>
+</div>
+{% assign after_go1 = true %}
+{% else %}
+{% if after_go1 %}
+{% if post.permalink == "/projects/trajectory-converter/" %}
+<div class="project-card">
+  <div class="project-thumbnail">
+    {% if post.header.teaser %}
+    <a href="{{ post.permalink }}">
+      <img src="{{ post.header.teaser }}" alt="{{ post.title }}">
+    </a>
+    {% else %}
+    <span class="placeholder">No image</span>
+    {% endif %}
+  </div>
+  <div class="project-info">
+    <div class="project-title">
+      {% if post.permalink %}
+        <a href="{{ post.permalink }}">{{ post.title }}</a>
+      {% else %}
+        {{ post.title }}
+      {% endif %}
+    </div>
+    {% if post.period %}<div class="project-period">{{ post.period }}</div>{% endif %}
+    {% if post.excerpt %}<div class="project-description">{{ post.excerpt }}</div>{% endif %}
+    {% if post.permalink == "/projects/mde-adaptive-scaling/" %}
+    <div class="project-links">
+      <a href="/assets/projects/mde-adaptive-scaling/cs229_project_report.pdf"><i class="fas fa-file-pdf"></i> Report</a>
+      <a href="/assets/projects/mde-adaptive-scaling/cs299_project_poster.pdf"><i class="fas fa-file-pdf"></i> Poster</a>
+      <a href="https://github.com/tae-h-yang/adaptive-depth-estimation"><i class="fab fa-github"></i> Code</a>
+    </div>
+    {% elsif post.permalink == "/projects/rl-autonomous-driving/" %}
+    <div class="project-links">
+      <a href="/assets/projects/rl-autonomous-dirving/AA228_CS238_Project_Report.pdf"><i class="fas fa-file-pdf"></i> Report</a>
+      <a href="https://github.com/tae-h-yang/SHIELD"><i class="fab fa-github"></i> Code</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+{% else %}
+<div class="project-card">
+  <div class="project-thumbnail">
+    {% if post.header.teaser %}
+    <a href="{{ post.permalink }}">
+      <img src="{{ post.header.teaser }}" alt="{{ post.title }}">
+    </a>
+    {% else %}
+    <span class="placeholder">No image</span>
+    {% endif %}
+  </div>
+  <div class="project-info">
+    <div class="project-title">
+      {% if post.permalink %}
+        <a href="{{ post.permalink }}">{{ post.title }}</a>
+      {% else %}
+        {{ post.title }}
+      {% endif %}
+    </div>
+    {% if post.period %}<div class="project-period">{{ post.period }}</div>{% endif %}
+    {% if post.excerpt %}<div class="project-description">{{ post.excerpt }}</div>{% endif %}
+    {% if post.permalink == "/projects/mde-adaptive-scaling/" %}
+    <div class="project-links">
+      <a href="/assets/projects/mde-adaptive-scaling/cs229_project_report.pdf"><i class="fas fa-file-pdf"></i> Report</a>
+      <a href="/assets/projects/mde-adaptive-scaling/cs299_project_poster.pdf"><i class="fas fa-file-pdf"></i> Poster</a>
+      <a href="https://github.com/tae-h-yang/adaptive-depth-estimation"><i class="fab fa-github"></i> Code</a>
+    </div>
+    {% elsif post.permalink == "/projects/rl-autonomous-driving/" %}
+    <div class="project-links">
+      <a href="/assets/projects/rl-autonomous-dirving/AA228_CS238_Project_Report.pdf"><i class="fas fa-file-pdf"></i> Report</a>
+      <a href="https://github.com/tae-h-yang/SHIELD"><i class="fab fa-github"></i> Code</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+{% endif %}
 {% endfor %}

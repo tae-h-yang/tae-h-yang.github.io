@@ -3,12 +3,14 @@ title: "Go1 DLIOM-Based Autonomous Navigation"
 # toc: true
 # toc_sticky: true
 collection: projects
-type: 
-permalink: /projects/go1-navigation/ 
+type:
+permalink: /projects/go1-navigation/
 # date: 2023-5-8
 period: Dec 2023 - Aug 2024
-location: 
+location:
 classes: wide
+header:
+  teaser: /assets/projects/go1-navigation/go1-thumbnail.gif
 excerpt: "Configured Unitree Go1 with 3D LiDAR and onboard Direct LiDAR-Inertial Odometry and Mapping (DLIOM) to enable accurate state estimation and autonomous navigation using ROS2 and Nav2 in real-world environments."
 ---
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>

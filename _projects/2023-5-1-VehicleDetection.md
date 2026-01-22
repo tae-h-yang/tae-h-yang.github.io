@@ -7,7 +7,7 @@ permalink: /projects/vehicle-detection/
 period: May 2023 - Jun 2023
 location: 
 classes: wide
-excerpt: "Trained and tested deep learning based object detection models, RetinaNet and YOLOv5, on an on-road vehicle dataset and their performance was investigated."
+excerpt: "<ul><li>Trained and tested deep learning object detection models (RetinaNet and YOLOv5) on an on-road vehicle dataset.</li><li>Investigated and compared model performance.</li></ul>"
 ---
 This page is based on the following resources:<br />
 <a style="text-decoration: none;" href="/assets/projects/vehicle-detection/ML for Computer Vision EECE 5644 Final Report.pdf" target="_blank">Report <i class="fa fa-file"></i></a><br />

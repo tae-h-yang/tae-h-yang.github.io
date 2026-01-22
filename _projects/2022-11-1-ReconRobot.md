@@ -7,7 +7,7 @@ permalink: /projects/recon-robot/
 period: Nov 2022 - Dec 2022
 location: 
 classes: wide
-excerpt: "Utilized Gmapping SLAM, Frontier-Based Exploration and tag detection on TurtleBot3 to achieve a reconnaissance mission autonomously in a closed and unkown environment."
+excerpt: "<ul><li>Utilized Gmapping SLAM, Frontier-Based Exploration, and tag detection on TurtleBot3.</li><li>Achieved autonomous reconnaissance missions in closed and unknown environments.</li></ul>"
 ---
 Some of the contents in this page is based on the following resource:<br /> 
 <a style="text-decoration: none;" href="/assets/projects/recon-robot/final-report.pdf" target="_blank">Report <i class="fa fa-file"></i></a><br />

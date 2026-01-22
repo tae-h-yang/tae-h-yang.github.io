@@ -7,7 +7,7 @@ permalink: /projects/wiimote-create3/
 period: Sep 2023 - Dec 2023
 location: 
 classes: wide
-excerpt: "Controlled a differential wheeled robot with a joystick by establishing bluetooth connections with the robot and joystick and mapping the joystick state to robot wheel speeds."
+excerpt: "<ul><li>Established Bluetooth connections with a differential wheeled robot and Wii-mote joystick.</li><li>Mapped joystick state to robot wheel speeds for real-time control.</li></ul>"
 ---
 This page is based on the following resources:<br />
 <a style="text-decoration: none;" href="https://iroboteducation.github.io/create3_docs/" target="_blank">Documentation <i class="fa fa-file"></i></a><br />

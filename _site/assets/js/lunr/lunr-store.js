@@ -261,7 +261,7 @@ var store = [{
         "excerpt":"This page is based on the following resources: Paper Code Introduction This project was a part of the robot drawing project using a differential wheeled robot for iRobot Inter Hackathon. The robot was equipped with drawing materials and its purpose was to draw objects in reference images. The images were...","categories": [],
         "tags": [],
         "url": "/projects/trajectory-converter/",
-        "teaser": null
+        "teaser": "/assets/projects/trajectory-converter/trajectory-converter-thumbnail.png"
       },{
         "title": "Wii-mote Controlled Differential Wheeled Robot",
         "excerpt":"This page is based on the following resources: Documentation Code Introduction The goal of iRobot Intern Challenge was to develop a mobile robot that could collect balls and place them in a goal area. Create 3 which was an educational robot produced by iRobot was provided for the development. Create...","categories": [],
@@ -273,25 +273,25 @@ var store = [{
         "excerpt":"      This work was conducted during my time as a Research Assistant at Northeastern University’s Autonomy &amp; Intelligence Lab.     ","categories": [],
         "tags": [],
         "url": "/projects/go1-navigation/",
-        "teaser": null
+        "teaser": "/assets/projects/go1-navigation/go1-thumbnail.gif"
       },{
         "title": "Action Affordance Learning for Robotic Pick-and-Place",
         "excerpt":"On this page Introduction Method Results and Demonstrations Quantitative Results Video Demonstrations Conclusion Introduction Teaching a robot to pick up and move arbitrary objects is a fundamental challenge in robotics. Instead of training a model to recognize specific objects, a more generalizable approach is to teach it the concept of...","categories": [],
         "tags": [],
         "url": "/projects/pick-and-place-learning/",
-        "teaser": null
+        "teaser": "/assets/projects/pick-and-place-learning/pick-and-place-learning-thumbnail.gif"
       },{
         "title": "Safe Autonomous Driving at Uncontrolled Intersections with Latent Style Awareness",
         "excerpt":"On this page Introduction Method 1. Combined Deep Q-Network (DQN): Full Observability (MDP) 2. Deep Recurrent Q-Network (DRQN): Partial Observability (POMDP) Action Space &amp; Training Details Demo Videos &amp; Results 1. Random Policy (Baseline) 2. Combined DQN Policy 3. Combined DRQN Policy Quantitative Analysis Conclusion Future Work This page is...","categories": [],
         "tags": [],
         "url": "/projects/rl-autonomous-driving/",
-        "teaser": null
+        "teaser": "/assets/projects/rl-autonomous-dirving/rl-autonomous-driving-thumbnail.gif"
       },{
         "title": "Enhancing Monocular Metric Depth Estimation through Adaptive Scaling",
         "excerpt":"On this page Introduction Method Generating Optimal Scaling Factors Training a Depth Scaling Predictor CNN Architecture Training Configuration Experimental Results Training and Validation Loss Scaling Factor Prediction Accuracy Depth Estimation Performance Point Cloud Comparisons Conclusion Future Work References This page is based on the following resources: Report Poster Code Introduction...","categories": [],
         "tags": [],
         "url": "/projects/mde-adaptive-scaling/",
-        "teaser": null
+        "teaser": "/assets/projects/mde-adaptive-scaling/scaled_pred02.png"
       },{
         "title": "Advances in Inference and Representation for Simultaneous Localization and Mapping",
         "excerpt":" ","categories": [],

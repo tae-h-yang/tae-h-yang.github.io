@@ -54,15 +54,3 @@ author_profile: true
     {% include archive-single-work-experiences.html %}
   {% endif %}
 {% endfor %}
-
-<header>
-  <h2>Interests</h2>
-</header>
-
-<hr>
-
-{% for post in site.activities reversed %}
-  {% if post.type == "interest" %}
-    {% include archive-single-work-experiences.html %}
-  {% endif %}
-{% endfor %}

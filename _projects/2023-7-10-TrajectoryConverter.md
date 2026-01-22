@@ -7,7 +7,9 @@ permalink: /projects/trajectory-converter/
 period: Jul 2023 - Aug 2023
 location: 
 classes: wide
-excerpt: "Created a program that converted input images (uploaded directly by users or captured with a robot's fisheye camera) to trajectories that the robot would follow to perform its drawing task."
+header:
+  teaser: /assets/projects/trajectory-converter/trajectory-converter-thumbnail.png
+excerpt: "<ul><li>Created a program that converted input images to robot drawing trajectories.</li><li>Supported images uploaded by users or captured with a robot's fisheye camera.</li></ul>"
 ---
 This page is based on the following resources:<br />
 <a style="text-decoration: none;" href="https://www.diva-portal.org/smash/get/diva2:1679079/FULLTEXT01.pdf" target="_blank">Paper <i class="fa fa-file"></i></a><br />

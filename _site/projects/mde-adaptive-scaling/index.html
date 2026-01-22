@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Enhancing Monocular Metric Depth Estimation through Adaptive Scaling - Tae Hoon Yang</title>
-<meta name="description" content="Enhanced monocular metric depth estimation by learning an image-conditioned scaling factor that corrects global scale bias, enabling accurate 3D perception without relying on additional sensors.">
+<meta name="description" content="Developed a lightweight CNN to predict image-specific scaling factors for Depth Anything V2, addressing scale ambiguity in monocular depth estimation.Reduced AbsRel error by 43% and doubled δ₁ accuracy on NYU Depth V2 test set compared to unscaled baseline.">
 
 
   <meta name="author" content="Tae Hoon Yang">
@@ -26,9 +26,11 @@
 <meta property="og:url" content="http://localhost:4000/projects/mde-adaptive-scaling/">
 
 
-  <meta property="og:description" content="Enhanced monocular metric depth estimation by learning an image-conditioned scaling factor that corrects global scale bias, enabling accurate 3D perception without relying on additional sensors.">
+  <meta property="og:description" content="Developed a lightweight CNN to predict image-specific scaling factors for Depth Anything V2, addressing scale ambiguity in monocular depth estimation.Reduced AbsRel error by 43% and doubled δ₁ accuracy on NYU Depth V2 test set compared to unscaled baseline.">
 
 
+
+  <meta property="og:image" content="http://localhost:4000/assets/projects/mde-adaptive-scaling/scaled_pred02.png">
 
 
 
@@ -125,7 +127,7 @@
             </li><li class="masthead__menu-item">
               <a href="/activities/">Activities</a>
             </li><li class="masthead__menu-item">
-              <a href="/resume/">Resume</a>
+              <a href="/resume/">CV</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -203,6 +205,10 @@
             <li><a href="https://x.com/taeyang___11" rel="nofollow noopener noreferrer me" itemprop="sameAs"><span class="fa-fw" style="display: inline-block; text-align: center; font-weight: bold;">𝕏</span><span class="label">X</span></a></li>
           
         
+          
+            <li><a href="/resume/" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-file" aria-hidden="true"></i><span class="label">CV</span></a></li>
+          
+        
       
 
       
@@ -271,7 +277,7 @@
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Enhancing Monocular Metric Depth Estimation through Adaptive Scaling">
-    <meta itemprop="description" content="Enhanced monocular metric depth estimation by learning an image-conditioned scaling factor that corrects global scale bias, enabling accurate 3D perception without relying on additional sensors.">
+    <meta itemprop="description" content="Developed a lightweight CNN to predict image-specific scaling factors for Depth Anything V2, addressing scale ambiguity in monocular depth estimation.Reduced AbsRel error by 43% and doubled δ₁ accuracy on NYU Depth V2 test set compared to unscaled baseline.">
     <meta itemprop="datePublished" content="January 01, 2025">
     
 
@@ -327,9 +333,9 @@
 </aside>
 
 <p>This page is based on the following resources:<br />
-<a style="text-decoration: none;" href="https://github.com/tae-h-yang/cs229-project/blob/main/docs/cs229_project_report.pdf" target="_blank">Report <i class="fa fa-file"></i></a><br />
-<a style="text-decoration: none;" href="https://github.com/tae-h-yang/cs229-project/blob/main/docs/cs299_project_poster.pdf" target="_blank">Poster <i class="fa fa-file"></i></a><br />
-<a style="text-decoration: none;" href="https://github.com/tae-h-yang/adaptive-depth-estimation" target="_blank">Code <i class="fa fa-code"></i></a><br /></p>
+<a style="text-decoration: none;" href="/assets/projects/mde-adaptive-scaling/cs229_project_report.pdf" target="_blank">Report <i class="fas fa-file-pdf"></i></a><br />
+<a style="text-decoration: none;" href="/assets/projects/mde-adaptive-scaling/cs299_project_poster.pdf" target="_blank">Poster <i class="fas fa-file-pdf"></i></a><br />
+<a style="text-decoration: none;" href="https://github.com/tae-h-yang/adaptive-depth-estimation" target="_blank">Code <i class="fab fa-github"></i></a><br /></p>
 
 <h2 id="introduction">Introduction</h2>
 <p>Monocular depth estimation (MDE) is a core task in computer vision with applications in autonomous driving, robotics, and augmented reality (AR) <a href="#1">[1]</a><a href="#2">[2]</a>. Despite advances in deep learning, predicting <strong>metric depth</strong> from a single image remains difficult due to <strong>scale ambiguity</strong> — the loss of absolute scale during perspective projection <a href="#3">[3]</a><a href="#4">[4]</a>. This limits real-world deployment in tasks like robot navigation and 3D reconstruction <a href="#5">[5]</a>.</p>
@@ -568,7 +574,6 @@ each overlaid with the ground truth point cloud for reference.</li>
 <a name="11"></a>[11] T. Zhou et al., “Unsupervised learning of depth and ego-motion,” CVPR, 2017.<br />
 <a name="12"></a>[12] Y. Zhou et al., “Adaptive scaling for depth estimation with motion cues,” CVPR, 2023.<br />
 <a name="13"></a>[13] N. Silberman et al., “Indoor segmentation and support inference from RGB-D,” ECCV, 2012.<br /></p>
-
 
         
       </section>

@@ -9,7 +9,9 @@ permalink: /projects/rl-autonomous-driving/
 period: Sep 2024 - Dec 2024
 location: 
 classes: wide
-excerpt: "Developed and compared MDP and POMDP-based reinforcement learning agents to navigate an autonomous vehicle through an uncontrolled intersection with other agents of unknown, latent driving styles."
+header:
+  teaser: /assets/projects/rl-autonomous-dirving/rl-autonomous-driving-thumbnail.gif
+excerpt: "<ul><li>Trained DQN (MDP) and DRQN (POMDP) agents in SUMO simulator for autonomous intersection navigation with agents of unknown driving styles.</li><li>Achieved 88% success rate; DRQN learned to infer latent driver behaviors using recurrent memory for safer decision-making.</li></ul>"
 ---
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async

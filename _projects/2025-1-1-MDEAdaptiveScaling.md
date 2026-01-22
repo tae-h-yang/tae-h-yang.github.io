@@ -9,7 +9,9 @@ permalink: /projects/mde-adaptive-scaling/
 period: Jan 2025 - Mar 2025
 location: 
 classes: wide
-excerpt: "Enhanced monocular metric depth estimation by learning an image-conditioned scaling factor that corrects global scale bias, enabling accurate 3D perception without relying on additional sensors."
+header:
+  teaser: /assets/projects/mde-adaptive-scaling/scaled_pred02.png
+excerpt: "<ul><li>Developed a lightweight CNN to predict image-specific scaling factors for Depth Anything V2, addressing scale ambiguity in monocular depth estimation.</li><li>Reduced AbsRel error by 43% and doubled δ₁ accuracy on NYU Depth V2 test set compared to unscaled baseline.</li></ul>"
 ---
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script type="text/javascript" id="MathJax-script" async
@@ -19,9 +21,9 @@ excerpt: "Enhanced monocular metric depth estimation by learning an image-condit
 {% include toc %}
 
 This page is based on the following resources:<br />
-<a style="text-decoration: none;" href="https://github.com/tae-h-yang/cs229-project/blob/main/docs/cs229_project_report.pdf" target="_blank">Report <i class="fa fa-file"></i></a><br />
-<a style="text-decoration: none;" href="https://github.com/tae-h-yang/cs229-project/blob/main/docs/cs299_project_poster.pdf" target="_blank">Poster <i class="fa fa-file"></i></a><br />
-<a style="text-decoration: none;" href="https://github.com/tae-h-yang/adaptive-depth-estimation" target="_blank">Code <i class="fa fa-code"></i></a><br />
+<a style="text-decoration: none;" href="/assets/projects/mde-adaptive-scaling/cs229_project_report.pdf" target="_blank">Report <i class="fas fa-file-pdf"></i></a><br />
+<a style="text-decoration: none;" href="/assets/projects/mde-adaptive-scaling/cs299_project_poster.pdf" target="_blank">Poster <i class="fas fa-file-pdf"></i></a><br />
+<a style="text-decoration: none;" href="https://github.com/tae-h-yang/adaptive-depth-estimation" target="_blank">Code <i class="fab fa-github"></i></a><br />
 
 ## Introduction
 Monocular depth estimation (MDE) is a core task in computer vision with applications in autonomous driving, robotics, and augmented reality (AR) <a href="#1">[1]</a><a href="#2">[2]</a>. Despite advances in deep learning, predicting **metric depth** from a single image remains difficult due to **scale ambiguity** — the loss of absolute scale during perspective projection <a href="#3">[3]</a><a href="#4">[4]</a>. This limits real-world deployment in tasks like robot navigation and 3D reconstruction <a href="#5">[5]</a>.
@@ -247,5 +249,3 @@ To further improve the robustness and versatility of our method, future work wil
 <a name="11"></a>[11] T. Zhou et al., “Unsupervised learning of depth and ego-motion,” CVPR, 2017.<br />
 <a name="12"></a>[12] Y. Zhou et al., “Adaptive scaling for depth estimation with motion cues,” CVPR, 2023.<br />
 <a name="13"></a>[13] N. Silberman et al., “Indoor segmentation and support inference from RGB-D,” ECCV, 2012.<br />
-
-

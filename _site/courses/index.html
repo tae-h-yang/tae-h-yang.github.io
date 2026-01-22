@@ -269,893 +269,440 @@
     
     
 
-
-
-
-<header>
-  <h2>Stanford University Courses</h2>
-</header>
-<hr>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">CS231N Deep Learning for Computer Vision
-</a>
-      
-    </h2>
-    <p class="page__meta">Spring 2025</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Explored cutting-edge topics in computer vision with a deep learning focus, emphasizing both theoretical foundations and practical modeling techniques. Covered core topics including image classification, convolutional neural networks (CNNs), optimization methods, and backpropagation. Advanced lectures delved into recurrent networks, attention mechanisms, and vision transformers. Additional modules focused on object detection, image segmentation, video understanding, self-supervised learning, generative models (VAEs, GANs, diffusion models), and 3D vision.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Explored cutting-edge topics in computer vision with a deep learning focus, emphasizing both theoretical foundations and practical modeling techniques. Covered core topics including image classification, convolutional neural networks (CNNs), optimization methods, and backpropagation. Advanced lectures delved into recurrent networks, attention mechanisms, and vision transformers. Additional modules focused on object detection, image segmentation, video understanding, self-supervised learning, generative models (VAEs, GANs, diffusion models), and 3D vision.</p>
-</p> -->
-    
-  </article>
-</div>
-
 <style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
+.course-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5em;
+  margin-bottom: 2em;
+}
+
+.course-row {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.course-row:hover {
+  transform: translateX(4px);
+}
+
+.course-row td {
+  background: #f8f9fa;
+  padding: 0.8em 1em;
+  vertical-align: middle;
+}
+
+.course-row:hover td {
+  background: #eef1f4;
+}
+
+.course-row.expanded td {
+  background: #eef1f4;
+}
+
+.course-row td:first-child {
+  border-radius: 8px 0 0 8px;
+  box-shadow: -2px 2px 4px rgba(0,0,0,0.06);
+}
+
+.course-row td:last-child {
+  border-radius: 0 8px 8px 0;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.06);
+}
+
+.course-code {
+  font-weight: 700;
+  font-size: 0.95em;
+  color: #2f7d95;
+  white-space: nowrap;
+}
+
+.course-name {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.course-semester {
+  font-size: 0.85em;
+  color: #666;
+  white-space: nowrap;
+}
+
+.course-excerpt-row {
+  display: none;
+}
+
+.course-excerpt-row.visible {
+  display: table-row;
+}
+
+.course-excerpt-row td {
+  padding: 0 1em 1em 1em;
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.6;
+  background: #f8f9fa;
+  border-radius: 0 0 8px 8px;
+}
 
-  
+@media (max-width: 600px) {
+  .course-table td {
+    padding: 0.5em 0.6em;
+    font-size: 0.9em;
+  }
 
+  .course-code {
+    font-size: 0.85em;
+    padding: 0.2em 0.4em;
+  }
 
+  .course-semester {
+    font-size: 0.75em;
+  }
 
+  .course-name {
+    font-size: 0.9em;
+  }
+}
+</style>
 
+<script>
+function toggleCourseRow(row) {
+  var excerptRow = row.nextElementSibling;
+  var wasVisible = excerptRow.classList.contains('visible');
 
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">CS224R Deep Reinforcement Learning
-</a>
-      
-    </h2>
-    <p class="page__meta">Spring 2025</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Studied core concepts and modern techniques in deep reinforcement learning, with an emphasis on both foundational algorithms and emerging research directions. Topics included Markov Decision Processes (MDPs), imitation learning, policy gradient methods, actor-critic algorithms, Q-learning, and offline RL. Explored reward learning from human preferences, model-based and goal-conditioned RL, multi-task learning, and meta-RL. Advanced lectures and guest talks covered reinforcement learning for language models and robotics, including sim-to-real transfer.</p>
+  // Close all others
+  document.querySelectorAll('.course-excerpt-row.visible').forEach(function(el) {
+    el.classList.remove('visible');
+    el.previousElementSibling.classList.remove('expanded');
+  });
 
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Studied core concepts and modern techniques in deep reinforcement learning, with an emphasis on both foundational algorithms and emerging research directions. Topics included Markov Decision Processes (MDPs), imitation learning, policy gradient methods, actor-critic algorithms, Q-learning, and offline RL. Explored reward learning from human preferences, model-based and goal-conditioned RL, multi-task learning, and meta-RL. Advanced lectures and guest talks covered reinforcement learning for language models and robotics, including sim-to-real transfer.</p>
-</p> -->
-    
-  </article>
-</div>
+  // Toggle current
+  if (!wasVisible) {
+    excerptRow.classList.add('visible');
+    row.classList.add('expanded');
+  }
+}
+</script>
 
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
 
-  
 
 
+<h2>Stanford University</h2>
 
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">ENGR319 Robotics and Autonomous Systems Seminar
-</a>
-      
-    </h2>
-    <p class="page__meta">Winter 2025</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Attended the Stanford Robotics and Autonomous Systems Seminar, a weekly in-person speaker series featuring academic and industry leaders in robotics. Topics covered perception, planning, learning, control, and hardware design for autonomous systems. Notable speakers included researchers from Stanford, MIT, ETH Zürich, Meta, and Nuro, presenting work on compliant manipulation, space autonomy, foundation models, scalable robot learning, and embodied intelligence. The seminar fostered cross-disciplinary discussions on the future of robotics research and deployment.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Attended the Stanford Robotics and Autonomous Systems Seminar, a weekly in-person speaker series featuring academic and industry leaders in robotics. Topics covered perception, planning, learning, control, and hardware design for autonomous systems. Notable speakers included researchers from Stanford, MIT, ETH Zürich, Meta, and Nuro, presenting work on compliant manipulation, space autonomy, foundation models, scalable robot learning, and embodied intelligence. The seminar fostered cross-disciplinary discussions on the future of robotics research and deployment.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">CS381 Sensorimotor Learning for Embodied Agents
-</a>
-      
-    </h2>
-    <p class="page__meta">Winter 2025</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Studied state-of-the-art approaches in sensorimotor learning for embodied AI, focusing on how autonomous agents perceive their environment, learn policies, and adapt through physical interaction. Covered topics such as dense visual representations, self-supervised vision transformers, policy learning with diffusion models, vision-language-action frameworks, benchmarking from human demonstrations, compliance control, and differentiable hardware design. The course emphasized critical analysis of recent research papers through structured in-class discussions, highlighting the challenges and opportunities unique to embodied intelligence.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Studied state-of-the-art approaches in sensorimotor learning for embodied AI, focusing on how autonomous agents perceive their environment, learn policies, and adapt through physical interaction. Covered topics such as dense visual representations, self-supervised vision transformers, policy learning with diffusion models, vision-language-action frameworks, benchmarking from human demonstrations, compliance control, and differentiable hardware design. The course emphasized critical analysis of recent research papers through structured in-class discussions, highlighting the challenges and opportunities unique to embodied intelligence.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">CS229 Machine Learning
-</a>
-      
-    </h2>
-    <p class="page__meta">Winter 2025</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Studied foundational principles and algorithms in machine learning, with an emphasis on both statistical understanding and modern modeling techniques. Covered supervised learning (regression, neural networks, support vector machines, boosting), unsupervised learning (clustering, PCA, autoencoders, Gaussian mixture models), and reinforcement learning. Also explored recent advances in deep learning, including convolutional neural networks, Transformers, and pretrained models. The course emphasized generalization, optimization, and the theoretical connections between different learning paradigms.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Studied foundational principles and algorithms in machine learning, with an emphasis on both statistical understanding and modern modeling techniques. Covered supervised learning (regression, neural networks, support vector machines, boosting), unsupervised learning (clustering, PCA, autoencoders, Gaussian mixture models), and reinforcement learning. Also explored recent advances in deep learning, including convolutional neural networks, Transformers, and pretrained models. The course emphasized generalization, optimization, and the theoretical connections between different learning paradigms.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">CS238 Decision Making under Uncertainty
-</a>
-      
-    </h2>
-    <p class="page__meta">Autumn 2024</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Studied computational frameworks for sequential decision making under uncertainty, with applications in robotics, autonomous systems, and decision-support tools. Topics included probabilistic modeling, Bayesian networks, influence diagrams, dynamic programming, reinforcement learning (policy gradients, actor-critic, model-free and model-based methods), and belief state planning for partially observable Markov decision processes (POMDPs). Gained hands-on experience through programming projects on planning and learning algorithms, as well as a final research-driven project. Emphasized mathematical foundations, scalable algorithmic solutions, and principled representations of uncertainty for real-world decision-making.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Studied computational frameworks for sequential decision making under uncertainty, with applications in robotics, autonomous systems, and decision-support tools. Topics included probabilistic modeling, Bayesian networks, influence diagrams, dynamic programming, reinforcement learning (policy gradients, actor-critic, model-free and model-based methods), and belief state planning for partially observable Markov decision processes (POMDPs). Gained hands-on experience through programming projects on planning and learning algorithms, as well as a final research-driven project. Emphasized mathematical foundations, scalable algorithmic solutions, and principled representations of uncertainty for real-world decision-making.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">CS227A Robot Perception
-</a>
-      
-    </h2>
-    <p class="page__meta">Autumn 2024</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Studied robot perception through a full-stack approach combining classical sensing models and modern learning-based techniques. Topics included sensor fundamentals (vision, acoustic, tactile), image formation, 3D geometry, pose estimation (ICP), mapping, kinematics, and planning. Explored learning-based vision methods including convolutional neural networks, neural radiance fields (NeRFs), visuomotor policy learning (e.g., behavior cloning), and self-supervised learning. Gained hands-on experience via five coding-based homework assignments building a vision-based pick-and-place system in simulation. Guest lectures featured experts from Google, TRI, and NVIDIA, with applications focused on scalable robot learning and foundation models.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Studied robot perception through a full-stack approach combining classical sensing models and modern learning-based techniques. Topics included sensor fundamentals (vision, acoustic, tactile), image formation, 3D geometry, pose estimation (ICP), mapping, kinematics, and planning. Explored learning-based vision methods including convolutional neural networks, neural radiance fields (NeRFs), visuomotor policy learning (e.g., behavior cloning), and self-supervised learning. Gained hands-on experience via five coding-based homework assignments building a vision-based pick-and-place system in simulation. Guest lectures featured experts from Google, TRI, and NVIDIA, with applications focused on scalable robot learning and foundation models.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">CS221 AI: Principles and Techniques
-</a>
-      
-    </h2>
-    <p class="page__meta">Autumn 2024</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Gained a broad foundation in modern AI through a sequence of practical modules spanning machine learning, search, planning, decision-making, and reasoning. The course began with supervised learning methods including linear regression, classification, neural networks, and generalization techniques, followed by topics in fairness (Group DRO), feature engineering, and optimization (SGD, backpropagation). Explored sequential decision-making through search algorithms (BFS, UCS, A*), dynamic programming, and constraint satisfaction problems. Studied Markov decision processes (MDPs), reinforcement learning (Monte Carlo, Q-learning, SARSA), and game-theoretic reasoning (minimax, expectimax, alpha-beta pruning). Covered probabilistic models such as Bayesian networks and Markov networks, focusing on inference, sampling, and learning with the EM algorithm. The course concluded with a unit on logic, including propositional and first-order logic, inference rules, and automated reasoning techniques.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Gained a broad foundation in modern AI through a sequence of practical modules spanning machine learning, search, planning, decision-making, and reasoning. The course began with supervised learning methods including linear regression, classification, neural networks, and generalization techniques, followed by topics in fairness (Group DRO), feature engineering, and optimization (SGD, backpropagation). Explored sequential decision-making through search algorithms (BFS, UCS, A*), dynamic programming, and constraint satisfaction problems. Studied Markov decision processes (MDPs), reinforcement learning (Monte Carlo, Q-learning, SARSA), and game-theoretic reasoning (minimax, expectimax, alpha-beta pruning). Covered probabilistic models such as Bayesian networks and Markov networks, focusing on inference, sampling, and learning with the EM algorithm. The course concluded with a unit on logic, including propositional and first-order logic, inference rules, and automated reasoning techniques.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-
-<header>
-  <h2>Northeastern University Courses</h2>
-</header>
-<hr>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE5639 Computer Vision
-</a>
-      
-    </h2>
-    <p class="page__meta">Spring 2024</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Introduced topics such as image formation, segmentation, feature extraction, matching, shape recovery, dynamic scene analysis, and object recognition. Computer vision brings together imaging devices, computers, and sophisticated algorithms to solve problems in industrial inspection, autonomous navigation, human-computer interfaces, medicine, image retrieval from databases, realistic computer graphics rendering, document analysis, and remote sensing. The goal of computer vision is to make useful decisions about real physical objects and scenes based on sensed images. Computer vision is an exciting but disorganized field that builds on very diverse disciplines such as image processing, statistics, pattern recognition, control theory, system identification, physics, geometry, computer graphics, and learning theory. Requires good programming experience in Matlab or C++.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Introduced topics such as image formation, segmentation, feature extraction, matching, shape recovery, dynamic scene analysis, and object recognition. Computer vision brings together imaging devices, computers, and sophisticated algorithms to solve problems in industrial inspection, autonomous navigation, human-computer interfaces, medicine, image retrieval from databases, realistic computer graphics rendering, document analysis, and remote sensing. The goal of computer vision is to make useful decisions about real physical objects and scenes based on sensed images. Computer vision is an exciting but disorganized field that builds on very diverse disciplines such as image processing, statistics, pattern recognition, control theory, system identification, physics, geometry, computer graphics, and learning theory. Requires good programming experience in Matlab or C++.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE5644 Introduction to Machine Learning and Patter Recognition
-</a>
-      
-    </h2>
-    <p class="page__meta">Summer1 2023</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Studied machine learning (the study and design of algorithms that enable computers/machines to learn from experience/data). Covered a range of algorithms, focusing on the underlying models between each approach. Emphasized the foundations to prepare for research in machine learning. Topics included Bayes decision theory, maximum likelihood parameter estimation, model selection, mixture density estimation, support vector machines, neural networks, probabilistic graphics models, and ensemble methods (boosting and bagging). Offered an opportunity to learn where and how to apply machine learning algorithms and why they work.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Studied machine learning (the study and design of algorithms that enable computers/machines to learn from experience/data). Covered a range of algorithms, focusing on the underlying models between each approach. Emphasized the foundations to prepare for research in machine learning. Topics included Bayes decision theory, maximum likelihood parameter estimation, model selection, mixture density estimation, support vector machines, neural networks, probabilistic graphics models, and ensemble methods (boosting and bagging). Offered an opportunity to learn where and how to apply machine learning algorithms and why they work.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE5554 Robotics Sensing and Navigation
-</a>
-      
-    </h2>
-    <p class="page__meta">Spring 2023</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Examined the actual sensors and mathematical techniques for robotic sensing and navigation with a focus on sensors such as cameras, sonars, and laser scanners. These were used in association with techniques and algorithms for dead reckoning and visual inertial odometry in conjunction with GPS and inertial measurement units. Covered Kalman filters and particle filters as applied to the SLAM problem. A large component of the class involved programming in both the ROS and LCM environments with real field robotics sensor data sets. Labs incorporated real field sensors and platforms. Culminated with both an individual design project and a team-based final project of considerable complexity.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Examined the actual sensors and mathematical techniques for robotic sensing and navigation with a focus on sensors such as cameras, sonars, and laser scanners. These were used in association with techniques and algorithms for dead reckoning and visual inertial odometry in conjunction with GPS and inertial measurement units. Covered Kalman filters and particle filters as applied to the SLAM problem. A large component of the class involved programming in both the ROS and LCM environments with real field robotics sensor data sets. Labs incorporated real field sensors and platforms. Culminated with both an individual design project and a team-based final project of considerable complexity.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE4630 Robotics
-</a>
-      
-    </h2>
-    <p class="page__meta">Spring 2023</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Introduced robotics analysis covering basic theory of kinematics, dynamics, and control of robots. Developed design capabilities of microprocessor-based control systems with input from sensory devices and output actuators by designing and implementing a small mobile robot system to complete a specific task. Covered actuators, sensors, system modeling, analysis, and motion control of robots.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Introduced robotics analysis covering basic theory of kinematics, dynamics, and control of robots. Developed design capabilities of microprocessor-based control systems with input from sensory devices and output actuators by designing and implementing a small mobile robot system to complete a specific task. Covered actuators, sensors, system modeling, analysis, and motion control of robots.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">ME3460 Robot Dynamics and Control
-</a>
-      
-    </h2>
-    <p class="page__meta">Fall 2022</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Covered fundamental components and mechanisms of robotic systems and their multidisciplinary nature. Introduced the robot’s kinematics, dynamics, and control. Presented a quick overview of forward and inverse kinematics, robot dynamics, as well as path planning and control techniques. Topics also included dynamic modeling and analysis of mechanically, electrically, and magnetically driven hydraulic and pneumatic drives; kinematics and motion analysis of linkages; as well as sensing technologies (e.g., position, linear and angular displacements, velocity and acceleration, force and torque sensors) used in robotic systems. Presented kinematics and control of automatic machinery and manufacturing processes, automatic assembly, and inspection robotic systems as representative examples.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Covered fundamental components and mechanisms of robotic systems and their multidisciplinary nature. Introduced the robot’s kinematics, dynamics, and control. Presented a quick overview of forward and inverse kinematics, robot dynamics, as well as path planning and control techniques. Topics also included dynamic modeling and analysis of mechanically, electrically, and magnetically driven hydraulic and pneumatic drives; kinematics and motion analysis of linkages; as well as sensing technologies (e.g., position, linear and angular displacements, velocity and acceleration, force and torque sensors) used in robotic systems. Presented kinematics and control of automatic machinery and manufacturing processes, automatic assembly, and inspection robotic systems as representative examples.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">MATH3081 Probability and Statistics
-</a>
-      
-    </h2>
-    <p class="page__meta">Fall 2022</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Focused on probability theory. Topics included sample space; conditional probability and independence; discrete and continuous probability distributions for one and for several random variables; expectation; variance; special distributions including binomial, Poisson, and normal distributions; law of large numbers; and central limit theorem. Also introduced basic statistical theory including estimation of parameters, confidence intervals, and hypothesis testing.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Focused on probability theory. Topics included sample space; conditional probability and independence; discrete and continuous probability distributions for one and for several random variables; expectation; variance; special distributions including binomial, Poisson, and normal distributions; law of large numbers; and central limit theorem. Also introduced basic statistical theory including estimation of parameters, confidence intervals, and hypothesis testing.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE5550 Mobile Robotics
-</a>
-      
-    </h2>
-    <p class="page__meta">Fall 2022</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Investigated the science and engineering of mobile robots. Topics included kinematics, dynamics, numerical methods, state estimation, control, perception, localization and mapping, and motion planning for mobile robots. Emphasizeed practical robot applications ranging from disaster response to healthcare to space exploration.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Investigated the science and engineering of mobile robots. Topics included kinematics, dynamics, numerical methods, state estimation, control, perception, localization and mapping, and motion planning for mobile robots. Emphasizeed practical robot applications ranging from disaster response to healthcare to space exploration.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE2322 Fundamentals of Digital Design and Computer Organization
-</a>
-      
-    </h2>
-    <p class="page__meta">Fall 2022</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Covered the design and evaluation of control and data structures for digital systems. Used hardware description languages to describe and design both behavioral and register-transfer-level architectures and control units. Topics included number systems, data representation, a review of combinational and sequential digital logic, finite state machines, arithmetic-logic unit (ALU) design, basic computer architecture, the concepts of memory and memory addressing, digital interfacing, timing, and synchronization. Assignments included designing and simulating digital hardware models using SystemVerilog as well as some assembly language (RISC-V) to expose the interface between hardware and software.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Covered the design and evaluation of control and data structures for digital systems. Used hardware description languages to describe and design both behavioral and register-transfer-level architectures and control units. Topics included number systems, data representation, a review of combinational and sequential digital logic, finite state machines, arithmetic-logic unit (ALU) design, basic computer architecture, the concepts of memory and memory addressing, digital interfacing, timing, and synchronization. Assignments included designing and simulating digital hardware models using SystemVerilog as well as some assembly language (RISC-V) to expose the interface between hardware and software.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE2560 Fundamentals of Engineering Algorithms
-</a>
-      
-    </h2>
-    <p class="page__meta">Spring 2020</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Covered the design and implementation of algorithms to solve engineering problems using a high-level programming language. Reviewed elementary data structures, such as arrays, stacks, queues, and lists, and introduces more advanced structures, such as trees and graphs and the use of recursion. Covered both the algorithms to manipulate these data structures as well as their use in problem solving. Introduced algorithm complexity analysis and its application to developing efficient algorithms. Emphasized the importance of software engineering principles.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Covered the design and implementation of algorithms to solve engineering problems using a high-level programming language. Reviewed elementary data structures, such as arrays, stacks, queues, and lists, and introduces more advanced structures, such as trees and graphs and the use of recursion. Covered both the algorithms to manipulate these data structures as well as their use in problem solving. Introduced algorithm complexity analysis and its application to developing efficient algorithms. Emphasized the importance of software engineering principles.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE2520 Fundamentals of Linear Systems
-</a>
-      
-    </h2>
-    <p class="page__meta">Spring 2020</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Developed the basic theory of continuous and discrete systems, emphasizing linear time-invariant systems. Discussed the representation of signals and systems in both the time and frequency domain. Topics included linearity, time invariance, causality, stability, convolution, system interconnection, and sinusoidal response. Developed the Fourier and Laplace transforms for the discussion of frequency-domain applications. Analyzed sampling and quantization of continuous waveforms (A/D and D/A conversion), leading to the discussion of discrete-time FIR and IIR systems, recursive analysis, and realization. The Z-transform and the discrete-time Fourier transform were developed and applied to the analysis of discrete-time signals and systems.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Developed the basic theory of continuous and discrete systems, emphasizing linear time-invariant systems. Discussed the representation of signals and systems in both the time and frequency domain. Topics included linearity, time invariance, causality, stability, convolution, system interconnection, and sinusoidal response. Developed the Fourier and Laplace transforms for the discussion of frequency-domain applications. Analyzed sampling and quantization of continuous waveforms (A/D and D/A conversion), leading to the discussion of discrete-time FIR and IIR systems, recursive analysis, and realization. The Z-transform and the discrete-time Fourier transform were developed and applied to the analysis of discrete-time signals and systems.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE2412 Fundamentals of Electronics
-</a>
-      
-    </h2>
-    <p class="page__meta">Spring 2020</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Reviewed basic circuit analysis techniques. Briefly introduced operation of the principal semiconductor devices: diodes, field-effect transistors, and bipolar junction transistors. Covered diode circuits in detail; the coverage of transistor circuits focused mainly on large-signal analysis, DC biasing of amplifiers, and switching behavior. Used PSpice software to simulate circuits and large-signal models and transient simulations to characterize the behavior of transistors in amplifiers and switching circuits. Digital electronics topics included CMOS logic gates, dynamic power dissipation, gate delay, and fan-out. Amplifier circuits were introduced with the evaluation of voltage transfer characteristics and the fundamentals of small-signal analysis.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Reviewed basic circuit analysis techniques. Briefly introduced operation of the principal semiconductor devices: diodes, field-effect transistors, and bipolar junction transistors. Covered diode circuits in detail; the coverage of transistor circuits focused mainly on large-signal analysis, DC biasing of amplifiers, and switching behavior. Used PSpice software to simulate circuits and large-signal models and transient simulations to characterize the behavior of transistors in amplifiers and switching circuits. Digital electronics topics included CMOS logic gates, dynamic power dissipation, gate delay, and fan-out. Amplifier circuits were introduced with the evaluation of voltage transfer characteristics and the fundamentals of small-signal analysis.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE2540 Fundamentals of Networks
-</a>
-      
-    </h2>
-    <p class="page__meta">Fall 2019</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Presented an overview of modern communication networks. The concept of a layered network architecture was used as a framework for understanding the principal functions and services required to achieve reliable end-to-end communications. Topics included service interfaces and peer-to-peer protocols, a comparison of the OSI (open system interconnection) reference model to the TCP/IP (Internet) and IEEE LAN (local area network) architectures, network-layer and transport-layer issues, and important emerging technologies such as Bluetooth and ZigBee.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Presented an overview of modern communication networks. The concept of a layered network architecture was used as a framework for understanding the principal functions and services required to achieve reliable end-to-end communications. Topics included service interfaces and peer-to-peer protocols, a comparison of the OSI (open system interconnection) reference model to the TCP/IP (Internet) and IEEE LAN (local area network) architectures, network-layer and transport-layer issues, and important emerging technologies such as Bluetooth and ZigBee.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE2160 Embedded Design: Enabling Robotics
-</a>
-      
-    </h2>
-    <p class="page__meta">Fall 2019</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Covered the basics of the Unix operating system, high-level programming concepts, introductory digital design, wireless networking, and Simulink design. Offered a hands-on experience developing a remote-controlled robotic arm using an embedded systems platform.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Covered the basics of the Unix operating system, high-level programming concepts, introductory digital design, wireless networking, and Simulink design. Offered a hands-on experience developing a remote-controlled robotic arm using an embedded systems platform.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">EECE2150 Circuits and Signals: Biomedical Applications
-</a>
-      
-    </h2>
-    <p class="page__meta">Fall 2019</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Covered circuit theory, signal processing, circuit building, and MATLAB programming. Introduced basic device and signal models and circuit laws used in the study of linear circuits. Analyzed resistive and complex impedance networks. Used the ideal operational amplifier model, focusing on differential amplifiers and active filter circuits. Introduced basic concepts of linearity and time-invariance for both continuous and discrete-time systems and concepts associated with analog/digital conversion. Demonstrated discrete-time linear filter design on acquired signals in the MATLAB environment. Used knowledge of circuits, analog signals, digital signals, and biological signals to build a working analog/digital EKG system.</p>
-
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Covered circuit theory, signal processing, circuit building, and MATLAB programming. Introduced basic device and signal models and circuit laws used in the study of linear circuits. Analyzed resistive and complex impedance networks. Used the ideal operational amplifier model, focusing on differential amplifiers and active filter circuits. Introduced basic concepts of linearity and time-invariance for both continuous and discrete-time systems and concepts associated with analog/digital conversion. Demonstrated discrete-time linear filter design on acquired signals in the MATLAB environment. Used knowledge of circuits, analog signals, digital signals, and biological signals to build a working analog/digital EKG system.</p>
-</p> -->
-    
-  </article>
-</div>
-
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
-
-  
-
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="#" onclick="toggleExcerpt(this); return false;">MATH2341 Differential Equations and Linear Algebra for Engineering
-</a>
-      
-    </h2>
-    <p class="page__meta">Spring 2019</p>
-    
-    <p class="archive__item-excerpt hidden" itemprop="description" style="font-size: 1em;">Studied ordinary differential equations, their applications, and techniques for solving them including numerical methods (using MATLAB), Laplace transforms, and linear algebra. Topics included linear and nonlinear first- and second-order equations and applications included electrical and mechanical systems, forced oscillation, and resonance. Topics from linear algebra, such as matrices, row-reduction, vector spaces, and eigenvalues/eigenvectors, were developed and applied to systems of differential equations.</p>
+<table class="course-table">
+  <tbody>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">CS205L</span></td>
+      <td class="course-name">Continuous Mathematical Methods with an Emphasis on Machine Learning</td>
+      <td><span class="course-semester">Winter 2026</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Studied numerical approaches to the continuous mathematics used throughout computer science with an emphasis on machine and deep learning. Covered underlying mathematical methods including computational linear algebra and optimization, as well as special topics such as automatic differentiation via backward propagation, momentum methods from ordinary differential equations, CNNs, and RNNs. Completed programming assignments focused on neural network creation, training, and inference.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">CS248B</span></td>
+      <td class="course-name">Fundamentals of Computer Graphics: Animation and Simulation</td>
+      <td><span class="course-semester">Autumn 2025</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Studied fundamental concepts and techniques in computer animation and physics simulation. Topics covered included numerical integration, 3D character modeling, keyframe animation, skinning/rigging, inverse kinematics, rigid body dynamics, deformable body simulation, and fluid simulation.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">CS231N</span></td>
+      <td class="course-name">Deep Learning for Computer Vision</td>
+      <td><span class="course-semester">Spring 2025</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Explored cutting-edge topics in computer vision with a deep learning focus, emphasizing both theoretical foundations and practical modeling techniques. Covered core topics including image classification, convolutional neural networks (CNNs), optimization methods, and backpropagation. Advanced lectures delved into recurrent networks, attention mechanisms, and vision transformers. Additional modules focused on object detection, image segmentation, video understanding, self-supervised learning, generative models (VAEs, GANs, diffusion models), and 3D vision.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">CS224R</span></td>
+      <td class="course-name">Deep Reinforcement Learning</td>
+      <td><span class="course-semester">Spring 2025</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Studied core concepts and modern techniques in deep reinforcement learning, with an emphasis on both foundational algorithms and emerging research directions. Topics included Markov Decision Processes (MDPs), imitation learning, policy gradient methods, actor-critic algorithms, Q-learning, and offline RL. Explored reward learning from human preferences, model-based and goal-conditioned RL, multi-task learning, and meta-RL. Advanced lectures and guest talks covered reinforcement learning for language models and robotics, including sim-to-real transfer.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">CS381</span></td>
+      <td class="course-name">Sensorimotor Learning for Embodied Agents</td>
+      <td><span class="course-semester">Winter 2025</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Studied state-of-the-art approaches in sensorimotor learning for embodied AI, focusing on how autonomous agents perceive their environment, learn policies, and adapt through physical interaction. Covered topics such as dense visual representations, self-supervised vision transformers, policy learning with diffusion models, vision-language-action frameworks, benchmarking from human demonstrations, compliance control, and differentiable hardware design. The course emphasized critical analysis of recent research papers through structured in-class discussions, highlighting the challenges and opportunities unique to embodied intelligence.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">CS229</span></td>
+      <td class="course-name">Machine Learning</td>
+      <td><span class="course-semester">Winter 2025</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Studied foundational principles and algorithms in machine learning, with an emphasis on both statistical understanding and modern modeling techniques. Covered supervised learning (regression, neural networks, support vector machines, boosting), unsupervised learning (clustering, PCA, autoencoders, Gaussian mixture models), and reinforcement learning. Also explored recent advances in deep learning, including convolutional neural networks, Transformers, and pretrained models. The course emphasized generalization, optimization, and the theoretical connections between different learning paradigms.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">ENGR319</span></td>
+      <td class="course-name">Robotics and Autonomous Systems Seminar</td>
+      <td><span class="course-semester">Winter 2025</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Attended the Stanford Robotics and Autonomous Systems Seminar, a weekly in-person speaker series featuring academic and industry leaders in robotics. Topics covered perception, planning, learning, control, and hardware design for autonomous systems. Notable speakers included researchers from Stanford, MIT, ETH Zürich, Meta, and Nuro, presenting work on compliant manipulation, space autonomy, foundation models, scalable robot learning, and embodied intelligence. The seminar fostered cross-disciplinary discussions on the future of robotics research and deployment.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">CS221</span></td>
+      <td class="course-name">AI: Principles and Techniques</td>
+      <td><span class="course-semester">Autumn 2024</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Gained a broad foundation in modern AI through a sequence of practical modules spanning machine learning, search, planning, decision-making, and reasoning. The course began with supervised learning methods including linear regression, classification, neural networks, and generalization techniques, followed by topics in fairness (Group DRO), feature engineering, and optimization (SGD, backpropagation). Explored sequential decision-making through search algorithms (BFS, UCS, A*), dynamic programming, and constraint satisfaction problems. Studied Markov decision processes (MDPs), reinforcement learning (Monte Carlo, Q-learning, SARSA), and game-theoretic reasoning (minimax, expectimax, alpha-beta pruning). Covered probabilistic models such as Bayesian networks and Markov networks, focusing on inference, sampling, and learning with the EM algorithm. The course concluded with a unit on logic, including propositional and first-order logic, inference rules, and automated reasoning techniques.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">CS238</span></td>
+      <td class="course-name">Decision Making under Uncertainty</td>
+      <td><span class="course-semester">Autumn 2024</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Studied computational frameworks for sequential decision making under uncertainty, with applications in robotics, autonomous systems, and decision-support tools. Topics included probabilistic modeling, Bayesian networks, influence diagrams, dynamic programming, reinforcement learning (policy gradients, actor-critic, model-free and model-based methods), and belief state planning for partially observable Markov decision processes (POMDPs). Gained hands-on experience through programming projects on planning and learning algorithms, as well as a final research-driven project. Emphasized mathematical foundations, scalable algorithmic solutions, and principled representations of uncertainty for real-world decision-making.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">CS227A</span></td>
+      <td class="course-name">Robot Perception</td>
+      <td><span class="course-semester">Autumn 2024</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Studied robot perception through a full-stack approach combining classical sensing models and modern learning-based techniques. Topics included sensor fundamentals (vision, acoustic, tactile), image formation, 3D geometry, pose estimation (ICP), mapping, kinematics, and planning. Explored learning-based vision methods including convolutional neural networks, neural radiance fields (NeRFs), visuomotor policy learning (e.g., behavior cloning), and self-supervised learning. Gained hands-on experience via five coding-based homework assignments building a vision-based pick-and-place system in simulation. Guest lectures featured experts from Google, TRI, and NVIDIA, with applications focused on scalable robot learning and foundation models.</td>
+    </tr>
+    
+  </tbody>
+</table>
 
-      <!-- <p class="archive__item-excerpt" itemprop="description"><p>Studied ordinary differential equations, their applications, and techniques for solving them including numerical methods (using MATLAB), Laplace transforms, and linear algebra. Topics included linear and nonlinear first- and second-order equations and applications included electrical and mechanical systems, forced oscillation, and resonance. Topics from linear algebra, such as matrices, row-reduction, vector spaces, and eigenvalues/eigenvectors, were developed and applied to systems of differential equations.</p>
-</p> -->
-    
-  </article>
-</div>
+<h2>Northeastern University</h2>
 
-<style>
-    .archive__item-excerpt.hidden {
-      display: none;
-    }
-  </style>
-  
-  <script>
-    function toggleExcerpt(link) {
-      var excerpt = link.parentElement.nextElementSibling.nextElementSibling; // Assuming the excerpt is the next sibling element of the parent
-      excerpt.classList.toggle('hidden'); // Add a 'hidden' class to toggle visibility
-    }
-  </script>
+<table class="course-table">
+  <tbody>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE5639</span></td>
+      <td class="course-name">Computer Vision</td>
+      <td><span class="course-semester">Spring 2024</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Introduced topics such as image formation, segmentation, feature extraction, matching, shape recovery, dynamic scene analysis, and object recognition. Computer vision brings together imaging devices, computers, and sophisticated algorithms to solve problems in industrial inspection, autonomous navigation, human-computer interfaces, medicine, image retrieval from databases, realistic computer graphics rendering, document analysis, and remote sensing. The goal of computer vision is to make useful decisions about real physical objects and scenes based on sensed images. Computer vision is an exciting but disorganized field that builds on very diverse disciplines such as image processing, statistics, pattern recognition, control theory, system identification, physics, geometry, computer graphics, and learning theory. Requires good programming experience in Matlab or C++.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE5644</span></td>
+      <td class="course-name">Introduction to Machine Learning and Patter Recognition</td>
+      <td><span class="course-semester">Summer1 2023</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Studied machine learning (the study and design of algorithms that enable computers/machines to learn from experience/data). Covered a range of algorithms, focusing on the underlying models between each approach. Emphasized the foundations to prepare for research in machine learning. Topics included Bayes decision theory, maximum likelihood parameter estimation, model selection, mixture density estimation, support vector machines, neural networks, probabilistic graphics models, and ensemble methods (boosting and bagging). Offered an opportunity to learn where and how to apply machine learning algorithms and why they work.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE5554</span></td>
+      <td class="course-name">Robotics Sensing and Navigation</td>
+      <td><span class="course-semester">Spring 2023</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Examined the actual sensors and mathematical techniques for robotic sensing and navigation with a focus on sensors such as cameras, sonars, and laser scanners. These were used in association with techniques and algorithms for dead reckoning and visual inertial odometry in conjunction with GPS and inertial measurement units. Covered Kalman filters and particle filters as applied to the SLAM problem. A large component of the class involved programming in both the ROS and LCM environments with real field robotics sensor data sets. Labs incorporated real field sensors and platforms. Culminated with both an individual design project and a team-based final project of considerable complexity.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE4630</span></td>
+      <td class="course-name">Robotics</td>
+      <td><span class="course-semester">Spring 2023</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Introduced robotics analysis covering basic theory of kinematics, dynamics, and control of robots. Developed design capabilities of microprocessor-based control systems with input from sensory devices and output actuators by designing and implementing a small mobile robot system to complete a specific task. Covered actuators, sensors, system modeling, analysis, and motion control of robots.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">ME3460</span></td>
+      <td class="course-name">Robot Dynamics and Control</td>
+      <td><span class="course-semester">Fall 2022</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Covered fundamental components and mechanisms of robotic systems and their multidisciplinary nature. Introduced the robot’s kinematics, dynamics, and control. Presented a quick overview of forward and inverse kinematics, robot dynamics, as well as path planning and control techniques. Topics also included dynamic modeling and analysis of mechanically, electrically, and magnetically driven hydraulic and pneumatic drives; kinematics and motion analysis of linkages; as well as sensing technologies (e.g., position, linear and angular displacements, velocity and acceleration, force and torque sensors) used in robotic systems. Presented kinematics and control of automatic machinery and manufacturing processes, automatic assembly, and inspection robotic systems as representative examples.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">MATH3081</span></td>
+      <td class="course-name">Probability and Statistics</td>
+      <td><span class="course-semester">Fall 2022</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Focused on probability theory. Topics included sample space; conditional probability and independence; discrete and continuous probability distributions for one and for several random variables; expectation; variance; special distributions including binomial, Poisson, and normal distributions; law of large numbers; and central limit theorem. Also introduced basic statistical theory including estimation of parameters, confidence intervals, and hypothesis testing.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE5550</span></td>
+      <td class="course-name">Mobile Robotics</td>
+      <td><span class="course-semester">Fall 2022</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Investigated the science and engineering of mobile robots. Topics included kinematics, dynamics, numerical methods, state estimation, control, perception, localization and mapping, and motion planning for mobile robots. Emphasizeed practical robot applications ranging from disaster response to healthcare to space exploration.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE2322</span></td>
+      <td class="course-name">Fundamentals of Digital Design and Computer Organization</td>
+      <td><span class="course-semester">Fall 2022</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Covered the design and evaluation of control and data structures for digital systems. Used hardware description languages to describe and design both behavioral and register-transfer-level architectures and control units. Topics included number systems, data representation, a review of combinational and sequential digital logic, finite state machines, arithmetic-logic unit (ALU) design, basic computer architecture, the concepts of memory and memory addressing, digital interfacing, timing, and synchronization. Assignments included designing and simulating digital hardware models using SystemVerilog as well as some assembly language (RISC-V) to expose the interface between hardware and software.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE2560</span></td>
+      <td class="course-name">Fundamentals of Engineering Algorithms</td>
+      <td><span class="course-semester">Spring 2020</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Covered the design and implementation of algorithms to solve engineering problems using a high-level programming language. Reviewed elementary data structures, such as arrays, stacks, queues, and lists, and introduces more advanced structures, such as trees and graphs and the use of recursion. Covered both the algorithms to manipulate these data structures as well as their use in problem solving. Introduced algorithm complexity analysis and its application to developing efficient algorithms. Emphasized the importance of software engineering principles.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE2520</span></td>
+      <td class="course-name">Fundamentals of Linear Systems</td>
+      <td><span class="course-semester">Spring 2020</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Developed the basic theory of continuous and discrete systems, emphasizing linear time-invariant systems. Discussed the representation of signals and systems in both the time and frequency domain. Topics included linearity, time invariance, causality, stability, convolution, system interconnection, and sinusoidal response. Developed the Fourier and Laplace transforms for the discussion of frequency-domain applications. Analyzed sampling and quantization of continuous waveforms (A/D and D/A conversion), leading to the discussion of discrete-time FIR and IIR systems, recursive analysis, and realization. The Z-transform and the discrete-time Fourier transform were developed and applied to the analysis of discrete-time signals and systems.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE2412</span></td>
+      <td class="course-name">Fundamentals of Electronics</td>
+      <td><span class="course-semester">Spring 2020</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Reviewed basic circuit analysis techniques. Briefly introduced operation of the principal semiconductor devices: diodes, field-effect transistors, and bipolar junction transistors. Covered diode circuits in detail; the coverage of transistor circuits focused mainly on large-signal analysis, DC biasing of amplifiers, and switching behavior. Used PSpice software to simulate circuits and large-signal models and transient simulations to characterize the behavior of transistors in amplifiers and switching circuits. Digital electronics topics included CMOS logic gates, dynamic power dissipation, gate delay, and fan-out. Amplifier circuits were introduced with the evaluation of voltage transfer characteristics and the fundamentals of small-signal analysis.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE2540</span></td>
+      <td class="course-name">Fundamentals of Networks</td>
+      <td><span class="course-semester">Fall 2019</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Presented an overview of modern communication networks. The concept of a layered network architecture was used as a framework for understanding the principal functions and services required to achieve reliable end-to-end communications. Topics included service interfaces and peer-to-peer protocols, a comparison of the OSI (open system interconnection) reference model to the TCP/IP (Internet) and IEEE LAN (local area network) architectures, network-layer and transport-layer issues, and important emerging technologies such as Bluetooth and ZigBee.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE2160</span></td>
+      <td class="course-name">Embedded Design: Enabling Robotics</td>
+      <td><span class="course-semester">Fall 2019</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Covered the basics of the Unix operating system, high-level programming concepts, introductory digital design, wireless networking, and Simulink design. Offered a hands-on experience developing a remote-controlled robotic arm using an embedded systems platform.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">EECE2150</span></td>
+      <td class="course-name">Circuits and Signals: Biomedical Applications</td>
+      <td><span class="course-semester">Fall 2019</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Covered circuit theory, signal processing, circuit building, and MATLAB programming. Introduced basic device and signal models and circuit laws used in the study of linear circuits. Analyzed resistive and complex impedance networks. Used the ideal operational amplifier model, focusing on differential amplifiers and active filter circuits. Introduced basic concepts of linearity and time-invariance for both continuous and discrete-time systems and concepts associated with analog/digital conversion. Demonstrated discrete-time linear filter design on acquired signals in the MATLAB environment. Used knowledge of circuits, analog signals, digital signals, and biological signals to build a working analog/digital EKG system.</td>
+    </tr>
+    
+    
+    
+    
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">MATH2341</span></td>
+      <td class="course-name">Differential Equations and Linear Algebra for Engineering</td>
+      <td><span class="course-semester">Spring 2019</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">Studied ordinary differential equations, their applications, and techniques for solving them including numerical methods (using MATLAB), Laplace transforms, and linear algebra. Topics included linear and nonlinear first- and second-order equations and applications included electrical and mechanical systems, forced oscillation, and resonance. Topics from linear algebra, such as matrices, row-reduction, vector spaces, and eigenvalues/eigenvectors, were developed and applied to systems of differential equations.</td>
+    </tr>
+    
+  </tbody>
+</table>
 
   </div>
 </div>

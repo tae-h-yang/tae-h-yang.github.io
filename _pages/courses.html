@@ -7,21 +7,161 @@ author_profile: true
 
 {% include base_path %}
 
-{% assign stanford_courses = site.courses | where: "type", "Stanford" | reverse %}
-{% assign northeastern_courses = site.courses | where: "type", "Northeastern" | reverse %}
+<style>
+.course-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.5em;
+  margin-bottom: 2em;
+}
 
-<header>
-  <h2>Stanford University Courses</h2>
-</header>
-<hr>
-{% for post in stanford_courses %}
-  {% include archive-single-course-toggle.html %}
-{% endfor %}
+.course-row {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
 
-<header>
-  <h2>Northeastern University Courses</h2>
-</header>
-<hr>
-{% for post in northeastern_courses %}
-  {% include archive-single-course-toggle.html %}
-{% endfor %}
+.course-row:hover {
+  transform: translateX(4px);
+}
+
+.course-row td {
+  background: #f8f9fa;
+  padding: 0.8em 1em;
+  vertical-align: middle;
+}
+
+.course-row:hover td {
+  background: #eef1f4;
+}
+
+.course-row.expanded td {
+  background: #eef1f4;
+}
+
+.course-row td:first-child {
+  border-radius: 8px 0 0 8px;
+  box-shadow: -2px 2px 4px rgba(0,0,0,0.06);
+}
+
+.course-row td:last-child {
+  border-radius: 0 8px 8px 0;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.06);
+}
+
+.course-code {
+  font-weight: 700;
+  font-size: 0.95em;
+  color: #2f7d95;
+  white-space: nowrap;
+}
+
+.course-name {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.course-semester {
+  font-size: 0.85em;
+  color: #666;
+  white-space: nowrap;
+}
+
+.course-excerpt-row {
+  display: none;
+}
+
+.course-excerpt-row.visible {
+  display: table-row;
+}
+
+.course-excerpt-row td {
+  padding: 0 1em 1em 1em;
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.6;
+  background: #f8f9fa;
+  border-radius: 0 0 8px 8px;
+}
+
+@media (max-width: 600px) {
+  .course-table td {
+    padding: 0.5em 0.6em;
+    font-size: 0.9em;
+  }
+
+  .course-code {
+    font-size: 0.85em;
+    padding: 0.2em 0.4em;
+  }
+
+  .course-semester {
+    font-size: 0.75em;
+  }
+
+  .course-name {
+    font-size: 0.9em;
+  }
+}
+</style>
+
+<script>
+function toggleCourseRow(row) {
+  var excerptRow = row.nextElementSibling;
+  var wasVisible = excerptRow.classList.contains('visible');
+
+  // Close all others
+  document.querySelectorAll('.course-excerpt-row.visible').forEach(function(el) {
+    el.classList.remove('visible');
+    el.previousElementSibling.classList.remove('expanded');
+  });
+
+  // Toggle current
+  if (!wasVisible) {
+    excerptRow.classList.add('visible');
+    row.classList.add('expanded');
+  }
+}
+</script>
+
+{% assign stanford_courses = site.courses | where: "type", "Stanford" | sort: "date" | reverse %}
+{% assign northeastern_courses = site.courses | where: "type", "Northeastern" | sort: "date" | reverse %}
+
+<h2>Stanford University</h2>
+
+<table class="course-table">
+  <tbody>
+    {% for post in stanford_courses %}
+    {% assign title_parts = post.title | split: " " %}
+    {% assign code = title_parts[0] %}
+    {% assign name = post.title | remove_first: code | strip %}
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">{{ code }}</span></td>
+      <td class="course-name">{{ name }}</td>
+      <td><span class="course-semester">{{ post.semester }}</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">{{ post.excerpt }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+<h2>Northeastern University</h2>
+
+<table class="course-table">
+  <tbody>
+    {% for post in northeastern_courses %}
+    {% assign title_parts = post.title | split: " " %}
+    {% assign code = title_parts[0] %}
+    {% assign name = post.title | remove_first: code | strip %}
+    <tr class="course-row" onclick="toggleCourseRow(this)">
+      <td><span class="course-code">{{ code }}</span></td>
+      <td class="course-name">{{ name }}</td>
+      <td><span class="course-semester">{{ post.semester }}</span></td>
+    </tr>
+    <tr class="course-excerpt-row">
+      <td colspan="3">{{ post.excerpt }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>

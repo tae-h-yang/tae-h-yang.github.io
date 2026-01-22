@@ -307,7 +307,7 @@ Hi! I'm Tae, a Master's student in Computer Science (AI specialization) at Stanf
 
 ---
 
-# Teaching
+# Teaching Assistant
 
 <style>
 .teaching-card {
